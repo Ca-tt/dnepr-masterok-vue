@@ -1,7 +1,7 @@
 <template>
   <header>
       <div class="open-lock">
-        <!-- <div><i class="fas fa-lock"></i></div> -->
+        <div><i class="fas fa-lock-open"></i></div>
         <div>Открываем замки любой сложности</div>
       </div>
       <div class="inf">
