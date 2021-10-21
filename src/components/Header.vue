@@ -1,9 +1,4 @@
 <template>
-<<<<<<< HEAD
-    <header>
-       
-    </header>
-=======
   <header>
       <div class="open-lock">
         <div><i class="fas fa-lock-open"></i></div>
@@ -28,7 +23,6 @@
         </div>
       </div>
   </header>
->>>>>>> ddb59a9948f311f6904f732d2cc8323ac205f48b
 </template>
 
 <style>
