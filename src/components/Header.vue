@@ -1,12 +1,12 @@
 <template>
   <header>
       <div class="open-lock">
-        <div><i class="fas fa-lock-open"></i></div>
+        <div><font-awesome-icon icon="lock-open" /></div>
         <div>Открываем замки любой сложности</div>
       </div>
       <div class="inf">
         <div>
-          <div></div>
+          <div><font-awesome-icon icon="clock" /></div>
           <div class="all-time">Работаем круглосуточно</div>
         </div>
         <div>
