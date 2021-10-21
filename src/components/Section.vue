@@ -12,7 +12,7 @@
         </section>
         <section class="main">
             <div class="service">
-                <img src="daniil/Vue/dnepr-masterok-vue/src/assets/q.jpg" alt="" class="service-img">
+                <img src="../img/e.jpg" alt="" class="service-img">
                 <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ ДВЕРЕЙ</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
