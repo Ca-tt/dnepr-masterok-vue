@@ -19,30 +19,41 @@
             </div>
             <div class="service">
                 <img src="daniil/Vue/dnepr-masterok-vue/src/assets/q.jpg" alt="" class="service-img">
-                <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ ДВЕРЕЙ</h3>
+                <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ АВТО</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
             </div>
             <div class="service">
                 <img src="daniil/Vue/dnepr-masterok-vue/src/assets/q.jpg" alt="" class="service-img">
-                <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ ДВЕРЕЙ</h3>
+                <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ СЕЙФА</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
             </div>
             <div class="service">
                 <img src="daniil/Vue/dnepr-masterok-vue/src/assets/q.jpg" alt="" class="service-img">
-                <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ ДВЕРЕЙ</h3>
+                <h3 class="service-title">ЗАМЕНА ЗАМКОВ</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
             </div>
             <div class="service">
                 <img src="daniil/Vue/dnepr-masterok-vue/src/assets/q.jpg" alt="" class="service-img">
-                <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ ДВЕРЕЙ</h3>
+                <h3 class="service-title">ЗАМЕНА НОЧНОЙ ЗАДВИЖКИ</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
-                <a class="to-master">
+                <a class="to-master" href="">
                     <figure class="give-call">
                         <h5 class="title-of-call">СРОЧНО ВЫЗВАТЬ МАСТЕРА</h5>
+                    </figure>
+                </a>
+            </div>
+            <div class="clarify-price">
+                <h3 class="clarify">УТОЧНИТЬ СТОИМОСТЬ</h3>
+                <p class="calculation">Для точного расчета отправьте фото замка</p>
+                <img src="daniil/Vue/dnepr-masterok-vue/src/assets/q.jpg" class="sn">
+                <p class="click-to-send">нажмите для отправки фото</p>
+                <a class="to-master" href="">
+                    <figure class="send-photo">
+                        <h5 class="send">ОТПРАВИТЬ ФОТО</h5>
                     </figure>
                 </a>
             </div>
@@ -58,6 +69,90 @@ export default {
 </script>
 
 <style>
+    @media screen and (min-width: 1440px){
+        .click-to-send{
+            font-size: 17px !important;
+        }
+        .calculation{
+            font-size: 17px !important;
+        }
+        .clarify{
+            font-size: 23px !important;
+        }
+        .clarify-price{
+            margin: 10px;
+        }
+        .sn{
+            width: 380px !important;
+            height: 240px !important;
+        }
+        .service-img{
+            width: 380px !important;
+            height: 240px !important;
+        }
+    }
+    @media screen and (min-width: 1024px){
+        .title{
+            font-size: 45px !important;
+        }
+        .click-to-send{
+            font-size: 14px;
+        }
+        .calculation{
+            font-size: 14px;
+        }
+    }
+    @media screen and (min-width: 768px){
+        .clarify-price{
+            margin-top: 0 !important;
+        }
+        .service{
+            margin: 10px;
+        }
+        .service-title{
+            font-size: 19px !important;
+        }
+    }
+    .to-master{
+        text-decoration: none;
+    }
+    .calculation{
+        margin: 0;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .clarify{
+        margin-top: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 21px;
+        font-weight: 300;
+    }
+    .clarify-price{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .send{
+        text-align: center;
+        color: white;
+    }
+    .send-photo{
+        margin-top: 0;
+        background-color: #fab005;
+        width: 200px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+    .sn{
+      width: 272px;
+      height: 150px;
+    }
     .title-of-call{
        text-align: center;
        color: white;
@@ -96,8 +191,9 @@ export default {
         margin-top: 10px;
         text-align: center;
         margin-bottom: 10px;
-        font-size: 17px;
+        font-size: 23px;
         color: #54617a;
+        font-weight: 600;
     }
     .service-img{
         width: 272px;
