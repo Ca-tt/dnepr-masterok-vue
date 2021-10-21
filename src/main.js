@@ -10,4 +10,5 @@ library.add(faUserSecret)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.mount('#app')
