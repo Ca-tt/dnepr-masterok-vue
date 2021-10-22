@@ -200,7 +200,9 @@ export default {
         height: 150px;
         margin-top: 20px;
     }
-    body{
+
+    /* изменил, потому что был бы отступ от хедера */
+    section{
         font-family: sans-serif;
         padding: 5%;
         margin: 0;

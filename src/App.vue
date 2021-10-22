@@ -1,27 +1,29 @@
 <template>
   <Header />
+  <SectionA />
   <Section />
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import SectionA from './components/SectionA.vue'
 import Section from './components/Section.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
+    SectionA,
     Section
   }
 }
 </script>
 
 <style>
-<<<<<<< HEAD
-=======
   body {
     margin: 0;
   }
+
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -29,5 +31,4 @@ export default {
     text-align: center;
     color: #2c3e50;
   }
->>>>>>> ddb59a9948f311f6904f732d2cc8323ac205f48b
 </style>
