@@ -49,7 +49,7 @@
             <div class="clarify-price">
                 <h3 class="clarify">УТОЧНИТЬ СТОИМОСТЬ</h3>
                 <p class="calculation">Для точного расчета отправьте фото замка</p>
-                <img src="../assets/logo-viber.png" class="sn">
+                <img src="../img/logo-viber.png" class="sn">
                 <p class="click-to-send">нажмите для отправки фото</p>
                 <a class="to-master" href="">
                     <figure class="send-photo">
@@ -112,9 +112,6 @@ export default {
         .service-title{
             font-size: 19px !important;
         }
-    }
-    .prices-page{
-        background-color: whitesmoke;
     }
     .service-img{
         border-radius: 7px;
