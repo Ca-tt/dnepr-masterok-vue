@@ -113,6 +113,9 @@ export default {
             font-size: 19px !important;
         }
     }
+    .prices-page{
+        background-color: whitesmoke;
+    }
     .service-img{
         border-radius: 7px;
         box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);;
