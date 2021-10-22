@@ -1,7 +1,9 @@
 <template>
-  <Header />
-  <SectionA />
-  <Section />
+  <div id="app">
+    <Header />
+    <SectionA />
+    <Section />
+  </div>
 </template>
 
 <script>

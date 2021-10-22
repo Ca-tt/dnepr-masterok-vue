@@ -12,31 +12,31 @@
         </section>
         <section class="main">
             <div class="service">
-                <img src="daniil/Vue/dnepr-masterok-vue/src/assets/q.jpg" alt="" class="service-img">
+                <img src="../img/door-open.jpg" alt="" class="service-img">
                 <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ ДВЕРЕЙ</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
             </div>
             <div class="service">
-                <img src="daniil/Vue/dnepr-masterok-vue/src/assets/q.jpg" alt="" class="service-img">
+                <img src="../img/auto-open.jpg" alt="" class="service-img">
                 <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ АВТО</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
             </div>
             <div class="service">
-                <img src="daniil/Vue/dnepr-masterok-vue/src/assets/q.jpg" alt="" class="service-img">
+                <img src="../img/safe-open.jpg" alt="" class="service-img">
                 <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ СЕЙФА</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
             </div>
             <div class="service">
-                <img src="daniil/Vue/dnepr-masterok-vue/src/assets/q.jpg" alt="" class="service-img">
+                <img src="../img/change-lock.jpg" alt="" class="service-img">
                 <h3 class="service-title">ЗАМЕНА ЗАМКОВ</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
             </div>
             <div class="service">
-                <img src="daniil/Vue/dnepr-masterok-vue/src/assets/q.jpg" alt="" class="service-img">
+                <img src="../img/change-latch.jpg" alt="" class="service-img">
                 <h3 class="service-title">ЗАМЕНА НОЧНОЙ ЗАДВИЖКИ</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
@@ -49,7 +49,7 @@
             <div class="clarify-price">
                 <h3 class="clarify">УТОЧНИТЬ СТОИМОСТЬ</h3>
                 <p class="calculation">Для точного расчета отправьте фото замка</p>
-                <img src="daniil/Vue/dnepr-masterok-vue/src/assets/q.jpg" class="sn">
+                <img src="../img/logo-viber.png" class="sn">
                 <p class="click-to-send">нажмите для отправки фото</p>
                 <a class="to-master" href="">
                     <figure class="send-photo">
@@ -83,8 +83,8 @@ export default {
             margin: 10px;
         }
         .sn{
-            width: 380px !important;
-            height: 240px !important;
+            max-width: 100% !important;
+            height: auto !important;
         }
         .service-img{
             width: 380px !important;
@@ -113,6 +113,13 @@ export default {
             font-size: 19px !important;
         }
     }
+    .prices-page{
+        background-color: whitesmoke;
+    }
+    .service-img{
+        border-radius: 7px;
+        box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);;
+    }
     .to-master{
         text-decoration: none;
     }
@@ -122,13 +129,14 @@ export default {
         margin-bottom: 5px;
     }
     .clarify{
-        margin-top: 10px;
+        margin-top: 30px !important;
         text-align: center;
         margin-bottom: 10px;
         font-size: 21px;
         font-weight: 300;
     }
     .clarify-price{
+        width: 380px;
         margin-top: 30px;
         display: flex;
         flex-direction: column;
@@ -150,8 +158,9 @@ export default {
         border-radius: 5px;
     }
     .sn{
-      width: 272px;
-      height: 150px;
+      margin-top: 10px !important;
+      max-width: 100%;
+      height: auto;
     }
     .title-of-call{
        text-align: center;
@@ -204,7 +213,6 @@ export default {
     /* изменил, потому что был бы отступ от хедера */
     section{
         font-family: sans-serif;
-        padding: 5%;
         margin: 0;
         color: #8d99ae;
     }

@@ -7,7 +7,7 @@
             <div class="com-container">
                 <div class="kyivstar">
                     <div class="logo">
-                        <img src="../assets/kyivstar.png" alt="">
+                        <img src="../img/kyivstar.png" alt="">
                     </div>
                     <div class="number">
                         <a href="">067 135 15 47</a>
@@ -15,7 +15,7 @@
                 </div>
                 <div class="vodafone">
                     <div class="logo">
-                        <img src="../assets/vodafone.png" alt="">
+                        <img src="../img/vodafone.png" alt="">
                     </div>
                     <div class="number">
                         <a href="">099 053 88 64</a>
