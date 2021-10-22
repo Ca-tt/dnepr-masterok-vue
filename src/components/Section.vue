@@ -12,31 +12,31 @@
         </section>
         <section class="main">
             <div class="service">
-                <img src="../assets/door-open.jpg" alt="" class="service-img">
+                <img src="../img/door-open.jpg" alt="" class="service-img">
                 <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ ДВЕРЕЙ</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
             </div>
             <div class="service">
-                <img src="../assets/auto-open.jpg" alt="" class="service-img">
+                <img src="../img/auto-open.jpg" alt="" class="service-img">
                 <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ АВТО</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
             </div>
             <div class="service">
-                <img src="../assets/safe-open.jpg" alt="" class="service-img">
+                <img src="../img/safe-open.jpg" alt="" class="service-img">
                 <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ СЕЙФА</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
             </div>
             <div class="service">
-                <img src="../assets/change-lock.jpg" alt="" class="service-img">
+                <img src="../img/change-lock.jpg" alt="" class="service-img">
                 <h3 class="service-title">ЗАМЕНА ЗАМКОВ</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
             </div>
             <div class="service">
-                <img src="../assets/change-latch.jpg" alt="" class="service-img">
+                <img src="../img/change-latch.jpg" alt="" class="service-img">
                 <h3 class="service-title">ЗАМЕНА НОЧНОЙ ЗАДВИЖКИ</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
