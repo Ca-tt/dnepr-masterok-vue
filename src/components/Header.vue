@@ -1,27 +1,35 @@
 <template>
   <header>
-      <div class="open-lock">
-        <div><font-awesome-icon icon="lock-open" /></div>
-        <div>Открываем замки любой сложности</div>
+     <div class="open-lock">
+      <div class="header-icon">
+        <font-awesome-icon icon="lock" />
       </div>
-      <div class="inf">
-        <div>
-          <div><font-awesome-icon icon="clock" /></div>
-          <div class="all-time">Работаем круглосуточно</div>
+       <div>Открываем замки любой сложности</div>
+    </div>
+    <div class="inf">
+      <div>
+        <div class="header-icon">
+          <font-awesome-icon icon="clock" />
         </div>
-        <div>
-          <div></div>
-          <div class="tel-number">
-            <a href="">067 135 15 47</a>
-          </div>
+        <div class="all-time">Работаем круглосуточно</div>
+      </div>
+      <div>
+        <div class="header-icon">
+          <font-awesome-icon icon="mobile" />
         </div>
-        <div>
-          <div></div>
-          <div class="tel-number">
-            <a href="">099 053 88 64</a>
-          </div>
+        <div class="tel-number">
+          <a href="">067 135 15 47</a>
         </div>
       </div>
+      <div>
+        <div class="header-icon">
+          <font-awesome-icon icon="mobile" />
+        </div>
+        <div class="tel-number">
+          <a href="">099 053 88 64</a>
+        </div>
+      </div>
+    </div>
   </header>
 </template>
 
@@ -35,6 +43,10 @@
     font-size: 0.9em;
   }
 
+  .open-lock, .inf div {
+    display: flex;
+  }
+
   .open-lock {
     margin-left: 75px;
   }
@@ -44,8 +56,13 @@
     margin-right: 75px;
   }
 
-  .all-time, .tel-number {
+  /* .all-time, .tel-number {
     margin: 0 15px;
+  } */
+
+  .inf > div {
+    margin-left: 15px;
+    align-items: center;
   }
 
   .tel-number a {
@@ -54,6 +71,11 @@
 
   .all-time, .open-lock {
     color: white;
+  }
+
+  .header-icon {
+    color: #999999;
+    margin-right: 10px;
   }
 
   @media (max-width: 1024px) {
