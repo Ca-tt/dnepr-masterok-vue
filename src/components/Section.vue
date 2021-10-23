@@ -210,7 +210,9 @@ export default {
         height: 150px;
         margin-top: 20px;
     }
-    body{
+
+    /* изменил, потому что был бы отступ от хедера */
+    section{
         font-family: sans-serif;
         margin: 0;
         color: #8d99ae;
