@@ -61,13 +61,6 @@
    </section>
 </template>
 
-<script>
-
-export default {
-  name: 'Section',
-}
-</script>
-
 <style>
 /* услуги и цены */
     @media screen and (min-width: 1440px){
@@ -137,7 +130,6 @@ export default {
         font-weight: 300;
     }
     .clarify-price{
-        width: 380px;
         margin-top: 30px;
         display: flex;
         flex-direction: column;

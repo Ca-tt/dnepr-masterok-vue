@@ -1,22 +1,25 @@
 <template>
   <div id="app">
     <Header />
-    <SectionA />
-    <Section />
+    <Mastercall />
+    <Services />
+    <SectionB />
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import SectionA from './components/SectionA.vue'
-import Section from './components/Section.vue'
+import Mastercall from './components/Mastercall.vue'
+import Services from './components/Services.vue'
+import SectionB from './components/SectionB.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    SectionA,
-    Section
+    Mastercall,
+    Services,
+    SectionB
   }
 }
 </script>
