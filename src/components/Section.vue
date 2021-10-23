@@ -69,6 +69,7 @@ export default {
 </script>
 
 <style>
+/* услуги и цены */
     @media screen and (min-width: 1440px){
         .click-to-send{
             font-size: 17px !important;
@@ -112,6 +113,9 @@ export default {
         .service-title{
             font-size: 19px !important;
         }
+    }
+    .prices-page{
+        background-color: whitesmoke;
     }
     .service-img{
         border-radius: 7px;
