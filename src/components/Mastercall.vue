@@ -36,6 +36,10 @@
 
 
 <style>
+    .communication {
+        margin-bottom: 50px;
+    }
+
     .com-container {
         display: flex;
         flex-direction: column;
@@ -94,6 +98,12 @@
 
         .number a {
             font-size: 22px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .communication {
+            margin-bottom: 100px;
         }
     }
 

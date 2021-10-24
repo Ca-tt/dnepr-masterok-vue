@@ -8,7 +8,7 @@
     </div>
     <div class="inf">
       <div>
-        <div class="header-icon">
+        <div class="header-icon clock">
           <font-awesome-icon icon="clock" />
         </div>
         <div class="all-time">Работаем круглосуточно</div>
@@ -76,6 +76,11 @@
   .header-icon {
     color: #999999;
     margin-right: 10px;
+    /* width: 1em; */
+  }
+
+  .clock {
+    width: 1em;
   }
 
   @media (max-width: 1024px) {

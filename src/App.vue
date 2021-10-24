@@ -1,25 +1,28 @@
 <template>
   <div id="app">
     <Header />
-    <Mastercall />
+    <MasterCall />
     <Services />
     <SectionB />
+    <Advantages />
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import Mastercall from './components/Mastercall.vue'
+import MasterCall from './components/MasterCall.vue'
 import Services from './components/Services.vue'
 import SectionB from './components/SectionB.vue'
+import Advantages from './components/Advantages.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Mastercall,
+    MasterCall,
     Services,
-    SectionB
+    SectionB,
+    Advantages
   }
 }
 </script>

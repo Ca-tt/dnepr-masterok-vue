@@ -234,5 +234,6 @@
         margin: 5px;
         color: #8d99ae;
         text-align: center;
+        font-size: 17px;
     }
 </style>
