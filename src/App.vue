@@ -4,6 +4,7 @@
     <Mastercall />
     <Services />
     <SectionB />
+    <Note />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from './components/Header.vue'
 import Mastercall from './components/Mastercall.vue'
 import Services from './components/Services.vue'
 import SectionB from './components/SectionB.vue'
+import Note from './components/Note.vue'
 
 export default {
   name: 'App',
@@ -19,7 +21,8 @@ export default {
     Header,
     Mastercall,
     Services,
-    SectionB
+    SectionB,
+    Note
   }
 }
 </script>
