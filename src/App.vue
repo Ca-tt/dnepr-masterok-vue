@@ -5,6 +5,8 @@
     <Services />
     <SectionB />
     <Advantages />
+    <Note />
+    <Footer />
   </div>
 </template>
 
@@ -14,6 +16,8 @@ import MasterCall from './components/MasterCall.vue'
 import Services from './components/Services.vue'
 import SectionB from './components/SectionB.vue'
 import Advantages from './components/Advantages.vue'
+import Note from './components/Note.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
@@ -22,7 +26,9 @@ export default {
     MasterCall,
     Services,
     SectionB,
-    Advantages
+    Advantages,
+    Note,
+    Footer
   }
 }
 </script>
