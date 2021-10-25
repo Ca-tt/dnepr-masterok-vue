@@ -6,6 +6,7 @@
     <SectionB />
     <Advantages />
     <Note />
+    <Call />
     <Footer />
   </div>
 </template>
@@ -17,6 +18,7 @@ import Services from './components/Services.vue'
 import SectionB from './components/SectionB.vue'
 import Advantages from './components/Advantages.vue'
 import Note from './components/Note.vue'
+import Call from './components/Call.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -28,6 +30,7 @@ export default {
     SectionB,
     Advantages,
     Note,
+    Call,
     Footer
   }
 }
