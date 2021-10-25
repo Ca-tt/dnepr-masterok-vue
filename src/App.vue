@@ -7,6 +7,7 @@
     <Advantages />
     <Note />
     <Footer />
+    <ModalWindow/>
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import SectionB from './components/SectionB.vue'
 import Advantages from './components/Advantages.vue'
 import Note from './components/Note.vue'
 import Footer from './components/Footer.vue'
+import ModalWindow from "./components/ModalWindow.vue"
 
 export default {
   name: 'App',
@@ -28,7 +30,8 @@ export default {
     SectionB,
     Advantages,
     Note,
-    Footer
+    Footer,
+    ModalWindow
   }
 }
 </script>
