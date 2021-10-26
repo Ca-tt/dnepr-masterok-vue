@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <Title />
     <MasterCall />
     <Services />
     <SectionB />
@@ -18,6 +19,7 @@ import SectionB from './components/SectionB.vue'
 import Advantages from './components/Advantages.vue'
 import Note from './components/Note.vue'
 import Footer from './components/Footer.vue'
+import Title from './components/Title.vue'
 
 export default {
   name: 'App',
@@ -28,7 +30,8 @@ export default {
     SectionB,
     Advantages,
     Note,
-    Footer
+    Footer,
+    Title
   }
 }
 </script>
