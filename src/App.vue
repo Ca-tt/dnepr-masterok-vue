@@ -7,7 +7,9 @@
     <SectionB />
     <Advantages />
     <Note />
+    <Call />
     <Footer />
+    <ModalWindow/>
   </div>
 </template>
 
@@ -18,8 +20,10 @@ import Services from './components/Services.vue'
 import SectionB from './components/SectionB.vue'
 import Advantages from './components/Advantages.vue'
 import Note from './components/Note.vue'
+import Call from './components/Call.vue'
 import Footer from './components/Footer.vue'
 import Title from './components/Title.vue'
+import ModalWindow from "./components/ModalWindow.vue"
 
 export default {
   name: 'App',
@@ -32,6 +36,9 @@ export default {
     Note,
     Footer,
     Title
+    Call,
+    Footer,
+    ModalWindow
   }
 }
 </script>

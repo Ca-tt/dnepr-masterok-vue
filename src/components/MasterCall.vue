@@ -125,6 +125,6 @@
 <script>
 
 export default {
-  name: 'SectionA',
+  name: 'MasterCall',
 }
 </script>
