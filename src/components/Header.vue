@@ -1,87 +1,79 @@
 <template>
-  <header>
+  <header class = "main-header">
+    <main class = "header-navigation">
      <div class="open-lock">
       <div class="header-icon">
         <font-awesome-icon icon="lock" />
       </div>
-       <div>Открываем замки любой сложности</div>
+       <span>Открываем замки любой сложности</span>
     </div>
-    <div class="inf">
-      <div>
-        <div class="header-icon clock">
+    <div class="right-navbar">
+      <div class = "rightnavbar-block">
+        <div class="header-icon">
           <font-awesome-icon icon="clock" />
         </div>
-        <div class="all-time">Работаем круглосуточно</div>
+        <span>Работаем круглосуточно</span>
       </div>
-      <div>
+      <div class = "rightnavbar-block">
         <div class="header-icon">
           <font-awesome-icon icon="mobile" />
         </div>
-        <div class="tel-number">
+        <nav class="call-number">
           <a href="">067 135 15 47</a>
-        </div>
+        </nav>
       </div>
-      <div>
+      <div class = "rightnavbar-block">
         <div class="header-icon">
           <font-awesome-icon icon="mobile" />
         </div>
-        <div class="tel-number">
+        <nav class="call-number">
           <a href="">099 053 88 64</a>
-        </div>
+        </nav>
       </div>
     </div>
+    </main>
   </header>
 </template>
 
 <style>
-  header {
-    display: flex;
+  .header-navigation{
+    padding: 12px;
     justify-content: space-between;
-    align-items: center;
+  }
+
+  .main-header{
     background-color: #222222;
-    height: 40px;
+    max-height: 40px;
     font-size: 0.9em;
   }
 
-  .open-lock, .inf div {
+  .main-header, a{
+    color: white;
+  }
+
+  .open-lock, .right-navbar , .header-navigation , .rightnavbar-block {
     display: flex;
-  }
-
-  .open-lock {
-    margin-left: 75px;
-  }
-
-  .inf {
-    display: flex;
-    margin-right: 75px;
-  }
-
-  /* .all-time, .tel-number {
-    margin: 0 15px;
-  } */
-
-  .inf > div {
-    margin-left: 15px;
     align-items: center;
   }
 
-  .tel-number a {
-    color: white;
+  .open-lock {
+    margin-left: 100px;
   }
 
-  .all-time, .open-lock {
-    color: white;
+  .right-navbar {
+    margin-right: 100px;
+  }
+
+  .rightnavbar-block {
+    padding: 0 15px;
   }
 
   .header-icon {
+    width: 10px;
     color: #999999;
-    margin-right: 10px;
-    /* width: 1em; */
+    margin-right: 15px;
   }
 
-  .clock {
-    width: 1em;
-  }
 
   @media (max-width: 1024px) {
     header {
