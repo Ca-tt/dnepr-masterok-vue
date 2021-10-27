@@ -35,9 +35,8 @@ export default {
     Advantages,
     Note,
     Footer,
-    Title
+    Title,
     Call,
-    Footer,
     ModalWindow
   }
 }

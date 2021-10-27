@@ -25,26 +25,75 @@
                   <li class="tab">                     от 300 грн</li>
               </ul>
               <div class="buttons">
-                <a href="#" class="a-m">
-                        <figure class="master-c">
-                            <h3>ВЫЗОВ МАСТЕРА</h3>
-                        </figure>
-                </a>
-                <a href="#" class="c-f">
-                        <figure class="price">
-                            <h3>РАСЧЕТ СТОИМОСТИ</h3>
-                        </figure>
-                </a>
+                    <a href="#" class="a-m">
+                        ВЫЗВАТЬ МАСТЕРА
+                    </a>
+                    <a href="#" class="c-f">
+                        РАСЧЕТ СТОИМОСТИ
+                    </a>
               </div>
           </div>
           <div class="mobile">
-              <img src="../img/mobile.png">
+              <img src="../img/mobile.png" class="title-image">
           </div>
       </div>
   </section>
 </template>
 
 <style>
+    .title-image{
+        width: 500px;
+        height: 500px;
+    }
+    .dnepr-class-img{
+        width: 272px;
+        height: 124px;
+    }
+    .c-f{
+        width: 250px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        outline: 2px solid white;
+        border-radius: 5px;
+        margin-left: 30px;
+    }
+    .c-f:hover{
+        width: 250px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        background-color: rgba(255,255,255,.65);
+        outline: 2px solid white;
+        border-radius: 5px;
+        margin-left: 30px;
+    }
+    .buttons{
+        display: flex;
+    }
+    .a-m{
+        text-decoration: none;
+        color: white;
+        background-color: #fab005;
+        border-color: #fab005;
+        width: 250px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+    }
+    .a-m:hover{
+        text-decoration: none;
+        color: white;
+        background-color: rgb(255, 203, 59);
+    }
     .list>li{
         margin-top: 25px;
     }
@@ -68,7 +117,7 @@
     }
     .title-slide{
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: flex-start;
     }
     .menu-click{
@@ -91,10 +140,6 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-    }
-    .dnepr-class-img{
-        width: 272px;
-        height: 124px;
     }
     .title-page{
         background-image: url("../img/background.jpg");
