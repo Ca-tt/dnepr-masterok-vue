@@ -9,7 +9,7 @@
     <Note />
     <Call />
     <Footer />
-    <ModalWindow/>
+<!--    <ModalWindow/>-->
   </div>
 </template>
 
@@ -23,7 +23,7 @@ import Note from './components/Note.vue'
 import Call from './components/Call.vue'
 import Footer from './components/Footer.vue'
 import Title from './components/Title.vue'
-import ModalWindow from "./components/ModalWindow.vue"
+// import ModalWindow from "./components/ModalWindow.vue"
 
 export default {
   name: 'App',
@@ -37,7 +37,7 @@ export default {
     Footer,
     Title,
     Call,
-    ModalWindow
+    // ModalWindow
   }
 }
 </script>

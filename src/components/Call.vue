@@ -100,7 +100,7 @@
 
         .tel-number-send {
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
         }
 
         .send {
@@ -133,3 +133,11 @@
         }
     }
 </style>
+
+<script>
+
+export default {
+  name: "Call",
+}
+
+</script>

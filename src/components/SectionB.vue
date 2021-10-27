@@ -1,5 +1,5 @@
 <template>
-   <section class="advertisment">
+   <section class="business-metrics">
        <div class="ad-part">
           <font-awesome-icon icon="truck" class="icon" />
           <h2 class="ad-title">20 мин</h2>
@@ -25,7 +25,7 @@
 
 <style>
   @media screen and (max-width: 426px){
-    .advertisment{
+    .business-metrics{
       margin-top: 40px !important;
       margin-bottom: 40px !important;
     }
@@ -70,7 +70,7 @@
       width: 70px;
       color: #54617a;
     }
-    .advertisment{
+    .business-metrics{
         display: flex;
         justify-content: center;
         align-items: center;
