@@ -1,12 +1,13 @@
 <template>
   <section>
-    <div class="backcall"><a href="" id="mybtn vue">ОБРАТНЫЙ ЗВОНОК</a></div>
+    <div class="backcall"><a href="" id="mybtn">ОБРАТНЫЙ ЗВОНОК</a></div>
     <div class="modal-wrapper" id="mymodal-wrap">
       <div class="popup-content">
         <div class="popup-header">
           <span class="close-modal"> &times; </span>
         </div>
-        <div class="popup-body"></div>
+        <div class="popup-body">
+        </div>
       </div>
     </div>
   </section>
