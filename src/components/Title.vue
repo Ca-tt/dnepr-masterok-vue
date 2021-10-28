@@ -42,8 +42,8 @@
 
 <style>
     .title-image{
-        width: 500px;
-        height: 500px;
+        width: 700px;
+        height: 550px;
     }
     .dnepr-class-img{
         width: 272px;
@@ -59,7 +59,6 @@
         color: white;
         outline: 2px solid white;
         border-radius: 5px;
-        margin-left: 30px;
     }
     .c-f:hover{
         width: 250px;
@@ -88,6 +87,7 @@
         align-items: center;
         justify-content: center;
         border-radius: 30px;
+        margin-right: 30px;
     }
     .a-m:hover{
         text-decoration: none;
@@ -117,7 +117,7 @@
     }
     .title-slide{
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: flex-start;
     }
     .menu-click{
@@ -148,5 +148,44 @@
         background-position: center center;
         background-attachment: fixed;
         background-size: cover;
+    }
+    @media screen and (max-width: 1024px){
+        .main-title{
+            font-size: 40px;
+        }
+        .title-slide{
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .title-image{
+        width: 500px;
+        height: 400px;
+        }
+        .c-f{
+            margin-bottom: 55px;
+            margin-top: 15px;
+        }
+        .buttons{
+            flex-direction: column;
+        }
+    }
+    @media screen and (max-width: 769px){
+        .menu-click{
+            font-size: 15px;
+        }
+        .dnepr-class-img{
+            width: 232px;
+            height: 104px;
+        }
+        .list{
+            font-size: 18px;
+        }
+        .main-title{
+            font-size: 30px;
+        }
+        .title-image{
+        width: 400px;
+        height: 330px;
+        }
     }
 </style>
