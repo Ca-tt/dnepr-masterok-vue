@@ -237,3 +237,11 @@
         font-size: 17px;
     }
 </style>
+
+<script>
+
+export default {
+  name: 'Services',
+
+}
+</script>

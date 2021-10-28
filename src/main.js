@@ -1,7 +1,5 @@
-import "./js/modalWindow";
 import Vue from 'vue';
 import App from './App.vue';
-
 
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
