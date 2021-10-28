@@ -47,13 +47,13 @@
 .main-header {
   background-color: #222222;
   max-height: 40px;
-  font-size: 0.9em;
+  font-size: .8rem;
 }
 
 .header-navigation {
   padding: 12px;
   justify-content: space-around;
-  max-width: 80%;
+  max-width: 88%;
   margin: 0 auto;
 }
 
@@ -69,6 +69,7 @@
 
 .svg-inline--fa.fa-w-16 {
   width: 0;
+  max-width: 18px;
 }
 
 .main-header,
