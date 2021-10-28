@@ -1,105 +1,97 @@
 <template>
-  <header>
-     <div class="open-lock">
-      <div class="header-icon">
-        <font-awesome-icon icon="lock" />
-      </div>
-       <div>Открываем замки любой сложности</div>
-    </div>
-    <div class="inf">
-      <div>
-        <div class="header-icon clock">
-          <font-awesome-icon icon="clock" />
-        </div>
-        <div class="all-time">Работаем круглосуточно</div>
-      </div>
-      <div>
+  <header class="main-header">
+    <main class="header-navigation">
+      <div class="left-navbar">
         <div class="header-icon">
-          <font-awesome-icon icon="mobile" />
+          <font-awesome-icon icon="lock" />
         </div>
-        <div class="tel-number">
-          <a href="">067 135 15 47</a>
+        <span>Открываем замки любой сложности</span>
+      </div>
+      <div class="right-navbar">
+        <div class="rightnavbar-block">
+          <div class="header-icon">
+            <font-awesome-icon icon="clock" />
+          </div>
+          <span>Работаем круглосуточно</span>
+        </div>
+        <div class="rightnavbar-block">
+          <div class="header-icon">
+            <font-awesome-icon icon="mobile" />
+          </div>
+          <nav class="call-number">
+            <a href="">067 135 15 47</a>
+          </nav>
+        </div>
+        <div class="rightnavbar-block">
+          <div class="header-icon">
+            <font-awesome-icon icon="mobile" />
+          </div>
+          <nav class="call-number">
+            <a href="">099 053 88 64</a>
+          </nav>
         </div>
       </div>
-      <div>
-        <div class="header-icon">
-          <font-awesome-icon icon="mobile" />
-        </div>
-        <div class="tel-number">
-          <a href="">099 053 88 64</a>
-        </div>
-      </div>
-    </div>
+    </main>
   </header>
 </template>
 
 <style>
+.left-navbar,
+.right-navbar,
+.header-navigation,
+.rightnavbar-block {
+  display: flex;
+  align-items: center;
+}
+
+.main-header {
+  background-color: #222222;
+  max-height: 40px;
+  font-size: .8rem;
+}
+
+.header-navigation {
+  padding: 12px;
+  justify-content: space-around;
+  max-width: 88%;
+  margin: 0 auto;
+}
+
+.rightnavbar-block {
+  padding: 0 15px;
+}
+
+.header-icon {
+  font-size: 18px;
+  color: #999;
+  margin-right: 10px;
+}
+
+.svg-inline--fa.fa-w-16 {
+  width: 0;
+  max-width: 18px;
+}
+
+.main-header,
+a {
+  color: white;
+}
+
+@media (max-width: 1024px) {
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #222222;
-    height: 40px;
-    font-size: 0.9em;
+    font-size: 0.75em;
   }
+}
 
-  .open-lock, .inf div {
-    display: flex;
+@media (max-width: 767px) {
+  header {
+    display: none;
   }
-
-  .open-lock {
-    margin-left: 75px;
-  }
-
-  .inf {
-    display: flex;
-    margin-right: 75px;
-  }
-
-  /* .all-time, .tel-number {
-    margin: 0 15px;
-  } */
-
-  .inf > div {
-    margin-left: 15px;
-    align-items: center;
-  }
-
-  .tel-number a {
-    color: white;
-  }
-
-  .all-time, .open-lock {
-    color: white;
-  }
-
-  .header-icon {
-    color: #999999;
-    margin-right: 10px;
-    /* width: 1em; */
-  }
-
-  .clock {
-    width: 1em;
-  }
-
-  @media (max-width: 1024px) {
-    header {
-      font-size: 0.75em;
-    }
-  }
-
-  @media (max-width: 767px) {
-    header {
-      display: none;
-    }
-  }
+}
 </style>
 
 <script>
-
 export default {
-  name: 'Header',
-
-}
+  name: "Header",
+};
 </script>

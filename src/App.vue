@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <Title />
     <MasterCall />
     <Services />
     <SectionB />
@@ -8,7 +9,7 @@
     <Note />
     <Call />
     <Footer />
-    <ModalWindow/>
+<!--    <ModalWindow/>-->
   </div>
 </template>
 
@@ -21,7 +22,8 @@ import Preferences from './components/Preferences.vue'
 import Note from './components/Note.vue'
 import Call from './components/Call.vue'
 import Footer from './components/Footer.vue'
-import ModalWindow from "./components/ModalWindow.vue"
+import Title from './components/Title.vue'
+// import ModalWindow from "./components/ModalWindow.vue"
 
 export default {
   name: 'App',
@@ -32,9 +34,10 @@ export default {
     SectionB,
     Preferences,
     Note,
-    Call,
     Footer,
-    ModalWindow
+    Title,
+    Call,
+    // ModalWindow
   }
 }
 </script>
