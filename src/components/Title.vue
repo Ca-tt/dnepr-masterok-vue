@@ -25,26 +25,75 @@
                   <li class="tab">                     от 300 грн</li>
               </ul>
               <div class="buttons">
-                <a href="#" class="a-m">
-                        <figure class="master-c">
-                            <h3>ВЫЗОВ МАСТЕРА</h3>
-                        </figure>
-                </a>
-                <a href="#" class="c-f">
-                        <figure class="price">
-                            <h3>РАСЧЕТ СТОИМОСТИ</h3>
-                        </figure>
-                </a>
+                    <a href="#" class="a-m">
+                        ВЫЗВАТЬ МАСТЕРА
+                    </a>
+                    <a href="#" class="c-f">
+                        РАСЧЕТ СТОИМОСТИ
+                    </a>
               </div>
           </div>
           <div class="mobile">
-              <img src="../img/mobile.png">
+              <img src="../img/mobile.png" class="title-image">
           </div>
       </div>
   </section>
 </template>
 
 <style>
+    .title-image{
+        width: 700px;
+        height: 550px;
+    }
+    .dnepr-class-img{
+        width: 272px;
+        height: 124px;
+    }
+    .c-f{
+        width: 250px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        outline: 2px solid white;
+        border-radius: 5px;
+    }
+    .c-f:hover{
+        width: 250px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        background-color: rgba(255,255,255,.65);
+        outline: 2px solid white;
+        border-radius: 5px;
+        margin-left: 30px;
+    }
+    .buttons{
+        display: flex;
+    }
+    .a-m{
+        text-decoration: none;
+        color: white;
+        background-color: #fab005;
+        border-color: #fab005;
+        width: 250px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        margin-right: 30px;
+    }
+    .a-m:hover{
+        text-decoration: none;
+        color: white;
+        background-color: rgb(255, 203, 59);
+    }
     .list>li{
         margin-top: 25px;
     }
@@ -92,10 +141,6 @@
         justify-content: space-evenly;
         align-items: center;
     }
-    .dnepr-class-img{
-        width: 272px;
-        height: 124px;
-    }
     .title-page{
         background-image: url("../img/background.jpg");
         min-height: 100vh;
@@ -103,5 +148,44 @@
         background-position: center center;
         background-attachment: fixed;
         background-size: cover;
+    }
+    @media screen and (max-width: 1024px){
+        .main-title{
+            font-size: 40px;
+        }
+        .title-slide{
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .title-image{
+        width: 500px;
+        height: 400px;
+        }
+        .c-f{
+            margin-bottom: 55px;
+            margin-top: 15px;
+        }
+        .buttons{
+            flex-direction: column;
+        }
+    }
+    @media screen and (max-width: 769px){
+        .menu-click{
+            font-size: 15px;
+        }
+        .dnepr-class-img{
+            width: 232px;
+            height: 104px;
+        }
+        .list{
+            font-size: 18px;
+        }
+        .main-title{
+            font-size: 30px;
+        }
+        .title-image{
+        width: 400px;
+        height: 330px;
+        }
     }
 </style>
