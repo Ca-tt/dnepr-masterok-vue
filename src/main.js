@@ -4,7 +4,7 @@ import App from './App.vue';
 
 
 // font awesome
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 // import necessary icons from font-awesome

@@ -1,6 +1,6 @@
 <template>
-  <section id ="vue">
-    <div class="backcall"><a href="" id="mybtn" v-on:click = "high">ОБРАТНЫЙ ЗВОНОК{{ counter }}</a></div>
+  <section>
+    <div class="backcall"><a href="" id="mybtn">ОБРАТНЫЙ ЗВОНОК</a></div>
     <div class="modal-wrapper" id="mymodal-wrap">
       <div class="popup-content">
         <div class="popup-header">
@@ -74,26 +74,10 @@
 }
 </style>
 
-<script type = "text/javascript">
+<script>
 
 export default {
-  
   name: "ModalWindow",
-  
 };
-// var app = new Vue(){
-//   el: "#vue" ,
-//   data:{
-//   counter : 1
-//   },
-//   created: function(){
-//     this.high();
-//   },
-//   methods:{
-//     high(){
-//       this.counter++;
-//     }
-//   }
-// }
 </script>
 
