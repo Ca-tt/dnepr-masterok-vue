@@ -1,3 +1,8 @@
+// import ModalWindow from "./ModalWindow.vue";
+// import Vue from "vue";
+// import VueRouter from "vue-router"
+
+
 // let modal = document.getElementById("mymodal-wrap");
 
 // let popupTogle = document.getElementById("mybtn");
