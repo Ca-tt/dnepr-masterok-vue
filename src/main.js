@@ -1,6 +1,7 @@
 import "./js/modalWindow";
 import Vue from 'vue';
 import App from './App.vue';
+import VueTheMask from 'vue-the-mask'
 
 
 // font awesome
@@ -35,8 +36,11 @@ library.add(
     faIdCard,
     faMoneyBillAlt,
     faMapMarkerAlt,
-    faEnvelope
+    faEnvelope,
+    // InputMask
 )
+
+Vue.use(VueTheMask)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

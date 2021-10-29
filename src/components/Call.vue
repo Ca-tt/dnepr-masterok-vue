@@ -11,7 +11,7 @@
                         <p>Введите ваш номер телефона</p>
                     </div>
                     <div>
-                        <input class="tel-input" type="tel">
+                       <the-mask :mask="['+38(0##) ###-##-##']" placeholder="+38(0__) ___-__-__" class="tel-input"/>
                     </div>
                 </div>
                 <div class="tel-number-send">
@@ -57,6 +57,11 @@
         padding: 20px 0px 38px 0px;
         border-radius: 8px;
         color: #7F7F7F;
+    }
+
+    .tel-input {
+        border: none;
+        font-size: 20px;
     }
 
     .send {
@@ -135,9 +140,5 @@
 </style>
 
 <script>
-
-export default {
-  name: "Call",
-}
-
+  
 </script>
