@@ -71,7 +71,6 @@
         background-color: rgba(255,255,255,.65);
         outline: 2px solid white;
         border-radius: 5px;
-        margin-left: 30px;
     }
     .buttons{
         display: flex;
@@ -188,4 +187,56 @@
         height: 330px;
         }
     }
+    @media screen and (max-width: 426px){
+        .a-m{
+            margin-right: 0;
+        }
+        .buttons{
+            justify-content: center;
+            align-items: center;
+        }
+        .main-title, .list{
+            text-align: center;
+        }
+        .title-slide{
+            flex-direction: column;
+        }
+        .dnepr-class-img{
+            margin-top: 20px;
+            width: 252px;
+            height: 110px;
+        }
+        .title-page{
+        background-image: url("../img/door-background.jpg");
+        min-height: 100vh;
+        background-color: rgba(146, 147, 161, 0.81);
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+        .menu-union{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 376px){
+        .title-image{
+            width: 370px;
+            height: 300px;
+        }
+    }  
+    @media screen and (max-width: 321px){
+        .title-image{
+            width: 320px;
+            height: 270px;
+        }
+        .c-f{
+            margin-bottom: 30px;
+        }
+        .main-title{
+            font-size: 26px;
+        }
+        .list{
+            font-size: 17px;
+        }
+    }  
 </style>
