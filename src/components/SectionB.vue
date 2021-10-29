@@ -80,3 +80,11 @@
         margin-bottom: 80px;
       }
 </style>
+
+<script>
+
+export default {
+  name: 'SectionB',
+
+}
+</script>

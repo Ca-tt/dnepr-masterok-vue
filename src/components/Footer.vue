@@ -94,3 +94,11 @@
     background-color: black;
   }
 </style>
+
+<script>
+
+export default {
+  name: 'Footer',
+
+}
+</script>

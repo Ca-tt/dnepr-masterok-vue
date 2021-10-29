@@ -11,7 +11,7 @@
                         <p>Введите ваш номер телефона</p>
                     </div>
                     <div>
-                        <input type="tel">
+                        <input class="tel-input" type="tel">
                     </div>
                 </div>
                 <div class="tel-number-send">

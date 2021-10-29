@@ -42,3 +42,11 @@
         padding: 4%;
     }
 </style>
+
+<script>
+
+export default {
+  name: 'Note',
+
+}
+</script>
