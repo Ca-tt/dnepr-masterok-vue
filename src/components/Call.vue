@@ -64,6 +64,7 @@
         font-size: 20px;
         margin-right: 0;
         text-align: center;
+        outline: 0;
     }
 
     .send {
@@ -112,7 +113,6 @@
 
         .tel-input {
             font-size: 23px;
-            text-align: right;
         }
 
         .send {
