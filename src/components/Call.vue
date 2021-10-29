@@ -26,6 +26,7 @@
 <style>
     .call-request {
         background-image: url("../img/contactusheader.jpg");
+        background-repeat: no-repeat;
         background-size: 100%;
         background-attachment: fixed;
         padding: 25px 0;

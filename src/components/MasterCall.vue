@@ -80,6 +80,10 @@
         color: #54617A;
     }
 
+    .logo img {
+        max-width: 100%;
+    }
+
     @media screen and (min-width: 768px) {
         .com-container {
             flex-direction: row;
@@ -105,6 +109,22 @@
         .communication {
             margin-bottom: 100px;
         }
+
+        .number a {
+            font-size: 25px;
+        }
+
+        .logo img {
+            width: 170px;
+        }
+
+        .logo {
+            margin-bottom: 0;
+        }
+
+        .call-soon p {
+            font-size: 18px;
+        }
     }
 
     @media screen and (min-width: 1440px) {
@@ -118,6 +138,11 @@
 
         .call-soon p {
             font-size: 18px;
+        }
+
+        .logo img {
+            width: 180px;
+
         }
     }
 </style>
