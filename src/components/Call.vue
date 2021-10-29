@@ -108,6 +108,10 @@
             justify-content: flex-end;
         }
 
+        .tel-input {
+            font-size: 23px;
+        }
+
         .send {
             padding: 12px 50px;
             font-size: 0.9em;
@@ -121,6 +125,10 @@
 
         .request-title p {
             font-size: 1.2em;
+        }
+
+        .tel-input {
+            font-size: 25px;
         }
     }
 
