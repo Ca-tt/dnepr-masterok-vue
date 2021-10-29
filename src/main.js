@@ -35,15 +35,12 @@ library.add(
     faMoneyBillAlt,
     faMapMarkerAlt,
     faEnvelope,
-    // InputMask
 )
 
 Vue.use(VueTheMask)
-
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
-
 new Vue({
     render: h => h(App),
 }).$mount('#app')

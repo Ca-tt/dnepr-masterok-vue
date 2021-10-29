@@ -67,10 +67,15 @@
   margin-right: 10px;
 }
 
-.svg-inline--fa.fa-w-16 {
-  width: 0;
-  max-width: 18px;
-}
+/*
+  * Damir disabled code below
+  * it cause problems in Metrics.vue -> Card component
+*/
+
+/*.svg-inline--fa.fa-w-16 {*/
+/*  width: 0;*/
+/*  max-width: 18px;*/
+/*}*/
 
 .main-header,
 a {
