@@ -46,10 +46,12 @@
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  min-height: 100vh;
 }
 
 .dimmer {
   background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
 }
 
 .title-image {
