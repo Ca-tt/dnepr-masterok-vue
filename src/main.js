@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
+import VueTheMask from 'vue-the-mask'
 
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -33,13 +34,13 @@ library.add(
     faIdCard,
     faMoneyBillAlt,
     faMapMarkerAlt,
-    faEnvelope
+    faEnvelope,
 )
 
+Vue.use(VueTheMask)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
-
 new Vue({
     render: h => h(App),
 }).$mount('#app')

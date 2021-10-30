@@ -11,7 +11,7 @@
                         <p>Введите ваш номер телефона</p>
                     </div>
                     <div>
-                        <input class="tel-input" type="tel">
+                       <the-mask :mask="['+38(0##) ###-##-##']" placeholder="+38(0__) ___-__-__" class="tel-input"/>
                     </div>
                 </div>
                 <div class="tel-number-send">
@@ -26,6 +26,7 @@
 <style>
     .call-request {
         background-image: url("../img/contactusheader.jpg");
+        background-repeat: no-repeat;
         background-size: 100%;
         background-attachment: fixed;
         padding: 25px 0;
@@ -57,6 +58,14 @@
         padding: 20px 0px 38px 0px;
         border-radius: 8px;
         color: #7F7F7F;
+    }
+
+    .tel-input {
+        border: none;
+        font-size: 20px;
+        margin-right: 0;
+        text-align: center;
+        outline: 0;
     }
 
     .send {
@@ -103,6 +112,10 @@
             justify-content: flex-end;
         }
 
+        .tel-input {
+            font-size: 23px;
+        }
+
         .send {
             padding: 12px 50px;
             font-size: 0.9em;
@@ -116,6 +129,10 @@
 
         .request-title p {
             font-size: 1.2em;
+        }
+
+        .tel-input {
+            font-size: 25px;
         }
     }
 
@@ -135,9 +152,5 @@
 </style>
 
 <script>
-
-export default {
-  name: "Call",
-}
-
+  
 </script>
