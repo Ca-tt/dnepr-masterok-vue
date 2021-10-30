@@ -1,7 +1,7 @@
 <template>
-  <section class="dimmer-inner">
-    <div class="dimmer is-black">
-      <div class="dimmer-background">
+  <section class="section is-showcase">
+    <div class="dimmer">
+
         <div class="menu">
           <img src="../img/title.png" class="dnepr-class-img" />
           <div class="menu-union">
@@ -10,6 +10,7 @@
             <a href="#" class="menu-click"> КОНТАКТЫ </a>
           </div>
         </div>
+
         <div class="title-slide">
           <div class="opening">
             <h1 class="main-title">
@@ -32,28 +33,24 @@
             <img src="../img/mobile.png" class="title-image" />
           </div>
         </div>
-      </div>
     </div>
+
   </section>
 </template>
 
 <style>
-.dimmer-inner {
-  z-index: 1;
-}
-.dimmer-background {
-  z-index: -2;
+
+.section {
   background-image: url("../img/background.jpg");
-  min-height: 100vh;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
 }
+
 .dimmer {
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: -1;
-  /* opacity: 0.8; */
+  background-color: rgba(0, 0, 0, 0.6);
 }
+
 .title-image {
   width: 700px;
   height: 550px;
