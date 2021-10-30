@@ -51,9 +51,10 @@
 }
 
 .header-navigation {
+  max-height: 40px;
   padding: 12px;
-  justify-content: space-around;
-  max-width: 88%;
+  justify-content: space-between;
+  max-width: 66%;
   margin: 0 auto;
 }
 
