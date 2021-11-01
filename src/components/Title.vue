@@ -1,44 +1,43 @@
 <template>
-  <section class="title-page">
-      <div class="menu">
-          <img src="../img/title.png" class="dnepr-class-img">
+  <section class="section is-showcase">
+    <div class="title-page">
+
+        <div class="menu">
+          <img src="../img/title.png" class="dnepr-class-img" />
           <div class="menu-union">
-            <a href="#" class="menu-click">
-                УСЛУГИ И ЦЕНЫ
-            </a>
-            <a href="#" class="menu-click">
-                НАШИ ПРИЕМУЩЕСТВА
-            </a>
-            <a href="#" class="menu-click">
-                КОНТАКТЫ
-            </a>
+            <a href="#" class="menu-click"> УСЛУГИ И ЦЕНЫ </a>
+            <a href="#" class="menu-click"> НАШИ ПРИЕМУЩЕСТВА </a>
+            <a href="#" class="menu-click"> КОНТАКТЫ </a>
           </div>
-      </div>
-      <div class="title-slide">
+        </div>
+
+        <div class="title-slide">
           <div class="opening">
-              <h1 class="main-title">АВАРИЙНОЕ<br> ВСКРЫТИЕ ЗАМКОВ</h1>
-              <ul class="list">
-                  <li>- ОТКРЫВАЕМ ВСЕ ВИДЫ ЗАМКОВ</li>
-                  <li>- ПРИЕДЕМ В ТЕЧЕНИИ 20 МИНУТ</li>
-                  <li>- БЕЗ ПОВРЕЖДЕНИЯ ЗАМКА</li>
-                  <li>- КОНФИДЕНЦИАЛЬНО</li>
-                  <li class="tab">                     от 300 грн</li>
-              </ul>
-              <div class="buttons">
-                    <a href="#" class="a-m">
-                        ВЫЗВАТЬ МАСТЕРА
-                    </a>
-                    <a href="#" class="c-f">
-                        РАСЧЕТ СТОИМОСТИ
-                    </a>
-              </div>
+            <h1 class="main-title">
+              АВАРИЙНОЕ<br />
+              ВСКРЫТИЕ ЗАМКОВ
+            </h1>
+            <ul class="list">
+              <li>- ОТКРЫВАЕМ ВСЕ ВИДЫ ЗАМКОВ</li>
+              <li>- ПРИЕДЕМ В ТЕЧЕНИИ 20 МИНУТ</li>
+              <li>- БЕЗ ПОВРЕЖДЕНИЯ ЗАМКА</li>
+              <li>- КОНФИДЕНЦИАЛЬНО</li>
+              <li class="tab">от 300 грн</li>
+            </ul>
+            <div class="buttons">
+              <a href="#" class="a-m"> ВЫЗВАТЬ МАСТЕРА </a>
+              <a href="#" class="c-f"> РАСЧЕТ СТОИМОСТИ </a>
+            </div>
           </div>
           <div class="mobile">
-              <img src="../img/mobile.png" class="title-image">
+            <img src="../img/mobile.png" class="title-image" />
           </div>
-      </div>
+        </div>
+    </div>
+
   </section>
 </template>
+
 
 <style>
     .title-image{

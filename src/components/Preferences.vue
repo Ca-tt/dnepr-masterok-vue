@@ -63,6 +63,7 @@
     .preferences > .title {
         /* width: 55%; */
         text-align: center;
+        margin-bottom: 25px;
     }
 
     .preferences > .title > .category {
@@ -103,11 +104,13 @@
     @media screen and (min-width: 768px) {
         .preferences > .title {
             width: 70%;
+            margin-bottom: 35px;
         }
 
         .pref-list-fst, .pref-list-snd {
             flex-direction: row;
             justify-content: space-around;
+            margin-bottom: 20px;
         }
 
         .pref-block {
@@ -122,6 +125,10 @@
     }
 
     @media screen and (min-width: 1024px) {
+        .pref-list-fst, .pref-list-snd {
+            margin-bottom: 25px;
+        }
+
         .preferences {
             margin-bottom: 100px;
         }

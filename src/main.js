@@ -3,11 +3,6 @@ import App from './App.vue';
 import VueModal from '@kouts/vue-modal'
 import '@kouts/vue-modal/dist/vue-modal.css'
 import VueTheMask from 'vue-the-mask'
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-//bootstrap
-// import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -41,18 +36,16 @@ library.add(
     faIdCard,
     faMoneyBillAlt,
     faMapMarkerAlt,
-    faEnvelope
+    faEnvelope,
 )
-// Vue.use(BootstrapVue)
-// Vue.use(IconsPlugin)
-Vue.use(VueTheMask)
+
 
 Vue.component('Modal', VueModal)
 
+Vue.use(VueTheMask)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
-
 new Vue({
     render: h => h(App),
 }).$mount('#app')
