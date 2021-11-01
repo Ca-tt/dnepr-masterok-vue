@@ -63,53 +63,6 @@
 
 <style>
 /* услуги и цены */
-    @media screen and (min-width: 1440px){
-        .click-to-send{
-            font-size: 17px !important;
-        }
-        .calculation{
-            font-size: 17px !important;
-        }
-        .clarify{
-            font-size: 23px !important;
-        }
-        .clarify-price{
-            margin: 10px;
-        }
-        .sn{
-            max-width: 100% !important;
-            height: auto !important;
-        }
-        .service-img{
-            width: 380px !important;
-            height: 240px !important;
-        }
-    }
-    @media screen and (min-width: 1024px){
-        .title{
-            font-size: 45px !important;
-        }
-        .click-to-send{
-            font-size: 14px;
-        }
-        .calculation{
-            font-size: 14px;
-        }
-    }
-    @media screen and (min-width: 768px){
-        .clarify-price{
-            margin-top: 0 !important;
-        }
-        .service{
-            margin: 10px;
-        }
-        .service-title{
-            font-size: 19px !important;
-        }
-    }
-    .prices-page{
-        background-color: whitesmoke;
-    }
     .service-img{
         border-radius: 7px;
         box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);;
@@ -135,6 +88,7 @@
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
+        width: 380px;
     }
     .send{
         text-align: center;
@@ -188,6 +142,7 @@
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
+        width: 380px;
     }
     .service-title{
         margin-top: 10px;
@@ -198,8 +153,8 @@
         font-weight: 600;
     }
     .service-img{
-        width: 272px;
-        height: 150px;
+        width: 350px;
+        height: 200px;
         margin-top: 20px;
     }
 
@@ -235,6 +190,72 @@
         color: #8d99ae;
         text-align: center;
         font-size: 17px;
+    }
+    .prices-page{
+        background-color: whitesmoke;
+    }
+    @media screen and (max-width: 1440px){
+        .click-to-send{
+            font-size: 17px;
+        }
+        .calculation{
+            font-size: 17px;
+        }
+        .clarify{
+            font-size: 23px;
+        }
+        .clarify-price{
+            margin: 10px;
+        }
+        .sn{
+            max-width: 100%;
+            height: auto;
+        }
+        .service-img{
+            width: 380px;
+            height: 240px;
+        }
+        .service{
+            width: 380px;
+            margin: 10px;
+        }
+    }
+    @media screen and (max-width: 1024px){
+        .title{
+            font-size: 45px;
+        }
+        .click-to-send{
+            font-size: 14px;
+        }
+        .calculation{
+            font-size: 14px;
+        }
+        .clarify-price{
+            width: 310px;
+        }
+        .service{
+            width: 310px;
+            margin: 10px;
+        }
+        .service-img{
+            width: 272px;
+            height: 150px;
+        }
+    }
+    @media screen and (max-width: 768px){
+        .clarify-price{
+            margin-top: 0;
+        }
+        .service{
+            margin: 10px;
+            width: 310px;
+        }
+        .service-title{
+            font-size: 19px;
+        }
+        .clarify-price{
+            width: 310px;
+        }
     }
 </style>
 
