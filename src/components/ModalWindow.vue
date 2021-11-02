@@ -1,42 +1,34 @@
 <template>
-  <div class="modal-window">
-    <button class="a-m" type="button" @click="showModal = true">
+  <div>
+    <button class="a-m" type="button" @click="openModal">
       Open modal
     </button>
 
-    <Modal
-      v-model="showModal"
-      title="Body freeze modal"
-      @before-open="beforeOpen"
-      @before-close="beforeClose"
-    >
+    <sweet-modal ref="modal">
+      test text
       <div class="modal-head">
-        <h1 class = "topic">ВЫЗОВ МАСТЕРА</h1>
-          <a @click="showModal = false"><span class="close-modal"> &times; </span></a>
+        <h1 class="topic">ВЫЗОВ МАСТЕРА</h1>
+<!--        <a @click="showModal = false"><span class="close-modal"> &times; </span></a>-->
       </div>
       <p>&nbsp;</p>
       <div class="modal-body">
         <label>Введите ваш номер телефона</label>
-        <input  class = "tel-mask" placeholder="+38(0__) ___-__-__" type = "tel" v-mask = "['+38(0##) ###-##-##']" />
+        <input class="tel-mask" placeholder="+38(0__) ___-__-__" type="tel"
+               v-mask="['+38(0##) ###-##-##']"/>
       </div>
       <a href="" class="send">ОТПРАВИТЬ</a>
-      <p class = "underline">*перезвоним в течении 5 минут</p>
-      <hr />
+      <p class="underline">*перезвоним в течении 5 минут</p>
+      <hr/>
       <p>Нет времени ждать звонка?<br> Нажмите чтоб позвонить:</p>
-      <h4 class = "topic">067 135 15 47</h4>
-      <h4 class = "topic">099 053 88 64</h4>
+      <h4 class="topic">067 135 15 47</h4>
+      <h4 class="topic">099 053 88 64</h4>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
-    </Modal>
+    </sweet-modal>
   </div>
 </template>
 
 <style>
-
-.vm{
-  width: 300px;
-}
-
 .vm-titlebar {
   display: none;
 }
@@ -65,30 +57,30 @@
   justify-content: center;
 }
 
-.modal-body{
+.modal-body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.tel-mask{
+.tel-mask {
   margin-top: 5px;
-  border:none;
+  border: none;
   font-size: 25px;
   text-align: center;
   outline: 0;
 }
 
-.topic{
+.topic {
   color: orange;
 }
 
-.underline{
+.underline {
   border-bottom: 1px solid slategrey;
   padding-bottom: 20px;
 }
 
-.send{
+.send {
   margin: 10px;
   display: flex;
   align-items: center;
@@ -100,7 +92,7 @@
 import bodyScroll from "body-scroll-freezer";
 
 export default {
-  name:"ModalWindow",
+  name: "ModalWindow",
 
   data: function () {
     return {
@@ -116,6 +108,9 @@ export default {
     },
     beforeClose() {
       bodyScroll.unfreeze();
+    },
+    openModal() {
+      this.$refs.modal.open()
     },
   },
 };

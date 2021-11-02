@@ -1,8 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
-import VueModal from '@kouts/vue-modal'
-import '@kouts/vue-modal/dist/vue-modal.css'
 import VueTheMask from 'vue-the-mask'
+import SweetModal from 'sweet-modal-vue/src/plugin.js'
 
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -39,11 +38,11 @@ library.add(
     faEnvelope,
 )
 
+Vue.use(SweetModal)
 
-Vue.component('Modal', VueModal)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(VueTheMask)
-Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 new Vue({

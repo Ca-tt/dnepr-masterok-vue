@@ -246,3 +246,8 @@
   }
 }
 </style>
+<script>
+export default {
+    name:"Title",
+};
+</script>
