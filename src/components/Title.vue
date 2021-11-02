@@ -25,7 +25,8 @@
               <li class="tab">от 300 грн</li>
             </ul>
             <div class="buttons">
-              <a href="#" class="call-master"> ВЫЗВАТЬ МАСТЕРА </a>
+              <button class="call-master" @click="showModal = true">
+                ВЫЗВАТЬ МАСТЕРА </button>
               <a href="#" class="cost-calculation"> РАСЧЕТ СТОИМОСТИ </a>
             </div>
           </div>
@@ -193,6 +194,4 @@
 export default {
     name:"Title",
 };
-
-
 </script>

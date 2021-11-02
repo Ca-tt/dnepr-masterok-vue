@@ -9,7 +9,7 @@
     <Note />
     <Call />
     <Footer />
-   <ModalWindow/>
+    <ModalWindow/>
   </div>
 </template>
 
