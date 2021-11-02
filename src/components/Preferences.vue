@@ -88,8 +88,11 @@
     }
 
     .pref-icon .icon {
-        width: 55px;
-        height: 55px;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #54617A;
+        padding: 15px;
+        border-radius: 50%;
         margin: 15px;
     }
 
