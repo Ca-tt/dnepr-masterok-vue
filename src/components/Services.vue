@@ -52,9 +52,7 @@
                 <img src="../img/logo-viber.png" class="sn">
                 <p class="click-to-send">нажмите для отправки фото</p>
                 <a class="to-master" href="">
-                    <figure class="send-photo">
-                        <h5 class="send">ОТПРАВИТЬ ФОТО</h5>
-                    </figure>
+                    <h5 class="send">ОТПРАВИТЬ ФОТО</h5>
                 </a>
             </div>
         </section>
@@ -93,16 +91,6 @@
     .send{
         text-align: center;
         color: white;
-    }
-    .send-photo{
-        margin-top: 0;
-        background-color: #fab005;
-        width: 200px;
-        height: 35px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
     }
     .sn{
       margin-top: 10px !important;
