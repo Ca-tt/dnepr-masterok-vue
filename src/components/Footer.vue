@@ -1,36 +1,34 @@
 <template>
-  <section class="footer">
-    <section class="un">
-      <div class="info">
-        <font-awesome-icon icon="map-marker-alt" class="i" />
+    <footer class="footer-main">
+      <div class="footer-info">
+        <font-awesome-icon icon="map-marker-alt" class="footer-icon" />
         <h6 class="dnepr">Работаем по г. Днепр</h6>
       </div>
-      <div class="info">
-        <font-awesome-icon icon="envelope" class="i" />
+      <div class="footer-info">
+        <font-awesome-icon icon="envelope" class="footer-icon" />
         <h6 class="mail">info@dnepr-сlass.com.ua</h6>
         <a href="#" class="third-section"><h6 class="confidentiality">Политика конфиденциальности</h6></a>
       </div>
-      <div class="info">
-        <font-awesome-icon icon="mobile" class="i" />
+      <div class="footer-info">
+        <font-awesome-icon icon="mobile" class="footer-icon" />
         <h6 class="number1">067 135 15 47</h6>
         <h6 class="number2">099 053 88 64</h6>
       </div>
-      <div class="info">
+      <div class="footer-info">
         <a href="#" class="fourth-section">
           <h6 class="developers">Сайт разработан в студии<br> PageSpeed.com.ua</h6>
         </a>
         <h6 class="dn-class">© 2020 dnepr-class.com.ua</h6>
       </div>
-    </section>
-  </section>
+    </footer>
 </template>
 
 <style>
   @media screen and (max-width: 426px){
-    .info{
+    .footer-info{
       margin: 20px;
     }
-    .un{
+    .footer-main{
       flex-direction: column;
     }
   }
@@ -74,7 +72,7 @@
     margin: 16px;
     color: #fab005;
   }
-  .info{
+  .footer-info{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,16 +81,15 @@
   .dnepr, .mail, .number1, .number2, .developers, .dn-class, .confidentiality{
     font-size: 15px;
   }
-  .i{
+  .footer-icon{
     color: #fab005;
   }
-  .un{
+  .footer-main{
     display: flex;
     justify-content: space-evenly;
-  }
-  .footer{
     background-color: black;
   }
+
 </style>
 
 <script>

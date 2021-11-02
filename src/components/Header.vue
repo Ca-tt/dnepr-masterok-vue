@@ -10,7 +10,7 @@
       <div class="right-navbar">
         <div class="rightnavbar-block">
           <div class="header-icon">
-            <font-awesome-icon icon="clock" />
+            <font-awesome-icon icon="clock" class =  "clock"/>
           </div>
           <span>Работаем круглосуточно</span>
         </div>
@@ -52,7 +52,7 @@
 
 .header-navigation {
   max-height: 40px;
-  padding: 12px;
+  padding: 10px;
   justify-content: space-between;
   max-width: 66%;
   margin: 0 auto;
@@ -63,20 +63,15 @@
 }
 
 .header-icon {
+  padding: 0;
   font-size: 18px;
   color: #999;
   margin-right: 10px;
 }
 
-/*
-  * Damir disabled code below
-  * it cause problems in Metrics.vue -> Card component
-*/
-
-/*.svg-inline--fa.fa-w-16 {*/
-/*  width: 0;*/
-/*  max-width: 18px;*/
-/*}*/
+.clock{
+  max-width: 18px;
+}
 
 .main-header,
 a {

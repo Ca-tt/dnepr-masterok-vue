@@ -1,6 +1,6 @@
 <template>
   <div class="modal-window">
-    <button type="button" class="btn btn-primary" @click="showModal = true">
+    <button class="a-m" type="button" @click="showModal = true">
       Open modal
     </button>
 
@@ -12,9 +12,7 @@
     >
       <div class="modal-head">
         <h1 class = "topic">ВЫЗОВ МАСТЕРА</h1>
-        <div class="close-modal">
-          <font-awesome-icon icon="fa-solid fa-xmark" />
-        </div>
+          <a @click="showModal = false"><span class="close-modal"> &times; </span></a>
       </div>
       <p>&nbsp;</p>
       <div class="modal-body">
@@ -34,6 +32,11 @@
 </template>
 
 <style>
+
+.vm{
+  width: 300px;
+}
+
 .vm-titlebar {
   display: none;
 }
@@ -57,6 +60,9 @@
   border-radius: 15px;
   top: -16px;
   right: -14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .modal-body{
@@ -68,6 +74,9 @@
 .tel-mask{
   margin-top: 5px;
   border:none;
+  font-size: 25px;
+  text-align: center;
+  outline: 0;
 }
 
 .topic{
@@ -95,7 +104,7 @@ export default {
 
   data: function () {
     return {
-      showModal: false,
+      showModal: false
     };
   },
   mounted() {
@@ -110,5 +119,6 @@ export default {
     },
   },
 };
+
 </script>
 

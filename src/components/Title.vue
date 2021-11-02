@@ -25,8 +25,8 @@
               <li class="tab">от 300 грн</li>
             </ul>
             <div class="buttons">
-              <a href="#" class="a-m"> ВЫЗВАТЬ МАСТЕРА </a>
-              <a href="#" class="c-f"> РАСЧЕТ СТОИМОСТИ </a>
+              <a href="#" class="call-master"> ВЫЗВАТЬ МАСТЕРА </a>
+              <a href="#" class="cost-calculation"> РАСЧЕТ СТОИМОСТИ </a>
             </div>
           </div>
           <div class="mobile">
@@ -48,7 +48,7 @@
         width: 272px;
         height: 124px;
     }
-    .c-f{
+    .cost-calculation{
         width: 250px;
         height: 50px;
         display: flex;
@@ -59,7 +59,7 @@
         outline: 2px solid white;
         border-radius: 5px;
     }
-    .c-f:hover{
+    .cost-calculation:hover{
         width: 250px;
         height: 50px;
         display: flex;
@@ -75,7 +75,7 @@
     .buttons{
         display: flex;
     }
-    .a-m{
+    .call-master{
         text-decoration: none;
         color: white;
         background-color: #fab005;
@@ -160,7 +160,7 @@
         width: 500px;
         height: 400px;
         }
-        .c-f{
+        .cost-calculation{
             margin-bottom: 55px;
             margin-top: 15px;
         }
