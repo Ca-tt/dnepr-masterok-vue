@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import Header from './site-sections/Header.vue'
 import MasterCall from './components/MasterCall.vue'
 import Services from './components/Services.vue'
 import SectionB from './components/SectionB.vue'

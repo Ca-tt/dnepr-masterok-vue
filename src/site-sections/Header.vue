@@ -46,7 +46,7 @@
 
 .main-header {
   background-color: #222222;
-  max-height: 40px;
+  /*max-height: 40px;*/
   font-size: .8rem;
 }
 
