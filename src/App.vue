@@ -4,7 +4,7 @@
     <Title />
     <MasterCall />
     <Services />
-    <SectionB />
+    <Metrics />
     <Preferences />
     <Note />
     <Call />
@@ -17,7 +17,7 @@
 import Header from './site-sections/Header.vue'
 import MasterCall from './components/MasterCall.vue'
 import Services from './components/Services.vue'
-import SectionB from './components/SectionB.vue'
+import Metrics from './site-sections/Metrics'
 import Preferences from './components/Preferences.vue'
 import Note from './components/Note.vue'
 import Call from './components/Call.vue'
@@ -31,7 +31,7 @@ export default {
     Header,
     MasterCall,
     Services,
-    SectionB,
+    Metrics,
     Preferences,
     Note,
     Footer,
@@ -42,16 +42,8 @@ export default {
 }
 </script>
 
-<style>
-  body {
-    margin: 0;
-  }
+<style lang="scss">
 
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
+@import "./scss/app/defaults";
+
 </style>

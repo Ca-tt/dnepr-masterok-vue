@@ -1,65 +1,34 @@
 <template>
-  <header class="main-header">
-    <main class="header-navigation">
-      <div class="left-navbar">
-        <div class="header-icon">
-          <font-awesome-icon icon="lock" />
-        </div>
-        <span>Открываем замки любой сложности</span>
+  <header class="site-header">
+
+    <Container class="has-columns-between-desktop">
+
+      <!-- left column -->
+      <div class="left-column">
+
+        <Card :card="cards[0]" class="is-horizontal"></Card>
+
       </div>
-      <div class="right-navbar">
-        <div class="rightnavbar-block">
-          <div class="header-icon">
-            <font-awesome-icon icon="clock" class =  "clock"/>
-          </div>
-          <span>Работаем круглосуточно</span>
-        </div>
-        <div class="rightnavbar-block">
-          <div class="header-icon">
-            <font-awesome-icon icon="mobile" />
-          </div>
-          <nav class="call-number">
-            <a href="">067 135 15 47</a>
-          </nav>
-        </div>
-        <div class="rightnavbar-block">
-          <div class="header-icon">
-            <font-awesome-icon icon="mobile" />
-          </div>
-          <nav class="call-number">
-            <a href="">099 053 88 64</a>
-          </nav>
-        </div>
+
+      <!-- right column -->
+      <div class="right-column">
+
+        <Card :card="cards[1]" class="is-horizontal"></Card>
+        <Card :card="cards[2]" class="is-horizontal"></Card>
+        <Card :card="cards[3]" class="is-horizontal"></Card>
+
       </div>
-    </main>
+      <!-- right column end-->
+    </Container>
   </header>
 </template>
 
-<style>
-.left-navbar,
-.right-navbar,
-.header-navigation,
-.rightnavbar-block {
-  display: flex;
-  align-items: center;
-}
+<style lang="scss" scoped>
+$header-padding: .5em 0;
 
-.main-header {
+.site-header {
+  padding: $header-padding;
   background-color: #222222;
-  /*max-height: 40px;*/
-  font-size: .8rem;
-}
-
-.header-navigation {
-  max-height: 40px;
-  padding: 10px;
-  justify-content: space-between;
-  max-width: 66%;
-  margin: 0 auto;
-}
-
-.rightnavbar-block {
-  padding: 0 15px;
 }
 
 .header-icon {
@@ -69,19 +38,13 @@
   margin-right: 10px;
 }
 
-.clock{
+.clock {
   max-width: 18px;
 }
 
-.main-header,
+.site-header,
 a {
   color: white;
-}
-
-@media (max-width: 1024px) {
-  header {
-    font-size: 0.75em;
-  }
 }
 
 @media (max-width: 767px) {
@@ -92,7 +55,40 @@ a {
 </style>
 
 <script>
+import Container from '../components/layout/Container';
+import Card from '../components/Card';
+
 export default {
   name: "Header",
+  components: {
+    Container,
+    Card,
+  },
+  data() {
+    return {
+      cards: [
+        {
+          icon: 'lock',
+          title: '',
+          text: 'Открываем замки любой сложности',
+        },
+        {
+          icon: 'clock',
+          title: '',
+          text: 'Работаем круглосуточно',
+        },
+        {
+          icon: 'mobile',
+          title: '',
+          text: '067 135 15 47',
+        },
+        {
+          icon: 'mobile',
+          title: '',
+          text: '099 053 88 64',
+        },
+      ]
+    }
+  }
 };
 </script>
