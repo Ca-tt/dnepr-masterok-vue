@@ -1,7 +1,6 @@
 <template>
   <section class="dimmed">
     <div class="call-dimmer">
-
       <div class="call-request">
         <div class="request-title">
           <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
@@ -12,7 +11,7 @@
             <div>
               <p>Введите ваш номер телефона</p>
             </div>
-            <div>
+            <div class="input-container">
               <the-mask
                 :mask="['+38(0##) ###-##-##']"
                 placeholder="+38(0__) ___-__-__"
@@ -25,17 +24,16 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </template>
 
 
 <style>
-.call-dimmer{
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 530px;
+.call-dimmer {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 530px;
 }
 .dimmed {
   background-image: url("../img/contactusheader.jpg");
@@ -80,8 +78,8 @@
   border: none;
   font-size: 20px;
   margin-right: 0;
-  text-align: center;
   outline: 0;
+  max-width: 185px;
 }
 
 .send {
@@ -95,21 +93,21 @@
 }
 
 .call-request {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (max-width: 426px){
-    .call-dimmer{
-      height: 400px;
-    }
+@media screen and (max-width: 426px) {
+  .call-dimmer {
+    height: 400px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .call-dimmer{
-      height: 500px;
+  .call-dimmer {
+    height: 500px;
   }
   .call-request {
     padding: 75px 0;
@@ -125,7 +123,6 @@
   }
 
   .y-tel-number {
-    width: 50%;
     padding: 20px 40px 38px 40px;
   }
 
@@ -147,6 +144,7 @@
 
   .tel-input {
     font-size: 23px;
+    max-width: 230px;
   }
 
   .send {
@@ -165,7 +163,8 @@
   }
 
   .tel-input {
-    font-size: 25px;
+    font-size: 28px;
+    max-width: 260px;
   }
 }
 
