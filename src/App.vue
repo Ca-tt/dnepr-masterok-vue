@@ -45,5 +45,6 @@ export default {
 <style lang="scss">
 
 @import "./scss/app/defaults";
+@import "./../node_modules/typeface-roboto/index.css"
 
 </style>

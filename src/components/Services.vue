@@ -118,6 +118,7 @@
     }
     h1, h2, h3, h4, h5, h6{
         color: #54617a;
+        font-family: "Roboto", sans-serif;
     }
     .explanation-of-service{
         margin: 0;
@@ -160,7 +161,7 @@
 
     h2.title{
         font-weight: 100;
-        font-family: sans-serif;
+        /* font-family: sans-serif; */
         font-size: 35px;
         margin-bottom: 10px;
         color: #54617a;
