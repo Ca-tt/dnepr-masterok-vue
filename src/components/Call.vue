@@ -20,7 +20,7 @@
             </div>
           </div>
           <div class="tel-number-send">
-            <a href="" class="send">ОТПРАВИТЬ</a>
+            <a href="" class="send-button">ОТПРАВИТЬ</a>
           </div>
         </div>
       </div>
@@ -66,12 +66,16 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff;
-  height: 151px;
+  /* height: 151px; */
   width: 90%;
   padding: 20px 0px 38px 0px;
   border-radius: 8px;
   color: #7f7f7f;
   margin: 0;
+}
+
+.tel-number-send {
+      margin-top: 20px;
 }
 
 .tel-input {
@@ -82,7 +86,8 @@
   max-width: 185px;
 }
 
-.send {
+.send-button {
+  color: white;
   font-size: 0.8em;
   text-decoration: none;
   background-color: #fab005;
@@ -124,6 +129,7 @@
 
   .y-tel-number {
     padding: 20px 40px 38px 40px;
+    width: 65%;
   }
 
   .tel-number-introduce {
@@ -147,7 +153,7 @@
     max-width: 230px;
   }
 
-  .send {
+  .send-button {
     padding: 12px 50px;
     font-size: 0.9em;
   }
@@ -166,6 +172,10 @@
     font-size: 28px;
     max-width: 260px;
   }
+
+  .y-tel-number {
+    width: 55%;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -177,7 +187,7 @@
     font-size: 1.2em;
   }
 
-  .send {
+  .send-button {
     font-size: 1.1em;
   }
 }
