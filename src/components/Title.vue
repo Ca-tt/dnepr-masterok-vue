@@ -1,7 +1,7 @@
 <template>
   <section class="section is-showcase">
     <div class="dimmer">
-
+      <Container>
         <div class="menu">
           <img src="../img/title.png" class="dnepr-class-img" />
           <div class="menu-union">
@@ -33,14 +33,13 @@
             <img src="../img/mobile.png" class="title-image" />
           </div>
         </div>
+      </Container>
     </div>
-
   </section>
 </template>
 
 
 <style scoped>
-
 .section {
   background-image: url("../img/background.jpg");
   background-position: center center;
@@ -55,8 +54,7 @@
 }
 
 .title-image {
-  width: 700px;
-  height: 550px;
+  width: 250px;
 }
 .dnepr-class-img {
   width: 272px;
@@ -129,8 +127,7 @@
 }
 .title-slide {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: space-evenly;
 }
 .menu-click {
   text-decoration: none;
@@ -158,12 +155,7 @@
     font-size: 40px;
   }
   .title-slide {
-    justify-content: flex-end;
     align-items: center;
-  }
-  .title-image {
-    width: 500px;
-    height: 400px;
   }
   .c-f {
     margin-bottom: 55px;
@@ -183,13 +175,42 @@
   }
   .list {
     font-size: 18px;
+    text-align: center;
   }
   .main-title {
     font-size: 30px;
+    text-align: center;
   }
   .title-image {
-    width: 400px;
-    height: 330px;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .menu{
+    display: flex;
+    flex-direction: column;
+  }
+  .title-slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-union{
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .menu-click{
+    font-size: 17px;
+  }
+  .buttons{
+    justify-content: center;
+    align-items: center;
+  }
+  .a-m{
+    margin: 0;
+  }
+  .c-f{
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 426px) {
@@ -212,28 +233,29 @@
     width: 252px;
     height: 110px;
   }
-  .title-page {
+  .section {
     background-image: url("../img/door-background.jpg");
     min-height: 100vh;
-    background-color: rgba(146, 147, 161, 0.81);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
   }
-  .menu-union {
-    display: none;
+  .menu-union{
+    flex-direction: column;
+  }
+  .menu-click{
+    margin-bottom: 10px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 376px) {
   .title-image {
-    width: 370px;
-    height: 300px;
+    width: 180px;
   }
 }
 @media screen and (max-width: 321px) {
   .title-image {
-    width: 320px;
-    height: 270px;
+    width: 170px;
   }
   .c-f {
     margin-bottom: 30px;
@@ -248,7 +270,11 @@
 </style>
 
 <script>
+import Container from '../components/layout/Container';
 export default {
-    name:"Title",
+  name: "Title",
+  components: {
+    Container,
+  }
 };
 </script>
