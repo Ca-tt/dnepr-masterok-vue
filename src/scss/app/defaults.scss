@@ -1,0 +1,30 @@
+@import '../layout/media-querries';
+
+/*
+ Default page styles
+ - body
+ - styles for mobile responsiveness
+*/
+
+
+$default-text-alignment: center;
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  @include to-desktop {
+    text-align: $default-text-alignment;
+  }
+}
+
+body,
+figure {
+  margin: 0;
+}
+
+
