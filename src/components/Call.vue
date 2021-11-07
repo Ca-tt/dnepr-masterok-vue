@@ -53,6 +53,12 @@
   color: white;
 }
 
+.request-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .request-title h2 {
   font-size: 1.8em;
 }
