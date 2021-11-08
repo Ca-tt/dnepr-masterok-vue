@@ -185,6 +185,7 @@
     }
     .prices-page{
         background-color: whitesmoke;
+        min-height: 900px;
     }
     @media screen and (max-width: 1440px){
         .click-to-send{
