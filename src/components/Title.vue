@@ -11,28 +11,29 @@
           </div>
         </div>
 
-        <div class="title-slide">
-          <div class="opening">
-            <h1 class="main-title">
-              АВАРИЙНОЕ<br />
-              ВСКРЫТИЕ ЗАМКОВ
-            </h1>
-            <ul class="list">
-              <li>- ОТКРЫВАЕМ ВСЕ ВИДЫ ЗАМКОВ</li>
-              <li>- ПРИЕДЕМ В ТЕЧЕНИИ 20 МИНУТ</li>
-              <li>- БЕЗ ПОВРЕЖДЕНИЯ ЗАМКА</li>
-              <li>- КОНФИДЕНЦИАЛЬНО</li>
-              <li class="tab">от 300 грн</li>
-            </ul>
-            <div class="buttons">
-              <a href="#" class="a-m"> ВЫЗВАТЬ МАСТЕРА </a>
-              <a href="#" class="c-f"> РАСЧЕТ СТОИМОСТИ </a>
-            </div>
-          </div>
-          <div class="mobile">
-            <img src="../img/mobile.png" class="title-image" />
+      <div class="title-slide">
+        <div class="opening">
+          <h1 class="main-title">
+            АВАРИЙНОЕ<br />
+            ВСКРЫТИЕ ЗАМКОВ
+          </h1>
+          <ul class="list">
+            <li>- ОТКРЫВАЕМ ВСЕ ВИДЫ ЗАМКОВ</li>
+            <li>- ПРИЕДЕМ В ТЕЧЕНИИ 20 МИНУТ</li>
+            <li>- БЕЗ ПОВРЕЖДЕНИЯ ЗАМКА</li>
+            <li>- КОНФИДЕНЦИАЛЬНО</li>
+            <li class="tab">от 300 грн</li>
+          </ul>
+          <div class="buttons">
+            <a class="a-m" @click="openModal"> ВЫЗВАТЬ МАСТЕРА </a>
+            <ModalWindow/>
+            <a href="#" class="c-f"> РАСЧЕТ СТОИМОСТИ </a>
           </div>
         </div>
+        <div class="mobile">
+          <img src="../img/mobile.png" class="title-image" />
+        </div>
+      </div>
       </Container>
     </div>
   </section>
@@ -271,10 +272,17 @@
 
 <script>
 import Container from '../components/layout/Container';
+import ModalWindow from "./ModalWindow.vue";
 export default {
   name: "Title",
+  methods: {
+    openModal() {
+      this.$refs.modal.open();
+    },
+  },
   components: {
     Container,
+    ModalWindow,
   }
 };
 </script>

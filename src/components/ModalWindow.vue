@@ -1,119 +1,60 @@
 <template>
   <div>
-    <button class="a-m" type="button" @click="openModal">
-      Open modal
-    </button>
-
-    <sweet-modal ref="modal">
-      test text
+    <sweet-modal ref="modal" width = "21%" overlay-theme = "dark">
       <div class="modal-head">
         <h1 class="topic">ВЫЗОВ МАСТЕРА</h1>
-<!--        <a @click="showModal = false"><span class="close-modal"> &times; </span></a>-->
       </div>
-      <p>&nbsp;</p>
+      <p>&nbsp;</p> 
       <div class="modal-body">
-        <label>Введите ваш номер телефона</label>
-        <input class="tel-mask" placeholder="+38(0__) ___-__-__" type="tel"
+        <label class = "enter-tel">Введите ваш номер телефона</label>
+        <input class="tel-input" placeholder="+38(0__) ___-__-__" type="tel"
                v-mask="['+38(0##) ###-##-##']"/>
       </div>
       <a href="" class="send">ОТПРАВИТЬ</a>
-      <p class="underline">*перезвоним в течении 5 минут</p>
+      <p>*перезвоним в течении 5 минут</p>
       <hr/>
       <p>Нет времени ждать звонка?<br> Нажмите чтоб позвонить:</p>
-      <h4 class="topic">067 135 15 47</h4>
-      <h4 class="topic">099 053 88 64</h4>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
+      <h2 class="topic">067 135 15 47</h2>
+      <h2 class="topic">099 053 88 64</h2>
     </sweet-modal>
   </div>
 </template>
 
+<script>
+
+export default {
+  name: "ModalWindow",
+
+  methods: {
+    openModal() {
+      this.$refs.modal.open()
+    }
+
+  },
+};
+
+</script>
+
 <style>
-.vm-titlebar {
-  display: none;
-}
 
-.vm-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #000;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 100;
-  font-size: 20px;
-}
-
-.close-modal {
-  height: 27px;
-  width: 27px;
-  position: absolute;
-  border: 2px solid #ffff;
-  background-color: rgba(117, 190, 218, 0.5);
-  border-radius: 15px;
-  top: -16px;
-  right: -14px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
+.sweet-content{
+  padding-top: 0px !important;
 }
 
 .modal-body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 }
 
-.tel-mask {
-  margin-top: 5px;
-  border: none;
-  font-size: 25px;
-  text-align: center;
-  outline: 0;
-}
-
-.topic {
+h2{
   color: orange;
 }
 
-.underline {
-  border-bottom: 1px solid slategrey;
-  padding-bottom: 20px;
-}
-
-.send {
-  margin: 10px;
-  display: flex;
-  align-items: center;
+p , .enter-tel{
+  color: gray;
+  font-family: inherit
 }
 
 </style>
-
-<script>
-import bodyScroll from "body-scroll-freezer";
-
-export default {
-  name: "ModalWindow",
-
-  data: function () {
-    return {
-      showModal: false
-    };
-  },
-  mounted() {
-    bodyScroll.init();
-  },
-  methods: {
-    beforeOpen() {
-      bodyScroll.freeze();
-    },
-    beforeClose() {
-      bodyScroll.unfreeze();
-    },
-    openModal() {
-      this.$refs.modal.open()
-    },
-  },
-};
-
-</script>
-
