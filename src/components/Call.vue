@@ -103,6 +103,10 @@
     0 1px 14px 0 rgb(0 0 0 / 12%);
 }
 
+.send-button:hover {
+  background-color: #faa005;
+}
+
 .call-request {
   display: flex;
   flex-direction: column;

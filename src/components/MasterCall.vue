@@ -1,36 +1,38 @@
 <template>
     <section>
-        <div class="communication">
-            <div class="title">
-                <h2 class="title">ВЫЗОВ МАСТЕРА</h2>
+        <Container>
+            <div class="communication">
+                <div class="title">
+                    <h2 class="title">ВЫЗОВ МАСТЕРА</h2>
+                </div>
+                <div class="com-container">
+                    <div class="kyivstar">
+                        <div class="logo">
+                            <img src="../img/kyivstar.png" alt="">
+                        </div>
+                        <div class="number">
+                            <a href="">067 135 15 47</a>
+                        </div>
+                    </div>
+                    <div class="vodafone">
+                        <div class="logo">
+                            <img src="../img/vodafone.png" alt="">
+                        </div>
+                        <div class="number">
+                            <a href="">099 053 88 64</a>
+                        </div>
+                    </div>
+                    <div class="call-back">
+                        <div class="backcall">
+                            <a href="">ОБРАТНЫЙ ЗВОНОК</a>
+                        </div>
+                        <div class="call-soon">
+                            <p>Перезвоним в течении 3-5 минут</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="com-container">
-                <div class="kyivstar">
-                    <div class="logo">
-                        <img src="../img/kyivstar.png" alt="">
-                    </div>
-                    <div class="number">
-                        <a href="">067 135 15 47</a>
-                    </div>
-                </div>
-                <div class="vodafone">
-                    <div class="logo">
-                        <img src="../img/vodafone.png" alt="">
-                    </div>
-                    <div class="number">
-                        <a href="">099 053 88 64</a>
-                    </div>
-                </div>
-                <div class="call-back">
-                    <div class="backcall">
-                        <a href="">ОБРАТНЫЙ ЗВОНОК</a>
-                    </div>
-                    <div class="call-soon">
-                        <p>Перезвоним в течении 3-5 минут</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </Container>
     </section>
 </template>
 
@@ -75,6 +77,10 @@
         background-color: #FAB619;
         border-radius: 5px;
         font-size: 12px;
+    }
+
+    .backcall a:hover {
+        background-color: #FAC019;
     }
 
     .call-soon p {
@@ -149,9 +155,13 @@
 </style>
 
 <script>
+import Container from '../components/layout/Container';
 
 export default {
   name: 'MasterCall',
+  components: {
+    Container
+  }
 }
 
 </script>
