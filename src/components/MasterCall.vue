@@ -50,6 +50,7 @@
         flex-direction: column;
         margin-bottom: 18px;
         justify-content: space-around;
+        align-items: center;
     }
 
     .call-back {

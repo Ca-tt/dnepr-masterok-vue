@@ -34,7 +34,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 200px;
+        /* height: 200px; */
     }
     .note{
         background-color: whitesmoke;
