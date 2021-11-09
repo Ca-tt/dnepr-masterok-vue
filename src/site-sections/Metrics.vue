@@ -1,16 +1,21 @@
 <template>
-  <section class="cards has-four-cards metrics">
-    <Card v-for="card in cards" :key="card.icon" :card="card" class="is-horizontal"/>
-  </section>
+  <Container>
+    <section class="cards has-four-cards metrics">
+      <Card class="is-vertical" v-for="card in cards" :key="card.icon"
+            :card="card"/>
+    </section>
+  </Container>
 </template>
 
 <script>
 import Card from '../components/Card.vue';
+import Container from '../components/layout/Container.vue';
 
 export default {
   name: 'Metrics',
   components: {
     Card,
+    Container,
   },
   data() {
     return {
@@ -42,15 +47,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './../scss/app/colors';
-@import './../scss/layout/breakpoints';
+@import './../scss/layout/media-querries';
 
 
-// TODO: refactor and gather old styles and new
-$cards-section-padding: 30px 0;
+$cards-section-padding: 2rem 0;
 
-$card-icon-size: 40px;
-$card-color: $grey;
 
 .cards {
   padding: $cards-section-padding;
@@ -59,34 +60,6 @@ $card-color: $grey;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
-  @media screen and (min-width: $desktop) {
-    justify-content: space-around;
-  }
-
-  .card {
-    margin: 0;
-    color: $card-color;
-
-    // change card width as screen getting bigger
-    @media screen and (min-width: $tablet) {
-      width: 50%;
-    }
-    @media screen and (min-width: $desktop) {
-      width: auto;
-    }
-
-    &-icon {
-      font-size: $card-icon-size;
-    }
-
-    &-title {
-
-    }
-
-    &-text {
-      color: #f5ac00;
-    }
   }
 }
 
