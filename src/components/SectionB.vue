@@ -24,6 +24,11 @@
 </template>
 
 <style>
+  .ad-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   @media screen and (max-width: 426px){
     .business-metrics{
       margin-top: 40px !important;
@@ -71,14 +76,14 @@
       color: #54617a;
     }
     .business-metrics{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-        margin-top: 80px;
-        margin-bottom: 80px;
-      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
 </style>
 
 <script>
