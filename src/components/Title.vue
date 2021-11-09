@@ -3,7 +3,7 @@
     <div class="dimmer">
       <Container>
         <div class="menu">
-          <img src="../img/title.png" class="dnepr-class-img" />
+          <img src="../img/title.png" class="dnepr-class-img"/>
           <div class="menu-union">
             <a href="#" class="menu-click"> УСЛУГИ И ЦЕНЫ </a>
             <a href="#" class="menu-click"> НАШИ ПРИЕМУЩЕСТВА </a>
@@ -14,7 +14,7 @@
         <div class="title-slide">
           <div class="opening">
             <h1 class="main-title">
-              АВАРИЙНОЕ<br />
+              АВАРИЙНОЕ<br/>
               ВСКРЫТИЕ ЗАМКОВ
             </h1>
             <ul class="list">
@@ -25,13 +25,13 @@
               <li class="tab">от 300 грн</li>
             </ul>
             <div class="buttons">
-              <a class="a-m" @click="openModal"> ВЫЗВАТЬ МАСТЕРА </a>
-              <ModalWindow />
+              <!-- что значит класс a-m? Неудачное название -->
+              <ModalWindow buttonText="Вызвать Мастера"></ModalWindow>
               <a href="#" class="c-f"> РАСЧЕТ СТОИМОСТИ </a>
             </div>
           </div>
           <div class="mobile">
-            <img src="../img/mobile.png" class="title-image" />
+            <img src="../img/mobile.png" class="title-image"/>
           </div>
         </div>
       </Container>
@@ -39,6 +39,18 @@
   </section>
 </template>
 
+<script>
+import Container from "../components/layout/Container";
+import ModalWindow from "../components/ModalWindow";
+
+export default {
+  name: "Title",
+  components: {
+    Container,
+    ModalWindow,
+  },
+};
+</script>
 
 <style scoped>
 .section {
@@ -57,10 +69,12 @@
 .title-image {
   width: 250px;
 }
+
 .dnepr-class-img {
   width: 272px;
   height: 124px;
 }
+
 .c-f {
   width: 250px;
   height: 50px;
@@ -72,6 +86,7 @@
   outline: 2px solid white;
   border-radius: 5px;
 }
+
 .c-f:hover {
   width: 250px;
   height: 50px;
@@ -84,167 +99,187 @@
   outline: 2px solid white;
   border-radius: 5px;
 }
+
 .buttons {
   display: flex;
-}
-.a-m {
-  text-decoration: none;
-  color: white;
-  background-color: #fab005;
-  border-color: #fab005;
-  width: 250px;
-  height: 50px;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-  margin-right: 30px;
+  justify-content: space-between;
 }
-.a-m:hover {
-  text-decoration: none;
-  color: white;
-  background-color: rgb(255, 203, 59);
-}
+
 .list > li {
   margin-top: 25px;
 }
+
 .tab {
   margin-left: 80px;
 }
+
 .opening {
   text-align: left;
 }
+
 .main-title {
   font-size: 50px;
   color: white;
   font-weight: 600;
   margin-bottom: 0;
 }
+
 .list {
   list-style-type: none;
   padding: 0;
   color: white;
   font-size: 20px;
 }
+
 .title-slide {
   display: flex;
   justify-content: space-evenly;
 }
+
 .menu-click {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.65);
   font-size: 17px;
   font-weight: 600;
 }
+
 .menu-click:hover {
   text-decoration: none;
   color: white;
 }
+
 .menu-union {
   display: flex;
   justify-content: space-around;
   width: 100%;
   margin-left: 50px;
 }
+
 .menu {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
+
 @media screen and (min-width: 1024px) {
   .menu {
     justify-content: space-between;
   }
+
   .menu-union {
     max-width: 55%;
   }
 }
+
 @media screen and (max-width: 1024px) {
   .main-title {
     font-size: 40px;
   }
+
   .title-slide {
     align-items: center;
   }
+
   .c-f {
     margin-bottom: 55px;
     margin-top: 15px;
   }
+
   .buttons {
     flex-direction: column;
   }
-  .menu-click{
+
+  .menu-click {
     padding: 0 15px;
   }
 }
+
 @media screen and (max-width: 769px) {
   .menu-click {
     font-size: 15px;
   }
+
   .dnepr-class-img {
     width: 232px;
     height: 104px;
   }
+
   .list {
     font-size: 18px;
     text-align: center;
   }
+
   .main-title {
     font-size: 30px;
     text-align: center;
   }
+
   .title-image {
     width: 200px;
     margin-bottom: 20px;
   }
+
   .menu {
     display: flex;
     flex-direction: column;
   }
+
   .title-slide {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
   .menu-union {
     margin-left: 0;
     margin-top: 10px;
   }
+
   .menu-click {
     font-size: 17px;
   }
+
   .buttons {
     justify-content: center;
     align-items: center;
   }
+
   .a-m {
     margin: 0;
   }
+
   .c-f {
     margin-bottom: 20px;
   }
 }
+
 @media screen and (max-width: 426px) {
   .a-m {
     margin-right: 0;
   }
+
   .buttons {
     justify-content: center;
     align-items: center;
   }
+
   .main-title,
   .list {
     text-align: center;
   }
+
   .title-slide {
     flex-direction: column;
   }
+
   .dnepr-class-img {
     margin-top: 20px;
     width: 252px;
     height: 110px;
   }
+
   .section {
     background-image: url("../img/door-background.jpg");
     min-height: 100vh;
@@ -252,48 +287,38 @@
     background-attachment: fixed;
     background-size: cover;
   }
+
   .menu-union {
     flex-direction: column;
   }
+
   .menu-click {
     margin-bottom: 10px;
     font-size: 20px;
   }
 }
+
 @media screen and (max-width: 376px) {
   .title-image {
     width: 180px;
   }
 }
+
 @media screen and (max-width: 321px) {
   .title-image {
     width: 170px;
   }
+
   .c-f {
     margin-bottom: 30px;
   }
+
   .main-title {
     font-size: 26px;
   }
+
   .list {
     font-size: 17px;
   }
 }
 </style>
-
-<script>
-import Container from "../components/layout/Container";
-import ModalWindow from "./ModalWindow.vue";
-export default {
-  name: "Title",
-  methods: {
-    openModal() {
-      this.$refs.modal.open();
-    },
-  },
-  components: {
-    Container,
-    ModalWindow,
-  },
-};
-</script>
