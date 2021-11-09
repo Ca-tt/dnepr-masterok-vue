@@ -20,7 +20,7 @@
             </div>
           </div>
           <div class="tel-number-send">
-            <a href="" class="send-button">ОТПРАВИТЬ</a>
+            <a href="#" class="send-button">ОТПРАВИТЬ</a>
           </div>
         </div>
       </div>
