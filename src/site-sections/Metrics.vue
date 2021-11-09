@@ -1,6 +1,6 @@
 <template>
   <section class="cards has-four-cards metrics">
-    <Card v-for="card in cards" :key="card.icon" :card="card"/>
+    <Card v-for="card in cards" :key="card.icon" :card="card" class="is-horizontal"/>
   </section>
 </template>
 
