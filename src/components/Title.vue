@@ -14,7 +14,7 @@
       <div class="title-slide">
         <div class="opening">
           <h1 class="main-title">
-            АВАРИЙНОЕ<br />
+            EMERGENT<br />
             ВСКРЫТИЕ ЗАМКОВ
           </h1>
           <ul class="list">
