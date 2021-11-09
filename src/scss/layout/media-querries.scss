@@ -23,3 +23,9 @@
     @content ;
   }
 }
+
+@mixin from-large-desktop {
+  @media screen and (min-width: $desktop-l) {
+    @content ;
+  }
+}

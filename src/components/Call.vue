@@ -53,6 +53,12 @@
   color: white;
 }
 
+.request-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .request-title h2 {
   font-size: 1.8em;
 }
@@ -95,6 +101,10 @@
   border-radius: 5px;
   box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 5px 8px 0 rgb(0 0 0 / 14%),
     0 1px 14px 0 rgb(0 0 0 / 12%);
+}
+
+.send-button:hover {
+  background-color: #faa005;
 }
 
 .call-request {

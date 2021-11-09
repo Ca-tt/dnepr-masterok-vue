@@ -34,6 +34,10 @@ $right-column-display: flex;
     max-width: 90%;
   }
 
+  @include from-large-desktop {
+    max-width: 70%;
+  }
+
   // TODO: refactor code repetition
 
   // starting from tablet

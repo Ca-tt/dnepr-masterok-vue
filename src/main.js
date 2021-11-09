@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
+import VueModal from '@kouts/vue-modal'
+import '@kouts/vue-modal/dist/vue-modal.css'
 import VueTheMask from 'vue-the-mask'
 import SweetModal from 'sweet-modal-vue/src/plugin.js'
 
@@ -40,9 +42,10 @@ library.add(
 
 Vue.use(SweetModal)
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('Modal', VueModal)
 
 Vue.use(VueTheMask)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 new Vue({

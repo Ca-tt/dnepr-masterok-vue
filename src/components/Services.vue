@@ -40,10 +40,8 @@
                 <h3 class="service-title">ЗАМЕНА НОЧНОЙ ЗАДВИЖКИ</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
-                <a class="to-master" href="">
-                    <figure class="give-call">
+                <a class="give-call" href="">
                         <h5 class="title-of-call">СРОЧНО ВЫЗВАТЬ МАСТЕРА</h5>
-                    </figure>
                 </a>
             </div>
             <div class="clarify-price">
@@ -52,7 +50,7 @@
                 <img src="../img/logo-viber.png" class="sn">
                 <p class="click-to-send">нажмите для отправки фото</p>
                 <a class="to-master" href="">
-                    <h5 class="send">ОТПРАВИТЬ ФОТО</h5>
+                    ОТПРАВИТЬ ФОТО
                 </a>
             </div>
         </section>
@@ -67,6 +65,14 @@
     }
     .to-master{
         text-decoration: none;
+        background-color: #fab005;
+        color: #fff;
+        width: 200px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
     }
     .calculation{
         margin: 0;
@@ -88,10 +94,6 @@
         flex-wrap: wrap;
         width: 380px;
     }
-    .send{
-        text-align: center;
-        color: white;
-    }
     .sn{
       margin-top: 10px !important;
       max-width: 100%;
@@ -109,6 +111,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 5px;
+        text-decoration: none;
     }
     .main{
         display: flex;
@@ -182,6 +185,7 @@
     }
     .prices-page{
         background-color: whitesmoke;
+        min-height: 900px;
     }
     @media screen and (max-width: 1440px){
         .click-to-send{
