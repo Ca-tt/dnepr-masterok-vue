@@ -4,7 +4,6 @@
     <Title />
     <MasterCall />
     <Services />
-    <!-- <SectionB /> -->
     <Metrics />
     <Preferences />
     <Note />
@@ -18,7 +17,6 @@
 import Header from './site-sections/Header.vue'
 import MasterCall from './components/MasterCall.vue'
 import Services from './components/Services.vue'
-// import SectionB from './components/SectionB.vue'
 import Metrics from './site-sections/Metrics.vue'
 import Preferences from './components/Preferences.vue'
 import Note from './components/Note.vue'
@@ -33,7 +31,6 @@ export default {
     Header,
     MasterCall,
     Services,
-    // SectionB,
     Metrics,
     Preferences,
     Note,

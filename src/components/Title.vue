@@ -11,29 +11,29 @@
           </div>
         </div>
 
-      <div class="title-slide">
-        <div class="opening">
-          <h1 class="main-title">
-            АВАРИЙНОЕ<br />
-            ВСКРЫТИЕ ЗАМКОВ
-          </h1>
-          <ul class="list">
-            <li>- ОТКРЫВАЕМ ВСЕ ВИДЫ ЗАМКОВ</li>
-            <li>- ПРИЕДЕМ В ТЕЧЕНИИ 20 МИНУТ</li>
-            <li>- БЕЗ ПОВРЕЖДЕНИЯ ЗАМКА</li>
-            <li>- КОНФИДЕНЦИАЛЬНО</li>
-            <li class="tab">от 300 грн</li>
-          </ul>
-          <div class="buttons">
-            <a class="a-m" @click="openModal"> ВЫЗВАТЬ МАСТЕРА </a>
-            <ModalWindow/>
-            <a href="#" class="c-f"> РАСЧЕТ СТОИМОСТИ </a>
+        <div class="title-slide">
+          <div class="opening">
+            <h1 class="main-title">
+              АВАРИЙНОЕ<br />
+              ВСКРЫТИЕ ЗАМКОВ
+            </h1>
+            <ul class="list">
+              <li>- ОТКРЫВАЕМ ВСЕ ВИДЫ ЗАМКОВ</li>
+              <li>- ПРИЕДЕМ В ТЕЧЕНИИ 20 МИНУТ</li>
+              <li>- БЕЗ ПОВРЕЖДЕНИЯ ЗАМКА</li>
+              <li>- КОНФИДЕНЦИАЛЬНО</li>
+              <li class="tab">от 300 грн</li>
+            </ul>
+            <div class="buttons">
+              <a class="a-m" @click="openModal"> ВЫЗВАТЬ МАСТЕРА </a>
+              <ModalWindow />
+              <a href="#" class="c-f"> РАСЧЕТ СТОИМОСТИ </a>
+            </div>
+          </div>
+          <div class="mobile">
+            <img src="../img/mobile.png" class="title-image" />
           </div>
         </div>
-        <div class="mobile">
-          <img src="../img/mobile.png" class="title-image" />
-        </div>
-      </div>
       </Container>
     </div>
   </section>
@@ -141,15 +141,23 @@
   color: white;
 }
 .menu-union {
-  width: 500px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  width: 100%;
   margin-left: 50px;
 }
 .menu {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    justify-content: space-between;    
+  }
+  .menu-union {
+    max-width: 55%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .main-title {
@@ -164,6 +172,9 @@
   }
   .buttons {
     flex-direction: column;
+  }
+  .menu-click{
+    padding: 0 15px;
   }
 }
 @media screen and (max-width: 769px) {
@@ -186,31 +197,31 @@
     width: 200px;
     margin-bottom: 20px;
   }
-  .menu{
+  .menu {
     display: flex;
     flex-direction: column;
   }
-  .title-slide{
+  .title-slide {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .menu-union{
+  .menu-union {
     margin-left: 0;
     margin-top: 10px;
   }
-  .menu-click{
+  .menu-click {
     font-size: 17px;
   }
-  .buttons{
+  .buttons {
     justify-content: center;
     align-items: center;
   }
-  .a-m{
+  .a-m {
     margin: 0;
   }
-  .c-f{
+  .c-f {
     margin-bottom: 20px;
   }
 }
@@ -241,10 +252,10 @@
     background-attachment: fixed;
     background-size: cover;
   }
-  .menu-union{
+  .menu-union {
     flex-direction: column;
   }
-  .menu-click{
+  .menu-click {
     margin-bottom: 10px;
     font-size: 20px;
   }
@@ -271,7 +282,7 @@
 </style>
 
 <script>
-import Container from '../components/layout/Container';
+import Container from "../components/layout/Container";
 import ModalWindow from "./ModalWindow.vue";
 export default {
   name: "Title",
@@ -283,6 +294,6 @@ export default {
   components: {
     Container,
     ModalWindow,
-  }
+  },
 };
 </script>
