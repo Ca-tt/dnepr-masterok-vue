@@ -1,6 +1,8 @@
 <template>
   <section class="section is-showcase">
     <div class="dimmer">
+      
+
 
         <div class="menu">
           <img src="../img/title.png" class="dnepr-class-img" />
