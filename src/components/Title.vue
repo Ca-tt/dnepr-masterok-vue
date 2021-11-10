@@ -3,7 +3,7 @@
     <div class="dimmer">
       <Container>
         <div class="menu">
-          <img src="../img/title.png" class="dnepr-class-img"/>
+          <img src="../img/title.png" class="dnepr-class-img" />
           <div class="menu-union">
             <a href="#" class="menu-click"> УСЛУГИ И ЦЕНЫ </a>
             <a href="#" class="menu-click"> НАШИ ПРИЕМУЩЕСТВА </a>
@@ -14,7 +14,7 @@
         <div class="title-slide">
           <div class="opening">
             <h1 class="main-title">
-              АВАРИЙНОЕ<br/>
+              АВАРИЙНОЕ<br />
               ВСКРЫТИЕ ЗАМКОВ
             </h1>
             <ul class="list">
@@ -25,13 +25,14 @@
               <li class="tab">от 300 грн</li>
             </ul>
             <div class="buttons">
-              <!-- что значит класс a-m? Неудачное название -->
-              <ModalWindow buttonText="Вызвать Мастера"></ModalWindow>
+              <a class="modal" href="#">
+                <ModalWindow buttonText="ВЫЗВАТЬ МАСТЕРА"></ModalWindow>
+              </a>
               <a href="#" class="c-f"> РАСЧЕТ СТОИМОСТИ </a>
             </div>
           </div>
           <div class="mobile">
-            <img src="../img/mobile.png" class="title-image"/>
+            <img src="../img/mobile.png" class="title-image" />
           </div>
         </div>
       </Container>
@@ -134,7 +135,7 @@ export default {
 
 .title-slide {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .menu-click {
