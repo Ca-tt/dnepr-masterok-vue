@@ -15,9 +15,10 @@
     @media screen and (max-width: 1024px){
         .notes{
             font-size: 15px !important;
+          /* о, костыль ( не используй !important) */
         }
         .title-note{
-            font-size: 20px !important;
+            font-size: 20px !important; /* о, еще один костыль */
         }
     }
     .notes{
@@ -34,12 +35,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* height: 200px; */
     }
     .note{
-        background-color: whitesmoke;
+        background-color: rgb(245, 250, 253);
         height: 200px;
-        padding: 4%;
+        padding: 2.5%; /* паддинги в процентах -- не хорошо */
     }
 </style>
 

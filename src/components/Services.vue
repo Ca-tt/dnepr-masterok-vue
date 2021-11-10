@@ -163,7 +163,7 @@
     }
 
     h2.title{
-        font-weight: 100;
+        font-weight: 350;
         /* font-family: sans-serif; */
         font-size: 35px;
         margin-bottom: 10px;

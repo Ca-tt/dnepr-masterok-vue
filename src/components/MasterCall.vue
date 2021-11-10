@@ -11,7 +11,7 @@
                             <img src="../img/kyivstar.png" alt="">
                         </div>
                         <div class="number">
-                            <a href="">067 135 15 47</a>
+                            <a href="#">067 135 15 47</a>
                         </div>
                     </div>
                     <div class="vodafone">
@@ -19,12 +19,12 @@
                             <img src="../img/vodafone.png" alt="">
                         </div>
                         <div class="number">
-                            <a href="">099 053 88 64</a>
+                            <a href="#">099 053 88 64</a>
                         </div>
                     </div>
                     <div class="call-back">
                         <div class="backcall">
-                            <a href="">ОБРАТНЫЙ ЗВОНОК</a>
+                          <ModalWindow button-text="Обратный звонок"></ModalWindow>
                         </div>
                         <div class="call-soon">
                             <p>Перезвоним в течении 3-5 минут</p>
@@ -36,6 +36,20 @@
     </section>
 </template>
 
+
+<script>
+import Container from '../components/layout/Container';
+import ModalWindow from "@/components/ModalWindow";
+
+export default {
+  name: 'MasterCall',
+  components: {
+    ModalWindow,
+    Container
+  }
+}
+
+</script>
 
 <style>
     .communication {
@@ -153,15 +167,3 @@
         }
     }
 </style>
-
-<script>
-import Container from '../components/layout/Container';
-
-export default {
-  name: 'MasterCall',
-  components: {
-    Container
-  }
-}
-
-</script>

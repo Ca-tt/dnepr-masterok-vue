@@ -34,6 +34,12 @@ export default {
 @import '../scss/app/colors';
 @import '../scss/layout/media-querries';
 
+// TODO: refactor and gather old styles and new
+$cards-section-padding: 30px 0;
+
+$card-icon-size: 50px;
+$card-color: $grey;
+
 // card configs (general)
 $default-card-padding: .25em;
 
@@ -47,6 +53,7 @@ $desktop-font-size: 17px;
 
 .card {
 
+  // карточки в хедере
   &.is-horizontal {
 
     .card-icon {
@@ -70,9 +77,38 @@ $desktop-font-size: 17px;
       .card-text {
         font-size: $desktop-font-size;
       }
+    }
+  }
 
+  // карточки в Metrics
+  &.is-vertical {
+    text-align: center;
+    margin: 0 0 2rem 0;
+    color: $card-color;
+
+    // change card width as screen getting bigger
+    @media screen and (min-width: $tablet) {
+      width: 50%;
+    }
+    @media screen and (min-width: $desktop) {
+      width: auto;
     }
 
+    .card-icon {
+      font-size: $card-icon-size;
+      margin: 0 0 2rem 0;
+    }
+
+    .card-title {
+      font-size: 2rem;
+      margin: 0 0 1rem 0;
+    }
+
+    .card-text {
+      color: #f5ac00;
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
   }
 
 }
