@@ -243,6 +243,7 @@
   }
   .menu-union{
     flex-direction: column;
+    width: 100%;
   }
   .menu-click{
     margin-bottom: 10px;

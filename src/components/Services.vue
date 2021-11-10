@@ -92,7 +92,7 @@
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
-        width: 380px;
+        width: 26%;
     }
     .sn{
       margin-top: 10px !important;
@@ -134,7 +134,7 @@
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
-        width: 380px;
+        width: 26%;
     }
     .service-title{
         margin-top: 10px;
@@ -199,6 +199,7 @@
         }
         .clarify-price{
             margin: 10px;
+            width: 380px;
         }
         .sn{
             max-width: 100%;
