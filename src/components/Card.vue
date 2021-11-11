@@ -1,31 +1,32 @@
 <template>
 
-  <!-- Card template-->
-  <figure class="card">
+    <!-- Card template-->
+    <figure class="column card">
 
-    <!-- icon (required) -->
-    <header class="card-icon">
-      <font-awesome-icon :icon="card.icon"/>
-    </header>
+      <!-- icon (required) -->
+      <header class="card-icon">
+        <font-awesome-icon :icon="card.icon"/>
+      </header>
 
-    <!-- headline (optional) -->
-    <main class="card-title">{{ card.title }}</main>
+      <!-- headline (optional) -->
+      <main class="card-title">{{ card.title }}</main>
 
-    <!-- subheading or text (required) -->
-    <figcaption class="card-text">{{ card.text }}</figcaption>
+      <!-- subheading or text (required) -->
+      <figcaption class="card-text">{{ card.text }}</figcaption>
 
-  </figure>
+    </figure>
 
 </template>
 
 <script>
+
 export default {
   name: 'Card',
   props: {
     card: {
       type: Object,
       required: true,
-    }
+    },
   }
 }
 </script>
@@ -82,9 +83,14 @@ $desktop-font-size: 17px;
 
   // карточки в Metrics
   &.is-vertical {
+
+    @include to-desktop {
+      max-width: 50%;
+      margin: 0 0 2rem 0;
+    }
+
     text-align: center;
-    margin: 0 0 2rem 0;
-    color: $card-color;
+      color: $card-color;
 
     // change card width as screen getting bigger
     @media screen and (min-width: $tablet) {
