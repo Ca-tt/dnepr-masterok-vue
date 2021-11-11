@@ -52,9 +52,6 @@ export default {
 </script>
 
 <style scoped>
-.modal1{
-  margin-left:100px ;
-}
 .section {
   background-image: url("../img/background.jpg");
   background-position: center center;
