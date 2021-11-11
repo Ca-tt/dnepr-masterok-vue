@@ -12,9 +12,12 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import '../../scss/layout/media-querries.scss'
 
 .column
-  margin: 0 auto
+
+  @include mobile-only
+    margin: 0 auto
 
   // when inside a row with columns between
   .row.columns-between &
