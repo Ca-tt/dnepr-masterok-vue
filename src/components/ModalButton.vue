@@ -21,7 +21,7 @@ export default {
     color: white;
     background-color: $orange;
     border: none;
-    padding: 20px 50px;
+    padding: 18px 46px;
     border-radius: 30px;
 
     &:hover {

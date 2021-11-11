@@ -40,8 +40,8 @@
                 <h3 class="service-title">ЗАМЕНА НОЧНОЙ ЗАДВИЖКИ</h3>
                 <p class="explanation-of-service">Стоимость от 400 грн<br>
                 зависит от степени сложности замка</p>
-                <a class="give-call" href="">
-                        <h5 class="title-of-call">СРОЧНО ВЫЗВАТЬ МАСТЕРА</h5>
+                <a class="give-call">
+                    <ModalWindow buttonText="СРОЧНО ВЫЗВАТЬ МАСТЕРА"></ModalWindow>
                 </a>
             </div>
             <div class="clarify-price">
@@ -254,9 +254,11 @@
 </style>
 
 <script>
-
+import ModalWindow from "../components/ModalWindow";
 export default {
   name: 'Services',
-
+  components:{
+    ModalWindow,
+  }
 }
 </script>

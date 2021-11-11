@@ -25,9 +25,7 @@
               <li class="tab">от 300 грн</li>
             </ul>
             <div class="buttons">
-              <a class="modal" href="#">
                 <ModalWindow buttonText="ВЫЗВАТЬ МАСТЕРА"></ModalWindow>
-              </a>
               <a href="#" class="c-f"> РАСЧЕТ СТОИМОСТИ </a>
             </div>
           </div>
@@ -54,6 +52,9 @@ export default {
 </script>
 
 <style scoped>
+.modal1{
+  margin-left:100px ;
+}
 .section {
   background-image: url("../img/background.jpg");
   background-position: center center;
