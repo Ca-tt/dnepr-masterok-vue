@@ -1,5 +1,7 @@
 <template>
 
+    <!-- TODO: wrap every card with a column component -->
+
     <!-- Card template-->
     <figure class="column card">
 
