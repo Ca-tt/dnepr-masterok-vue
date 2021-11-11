@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import App from './App.vue';
 import VueModal from '@kouts/vue-modal'
 import '@kouts/vue-modal/dist/vue-modal.css'
 import VueTheMask from 'vue-the-mask'
 import SweetModal from 'sweet-modal-vue/src/plugin.js'
+import App from './App.vue';
 
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
