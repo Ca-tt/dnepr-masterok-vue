@@ -3,7 +3,7 @@
     <div class="dimmer">
       <Container>
         <div class="menu">
-          <img src="../img/title.png" class="dnepr-class-img" />
+          <img src="../img/title.png" class="dnepr-class-img"/>
           <div class="menu-union">
             <a href="#" class="menu-click"> УСЛУГИ И ЦЕНЫ </a>
             <a href="#" class="menu-click"> НАШИ ПРИЕМУЩЕСТВА </a>
@@ -11,10 +11,17 @@
           </div>
         </div>
 
-        <div class="title-slide">
-          <div class="opening">
+        <Row class="title-slide columns-between-tablet">
+          <Column class="left-column opening">
             <h1 class="main-title">
-              АВАРИЙНОЕ<br />
+              <!--
+                Убрал тег <br>. Считается дурным тоном, ведь
+                с ним тяжелее делать гибкие переходы текста
+
+                Хотя в твоем случае можно было и оставить
+                Так что не костыль =)
+              -->
+              АВАРИЙНОЕ
               ВСКРЫТИЕ ЗАМКОВ
             </h1>
             <ul class="list">
@@ -25,14 +32,15 @@
               <li class="tab">от 300 грн</li>
             </ul>
             <div class="buttons">
-                <ModalWindow buttonText="ВЫЗВАТЬ МАСТЕРА"></ModalWindow>
+              <ModalWindow buttonText="ВЫЗВАТЬ МАСТЕРА"></ModalWindow>
               <a href="#" class="c-f"> РАСЧЕТ СТОИМОСТИ </a>
             </div>
-          </div>
-          <div class="mobile">
-            <img src="../img/mobile.png" class="title-image" />
-          </div>
-        </div>
+          </Column>
+
+          <Column class="mobile right-column">
+            <img src="../img/mobile.png" class="title-image"/>
+          </Column>
+        </Row>
       </Container>
     </div>
   </section>
@@ -41,17 +49,24 @@
 <script>
 import Container from "../components/layout/Container";
 import ModalWindow from "../components/ModalWindow";
+import Row from "@/components/layout/Row";
+import Column from "@/components/layout/Column";
+
 
 export default {
   name: "Title",
   components: {
+    Column,
+    Row,
     Container,
     ModalWindow,
   },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import './../scss/layout/media-querries';
+
 .section {
   background-image: url("../img/background.jpg");
   background-position: center center;
@@ -63,6 +78,28 @@ export default {
 .dimmer {
   background-color: rgba(0, 0, 0, 0.6);
   min-height: 100vh;
+
+  .container {
+    padding: 2rem 1rem;
+  }
+}
+
+/*
+  Блоки должны идти в CSS в таком же порядке, как и в ХТМЛ
+  вытянут этот блок с низу, он был под.buttons
+*/
+
+.column {
+
+  &.left-column {
+    @include from-tablet {
+      flex: 1 0 50% !important; /*костыль. Подумаю, как исправить этот стыд */
+    }
+  }
+}
+
+.opening {
+  text-align: left;
 }
 
 .title-image {
@@ -74,36 +111,57 @@ export default {
   height: 124px;
 }
 
+// кнопки по центру только планшета
+.buttons {
+  @include mobile-only {
+    text-align: center;
+  }
+}
+
+/*
+  Название классов не оч. Объясню, почему
+
+  Мне, как разработчику, который не писал этот код, не ясно,
+  что такое .c-f: кнопка, секция, блок-контейнер?
+
+  Старайся давайть названия для блоков по следующей методе:
+  - что за элемент (секция, кнопка)
+  - что делает на сайте (колонка, ряд, контейнер)
+  - в каком состоянии находится (оранжевая, синяя, большая, маленькая)
+
+*/
+
+/*
+  Сократил код кнопки за счет того, что
+  не использовал flex.
+
+  Чтобы выровнять текст по центру, использовал паддинги
+  В ховере был тот же код, что и для элемента без наведения.
+
+  Убрал этот код.
+*/
+
 .c-f {
   width: 250px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 15px 25px;
+  display: inline-block;
   text-decoration: none;
   color: white;
+  text-align: center;
   outline: 2px solid white;
   border-radius: 5px;
+
+  /*
+    В sass можно делать даже так:
+    - вкладывать один элемент в другой
+    - и использовать название родительского класса (&)
+   */
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.65);
+  }
 }
 
-.c-f:hover {
-  width: 250px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.65);
-  outline: 2px solid white;
-  border-radius: 5px;
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 .list > li {
   margin-top: 25px;
@@ -113,9 +171,6 @@ export default {
   margin-left: 80px;
 }
 
-.opening {
-  text-align: left;
-}
 
 .main-title {
   font-size: 50px;
@@ -131,10 +186,11 @@ export default {
   font-size: 20px;
 }
 
-.title-slide {
-  display: flex;
-  justify-content: space-around;
-}
+/* решели с Лешей, что space-between будет выглядить лучше*/
+//.title-slide {
+//display: flex;
+//justify-content: space-between;
+//}
 
 .menu-click {
   text-decoration: none;
@@ -176,14 +232,22 @@ export default {
     font-size: 40px;
   }
 
-  .title-slide {
-    align-items: center;
-  }
+  //.title-slide {
+  //  align-items: center;
+  //}
+  /*
+    маржины указываем только нижние
+    верхние и нижние в куче слипаются между собой
+    и не дают нужного оступа
+    почитай про margin collapse, пожалуйста,
+    чтобы понять, зачем так начали делать
+  */
 
-  .c-f {
-    margin-bottom: 55px;
-    margin-top: 15px;
-  }
+
+  //.c-f {
+  //  margin-bottom: 55px;
+  //  margin-top: 15px;
+  //}
 
   .buttons {
     flex-direction: column;
@@ -224,12 +288,12 @@ export default {
     flex-direction: column;
   }
 
-  .title-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  //.title-slide {
+  //  display: flex;
+  //  flex-direction: column;
+  //  align-items: center;
+  //  justify-content: center;
+  //}
 
   .menu-union {
     margin-left: 0;
@@ -269,9 +333,9 @@ export default {
     text-align: center;
   }
 
-  .title-slide {
-    flex-direction: column;
-  }
+  //.title-slide {
+  //  flex-direction: column;
+  //}
 
   .dnepr-class-img {
     margin-top: 20px;

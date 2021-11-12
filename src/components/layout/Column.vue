@@ -11,7 +11,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '../../scss/layout/media-querries.scss'
 
 .column
@@ -19,15 +19,22 @@ export default {
   @include mobile-only
     margin: 0 auto
 
-  // when inside a row with columns between
-  .row.columns-between &
+// when inside a row with columns between
+:is(.row.columns-between,
+    .row.columns-between-tablet,
+    .row.columns-between-desktop)
+
+  .column
 
     &.left-column
-      flex: 1 1 25%
+      flex: 1 0 30%
 
     &.right-column
-      flex: 1 1 50%
-      display: flex
-      justify-content: flex-end
+      flex: 1 1 70%
+      text-align: center
+
+      @include from-tablet
+        display: flex
+        justify-content: flex-end
 
 </style>
