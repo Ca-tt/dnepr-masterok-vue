@@ -14,7 +14,9 @@ export default {
 @import '../scss/layout/media-querries';
 
 .button {
-  margin: 0 0 1rem 0;
+  @include to-desktop {
+    margin: 0 0 1rem 0;
+  }
 
   &.is-modal-opener {
     font-size: 1em;
