@@ -3,7 +3,7 @@
     <div class="call-dimmer">
       <div class="call-request">
         <div class="request-title">
-          <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
+          <h2 class="title">ЗАКАЗАТЬ ЗВОНОК</h2>
           <p>Мы перезвоним в течении 5 минут</p>
         </div>
         <div class="y-tel-number">
