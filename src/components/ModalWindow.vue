@@ -102,10 +102,6 @@
   font-size: 13px;
 }
 
-.sweet-modal {
-  max-width: 25%;
-}
-
 .modal-body {
   display: flex;
   flex-direction: column;
