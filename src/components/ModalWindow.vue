@@ -16,7 +16,12 @@
           type="tel"
           v-mask="['+38(0##) ###-##-##']"
         />
-        <a class="modal-send">ОТПРАВИТЬ</a>
+        <!--
+          Нельзя делать ссылку без href
+          Браузер сочтет это за ошибку
+          Оставляй пустой хреф (решетку), если нужно
+        -->
+        <a href="#" class="modal-send">ОТПРАВИТЬ</a>
         <div class="moving-icon">
           <font-awesome-icon icon="lock"
             class="

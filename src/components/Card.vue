@@ -14,7 +14,8 @@
       <main class="card-title">{{ card.title }}</main>
 
       <!-- subheading or text (required) -->
-      <figcaption class="card-text">{{ card.text }}</figcaption>
+      <figcaption
+          class="card-text">{{ card.text }}</figcaption>
 
     </figure>
 
@@ -88,7 +89,7 @@ $desktop-font-size: 17px;
 
     @include to-desktop {
       max-width: 50%;
-      margin: 0 0 2rem 0;
+      margin: 0 auto 2rem auto;
     }
 
     text-align: center;
