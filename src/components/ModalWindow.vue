@@ -2,7 +2,8 @@
   <div>
     <ModalButton :text="buttonText" @click.native="openModal"></ModalButton>
 
-    <sweet-modal ref="modal" hide-close-button="true">
+    <!-- check this prop hide-close-button="true"-->
+    <sweet-modal ref="modal" :hide-close-button="true">
       <div class="modal-head">
         <p class="topic">ВЫЗОВ МАСТЕРА</p>
         <span class="modal-close" @click="closeModal">&times;</span>
@@ -17,7 +18,7 @@
         />
         <a class="modal-send">ОТПРАВИТЬ</a>
         <div class="moving-icon">
-          <font-awesome-icon
+          <font-awesome-icon icon="lock"
             class="
               Тут
               должна

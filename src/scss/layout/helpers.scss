@@ -1,7 +1,10 @@
-.is-centered {
-  margin: 0 auto;
-}
+@import 'media-querries'
 
-.is-flex-from-tablet {
-  
-}
+.is-centered 
+  margin: 0 auto
+
+
+.is-flex-from-tablet
+  @include from-tablet
+    display: flex
+

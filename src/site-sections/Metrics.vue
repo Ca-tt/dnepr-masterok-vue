@@ -1,19 +1,21 @@
 <template>
   <Container>
-    <section class="cards has-four-cards metrics">
-      <Card class="is-vertical" v-for="card in cards" :key="card.icon"
+    <Row class="columns-between columns-centered-mobile cards">
+      <Card class="card is-vertical" v-for="card in cards" :key="card.icon"
             :card="card"/>
-    </section>
+    </Row>
   </Container>
 </template>
 
 <script>
-import Card from '../components/Card.vue';
 import Container from '../components/layout/Container.vue';
+import Row from "@/components/layout/Row";
+import Card from '../components/Card.vue';
 
 export default {
   name: 'Metrics',
   components: {
+    Row,
     Card,
     Container,
   },
@@ -51,7 +53,6 @@ export default {
 
 
 $cards-section-padding: 2rem 0;
-
 
 .cards {
   padding: $cards-section-padding;
