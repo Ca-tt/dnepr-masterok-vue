@@ -1,5 +1,5 @@
 <template>
-  <section class="section is-showcase">
+  <section class="section is-site-opening is-showcase">
     <div class="dimmer">
       <Container>
         <div class="menu">
@@ -84,20 +84,19 @@ export default {
   }
 }
 
+//.column {
+//
+//  &.left-column {
+//    @include from-tablet {
+//      flex: 1 0 50% !important; /*костыль. Подумаю, как исправить этот стыд */
+//    }
+//  }
+//}
+
 /*
   Блоки должны идти в CSS в таком же порядке, как и в ХТМЛ
   вытянут этот блок с низу, он был под.buttons
 */
-
-.column {
-
-  &.left-column {
-    @include from-tablet {
-      flex: 1 0 50% !important; /*костыль. Подумаю, как исправить этот стыд */
-    }
-  }
-}
-
 .opening {
   text-align: left;
 }
@@ -115,6 +114,11 @@ export default {
 .buttons {
   @include mobile-only {
     text-align: center;
+  }
+
+  @include from-desktop {
+    display: flex;
+    align-items: baseline;
   }
 }
 
@@ -142,8 +146,11 @@ export default {
 */
 
 .c-f {
-  width: 250px;
-  padding: 15px 25px;
+  // max width почти всегда лучше width
+  max-width: 250px;
+  // используйте относительные единицы, когда можно
+  // они гибкие и меняются от размера шрифта
+  padding: 1em 2em;
   display: inline-block;
   text-decoration: none;
   color: white;
@@ -249,10 +256,6 @@ export default {
   //  margin-top: 15px;
   //}
 
-  .buttons {
-    flex-direction: column;
-  }
-
   .menu-click {
     padding: 0 15px;
   }
@@ -304,10 +307,11 @@ export default {
     font-size: 17px;
   }
 
-  .buttons {
-    justify-content: center;
-    align-items: center;
-  }
+  // теперь это не нужно
+  //.buttons {
+  //  justify-content: center;
+  //  align-items: center;
+  //}
 
   .a-m {
     margin: 0;
@@ -323,10 +327,11 @@ export default {
     margin-right: 0;
   }
 
-  .buttons {
-    justify-content: center;
-    align-items: center;
-  }
+  // в этом тоже больше нет необходимости
+  //.buttons {
+  //  justify-content: center;
+  //  align-items: center;
+  //}
 
   .main-title,
   .list {
