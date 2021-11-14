@@ -20,7 +20,8 @@
             </div>
           </div>
           <div class="tel-number-send">
-            <a href="#" class="send-button">ОТПРАВИТЬ</a>
+            <!-- <a href="#" class="send-button">ОТПРАВИТЬ</a> -->
+            <ModalWindow button-text="ОТПРАВИТЬ"></ModalWindow>
           </div>
         </div>
       </div>
@@ -90,7 +91,7 @@
 }
 
 .tel-number-send {
-      margin-top: 20px;
+  margin-top: 20px;
 }
 
 .tel-input {
@@ -213,4 +214,15 @@
 </style>
 
 <script>
+import ModalWindow from "@/components/ModalWindow";
+
+
+export default {
+  name: 'Call',
+  components: {
+    ModalWindow,
+    // Container
+  }
+}
+
 </script>
