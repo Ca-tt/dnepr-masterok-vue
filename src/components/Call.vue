@@ -3,7 +3,7 @@
     <div class="call-dimmer">
       <div class="call-request">
         <div class="request-title">
-          <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
+          <h2 class="title">ЗАКАЗАТЬ ЗВОНОК</h2>
           <p>Мы перезвоним в течении 5 минут</p>
         </div>
         <div class="y-tel-number">
@@ -29,18 +29,27 @@
 </template>
 
 
-<style>
+<style lang="scss" scoped>
+@import '../scss/layout/media-querries';
+
 .call-dimmer {
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
-  height: 530px;
+  padding: 2rem 0;
+
+
+  // фиксированная высота, начиная с больших экранов
+  // а то на телефоне смотрится как огромный блок
+  @include from-tablet {
+    height: 530px;
+  }
 }
+
 .dimmed {
   background-image: url("../img/contactusheader.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;

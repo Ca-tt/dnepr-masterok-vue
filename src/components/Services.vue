@@ -12,39 +12,46 @@
       </div>
     </section>
     <section class="main">
+      <!--
+        между однотипными элементами всегда ставим одну пустую линию
+        это повышает читаемость кода
+      -->
       <div class="service">
         <img src="../img/door-open.jpg" alt="" class="service-img">
         <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ ДВЕРЕЙ</h3>
         <p class="explanation-of-service">Стоимость от 400 грн<br>
           зависит от степени сложности замка</p>
       </div>
+
       <div class="service">
         <img src="../img/auto-open.jpg" alt="" class="service-img">
         <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ АВТО</h3>
         <p class="explanation-of-service">Стоимость от 400 грн<br>
           зависит от степени сложности замка</p>
       </div>
+
       <div class="service">
         <img src="../img/safe-open.jpg" alt="" class="service-img">
         <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ СЕЙФА</h3>
         <p class="explanation-of-service">Стоимость от 400 грн<br>
           зависит от степени сложности замка</p>
       </div>
+
       <div class="service">
         <img src="../img/change-lock.jpg" alt="" class="service-img">
         <h3 class="service-title">ЗАМЕНА ЗАМКОВ</h3>
         <p class="explanation-of-service">Стоимость от 400 грн<br>
           зависит от степени сложности замка</p>
       </div>
+
       <div class="service">
         <img src="../img/change-latch.jpg" alt="" class="service-img">
         <h3 class="service-title">ЗАМЕНА НОЧНОЙ ЗАДВИЖКИ</h3>
         <p class="explanation-of-service">Стоимость от 400 грн<br>
           зависит от степени сложности замка</p>
-        <a class="give-call">
           <ModalWindow buttonText="СРОЧНО ВЫЗВАТЬ МАСТЕРА"></ModalWindow>
-        </a>
       </div>
+
       <div class="clarify-price">
         <h3 class="clarify">УТОЧНИТЬ СТОИМОСТЬ</h3>
         <p class="calculation">Для точного расчета отправьте фото замка</p>

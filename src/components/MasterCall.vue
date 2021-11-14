@@ -1,39 +1,39 @@
 <template>
-    <section>
-        <Container>
-            <div class="communication">
-                <div class="title">
-                    <h2 class="title">ВЫЗОВ МАСТЕРА</h2>
-                </div>
-                <div class="com-container">
-                    <div class="kyivstar">
-                        <div class="logo">
-                            <img src="../img/kyivstar.png" alt="">
-                        </div>
-                        <div class="number">
-                            <a href="#">067 135 15 47</a>
-                        </div>
-                    </div>
-                    <div class="vodafone">
-                        <div class="logo">
-                            <img src="../img/vodafone.png" alt="">
-                        </div>
-                        <div class="number">
-                            <a href="#">099 053 88 64</a>
-                        </div>
-                    </div>
-                    <div class="call-back">
-                        <div class="backcall">
-                          <ModalWindow button-text="Обратный звонок"></ModalWindow>
-                        </div>
-                        <div class="call-soon">
-                            <p>Перезвоним в течении 3-5 минут</p>
-                        </div>
-                    </div>
-                </div>
+  <section>
+    <Container>
+      <div class="communication">
+        <div class="title">
+          <h2 class="title">ВЫЗОВ МАСТЕРА</h2>
+        </div>
+        <div class="com-container">
+          <div class="kyivstar">
+            <div class="logo">
+              <img src="../img/kyivstar.png" alt="">
             </div>
-        </Container>
-    </section>
+            <div class="number">
+              <a href="#">067 135 15 47</a>
+            </div>
+          </div>
+          <div class="vodafone">
+            <div class="logo">
+              <img src="../img/vodafone.png" alt="">
+            </div>
+            <div class="number">
+              <a href="#">099 053 88 64</a>
+            </div>
+          </div>
+          <div class="call-back">
+            <div class="backcall">
+              <ModalWindow button-text="Обратный звонок"></ModalWindow>
+            </div>
+            <div class="call-soon">
+              <p>Перезвоним в течении 3-5 минут</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
 </template>
 
 
@@ -51,119 +51,135 @@ export default {
 
 </script>
 
-<style>
-    .communication {
-        margin-bottom: 50px;
-    }
+<style lang="scss">
+@import '../scss/layout/media-querries';
 
-    .com-container {
-        display: flex;
-        flex-direction: column;
-    }
+.communication {
+  margin-bottom: 50px;
+}
 
-    .kyivstar, .vodafone, .call-back {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 18px;
-        justify-content: space-around;
-        align-items: center;
-    }
+.com-container {
+  display: flex;
+  flex-direction: column;
+}
 
-    .call-back {
-        margin-top: 30px;
-        margin-bottom: 0;
-    }
+.kyivstar, .vodafone, .call-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
-    .logo, .backcall {
-        margin-bottom: 15px;
-    }
+  // маржины не нужны на десктопе, убрал их
+  @include to-desktop {
+    margin-bottom: 1rem;
+  }
+}
 
-    .number a {
-        text-decoration: none;
-        color: #54617A;
-        font-size: 20px;
-    }
+.call-back {
 
-    .backcall a {
-        color: white;
-        text-decoration: none;
-        padding: 12px 20px;
-        background-color: #FAB619;
-        border-radius: 5px;
-        font-size: 12px;
-    }
+  // тут тоже маржины не нужны на больших экранах
+  // только мешают выровняться по флексу по вертикали
+  @include to-desktop {
+    // маржины должны быть в одном правиле
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
 
-    .backcall a:hover {
-        background-color: #FAC019;
-    }
+  p {
+    margin: 0;
+  }
+}
 
-    .call-soon p {
-        color: #54617A;
-    }
+.logo, .backcall {
+  margin-bottom: 15px;
+}
 
-    .logo img {
-        max-width: 100%;
-    }
+.number a {
+  text-decoration: none;
+  color: #54617A;
+  font-size: 20px;
+}
 
-    @media screen and (min-width: 768px) {
-        .com-container {
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-            margin-top: 50px;
-        }
+.backcall a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  background-color: #FAB619;
+  border-radius: 5px;
+  font-size: 12px;
+}
 
-        .kyivstar, .vodafone, .call-back {
-            width: 30%;
-        }
+.backcall a:hover {
+  background-color: #FAC019;
+}
 
-        .backcall a {
-            font-size: 15px;
-        }
+.call-soon p {
+  color: #54617A;
+}
 
-        .number a {
-            font-size: 22px;
-        }
-    }
+.logo img {
+  max-width: 100%;
+}
 
-    @media screen and (min-width: 1024px) {
-        .communication {
-            margin-bottom: 100px;
-        }
+@media screen and (min-width: 768px) {
+  .com-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
 
-        .number a {
-            font-size: 25px;
-        }
+  .kyivstar, .vodafone, .call-back {
+    width: 30%;
+  }
 
-        .logo img {
-            width: 170px;
-        }
+  .backcall a {
+    font-size: 15px;
+  }
 
-        .logo {
-            margin-bottom: 0;
-        }
+  .number a {
+    font-size: 22px;
+  }
+}
 
-        .call-soon p {
-            font-size: 18px;
-        }
-    }
+@media screen and (min-width: 1024px) {
+  .communication {
+    margin-bottom: 100px;
+  }
 
-    @media screen and (min-width: 1440px) {
-        .backcall a {
-            font-size: 20px;
-        }
+  .number a {
+    font-size: 25px;
+  }
 
-        .number a {
-            font-size: 25px;
-        }
+  .logo img {
+    width: 170px;
+  }
 
-        .call-soon p {
-            font-size: 18px;
-        }
+  .logo {
+    margin-bottom: 0;
+  }
 
-        .logo img {
-            width: 180px;
+  .call-soon p {
+    font-size: 18px;
+  }
+}
 
-        }
-    }
+@media screen and (min-width: 1440px) {
+  .backcall a {
+    font-size: 20px;
+  }
+
+  .number a {
+    font-size: 25px;
+  }
+
+  .call-soon p {
+    font-size: 18px;
+  }
+
+  .logo img {
+    width: 180px;
+
+  }
+}
 </style>

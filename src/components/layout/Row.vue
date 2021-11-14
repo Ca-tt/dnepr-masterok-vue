@@ -55,6 +55,22 @@ $right-column-display: flex
       @include from-desktop
         justify-content: space-between
 
+  // when space is not enough
+  // and two columns on a tablet
+  &.two-columns
+
+    // немного адаптивов не помешает
+    @include from-tablet
+      flex-wrap: wrap
+
+      .column
+        width: 50%
+
+    @include from-desktop
+
+      .column
+        width: auto
+        padding: 0 1em
 
 
 //

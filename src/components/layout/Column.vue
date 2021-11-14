@@ -24,17 +24,23 @@ export default {
     .row.columns-between-tablet,
     .row.columns-between-desktop)
 
-  .column
-
-    &.left-column
+    .left-column
       flex: 1 0 30%
 
-    &.right-column
+    .right-column
       flex: 1 1 70%
       text-align: center
 
       @include from-tablet
         display: flex
         justify-content: flex-end
+
+// начались костыли
+  // in Title.vue
+.section.is-site-opening
+  .left-column
+    flex: 1 0 50%
+  .right-column
+    flex: 1 0 30%
 
 </style>

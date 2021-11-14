@@ -8,36 +8,35 @@
         <p class="topic">ВЫЗОВ МАСТЕРА</p>
         <span class="modal-close" @click="closeModal">&times;</span>
       </div>
-      <form action="send.php" method="post">
-        <div class="modal-body">
-          <label class="enter-tel">Введите ваш номер телефона</label>
-          <input
-            class="call-input"
-            placeholder="+38(0__) ___-__-__"
-            type="tel"
-            v-mask="['+38(0##) ###-##-##']"
+      <div class="modal-body">
+        <form action="send.php" method="post">
+        <label class="enter-tel">Введите ваш номер телефона</label>
+        <input
+          class="call-input"
+          placeholder="+38(0__) ___-__-__"
+          type="tel"
+          v-mask="['+38(0##) ###-##-##']"
+        />
+        </form>
+        <a href="#" class="modal-send">ОТПРАВИТЬ</a>
+        <div class="moving-icon">
+          <font-awesome-icon icon="lock"
+            class="
+              Тут
+              должна
+              быть
+              анимированая
+              иконка
+              но
+              я
+              хз
+              как
+              ёе
+              добавить(:
+            "
           />
-          <a class="modal-send">ОТПРАВИТЬ</a>
-          <div class="moving-icon">
-            <font-awesome-icon
-              icon="lock"
-              class="
-                Тут
-                должна
-                быть
-                анимированая
-                иконка
-                но
-                я
-                хз
-                как
-                ёе
-                добавить(:
-              "
-            />
           </div>
         </div>
-      </form>
       <p class="bottom-line">*перезвоним в течении 5 минут</p>
       <p>
         Нет времени ждать звонка?<br />
