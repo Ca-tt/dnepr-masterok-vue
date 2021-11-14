@@ -1,10 +1,6 @@
-@import 'media-querries'
+.is-centered {
+  margin: 0 auto;
+}
 
-.is-centered 
-  margin: 0 auto
-
-
-.is-flex-from-tablet
-  @include from-tablet
-    display: flex
-
+.is-flex-from-tablet {
+}

@@ -8,33 +8,36 @@
         <p class="topic">ВЫЗОВ МАСТЕРА</p>
         <span class="modal-close" @click="closeModal">&times;</span>
       </div>
-      <div class="modal-body">
-        <label class="enter-tel">Введите ваш номер телефона</label>
-        <input
-          class="call-input"
-          placeholder="+38(0__) ___-__-__"
-          type="tel"
-          v-mask="['+38(0##) ###-##-##']"
-        />
-        <a class="modal-send">ОТПРАВИТЬ</a>
-        <div class="moving-icon">
-          <font-awesome-icon icon="lock"
-            class="
-              Тут
-              должна
-              быть
-              анимированая
-              иконка
-              но
-              я
-              хз
-              как
-              ёе
-              добавить(:
-            "
+      <form action="send.php" method="post">
+        <div class="modal-body">
+          <label class="enter-tel">Введите ваш номер телефона</label>
+          <input
+            class="call-input"
+            placeholder="+38(0__) ___-__-__"
+            type="tel"
+            v-mask="['+38(0##) ###-##-##']"
           />
+          <a class="modal-send">ОТПРАВИТЬ</a>
+          <div class="moving-icon">
+            <font-awesome-icon
+              icon="lock"
+              class="
+                Тут
+                должна
+                быть
+                анимированая
+                иконка
+                но
+                я
+                хз
+                как
+                ёе
+                добавить(:
+              "
+            />
+          </div>
         </div>
-      </div>
+      </form>
       <p class="bottom-line">*перезвоним в течении 5 минут</p>
       <p>
         Нет времени ждать звонка?<br />
@@ -99,7 +102,7 @@
   color: white;
 }
 
-.modal-close:hover{
+.modal-close:hover {
   font-size: 13px;
 }
 
@@ -146,7 +149,6 @@
 @media screen and (max-width: 1024px) {
   .sweet-modal {
     max-width: 90%;
-    margin-left: 20px; /*костыль ПАМАГИТЕ*/
   }
 }
 </style>
