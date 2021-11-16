@@ -65,11 +65,13 @@
   </section>
 </template>
 
-<style>
+<style lang="scss" scoped>
+@import './../scss/app/colors.sass';
+
 /* услуги и цены */
 .service-img {
   border-radius: 7px;
-  box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);;
+  box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);
 }
 
 .to-master {
@@ -206,8 +208,8 @@ h2.title {
 }
 
 .prices-page {
-  background-color: whitesmoke;
-  min-height: 900px;
+  background-color: $light-grey-blue;
+  padding: 50px 0;
 }
 
 @media screen and (max-width: 1440px) {
