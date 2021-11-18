@@ -1,7 +1,7 @@
 <template>
   <section class="prices-page">
     <section class="title-prices-page">
-      <div class="title">
+      <div class="title-block">
         <h2 class="title">НАШИ УСЛУГИ И ЦЕНЫ</h2>
       </div>
       <div class="categories">
@@ -76,7 +76,7 @@
 
 .to-master {
   text-decoration: none;
-  background-color: #fab005;
+  background-color: $orange;
   color: #fff;
   width: 200px;
   height: 35px;
@@ -121,7 +121,7 @@
 }
 
 .give-call {
-  background-color: #fab005;
+  background-color: $orange;
   width: 230px;
   height: 35px;
   display: flex;
@@ -139,14 +139,14 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #54617a;
+  color: $grey;
   font-family: "Roboto", sans-serif;
 }
 
 .explanation-of-service {
   margin: 0;
   text-align: center;
-  color: #8d99ae;
+  color: $light-grey;
   margin-bottom: 5px;
 }
 
@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-bottom: 10px;
   font-size: 23px;
-  color: #54617a;
+  color: $grey;
   font-weight: 600;
 }
 
@@ -179,18 +179,18 @@ section {
   margin: 0;
 }
 
-div.title {
+.title-block {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-h2.title {
+.title {
   font-weight: 350;
   /* font-family: sans-serif; */
   font-size: 35px;
   margin-bottom: 10px;
-  color: #54617a;
+  color: $grey;
   text-align: center;
 }
 
@@ -202,7 +202,7 @@ h2.title {
 
 .category {
   margin: 5px;
-  color: #8d99ae;
+  color: $light-grey;
   text-align: center;
   font-size: 17px;
 }
