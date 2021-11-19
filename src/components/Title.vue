@@ -34,7 +34,7 @@
             </ul>
             <div class="buttons">
               <ModalWindow buttonText="ВЫЗВАТЬ МАСТЕРА"></ModalWindow>
-              <a href="#" class="c-f"> РАСЧЕТ СТОИМОСТИ </a>
+              <a href="tel:+38 067 135 15 47" class="c-f"> РАСЧЕТ СТОИМОСТИ </a>
             </div>
           </Column>
 
