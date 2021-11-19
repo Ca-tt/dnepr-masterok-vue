@@ -23,8 +23,8 @@
         Нет времени ждать звонка?<br />
         Нажмите чтоб позвонить:
       </p>
-      <h2 class="number">067 135 15 47</h2>
-      <h2 class="number">099 053 88 64</h2>
+      <a><h2 class="number">067 135 15 47</h2></a>
+      <a><h2 class="number">099 053 88 64</h2></a>
     </sweet-modal>
   </div>
 </template>
@@ -41,7 +41,7 @@
   }
 
   .sweet-modal {
-    max-width: 20%;
+    max-width: 26%;
     max-height: 97%;
     min-width: 220px;
     color: #000;
@@ -128,10 +128,15 @@
     display: none;
   }
 
+@media screen and (min-width: 1023px) {
+  .sweet-modal{
+    max-width: 400px;
+  }
+}
+
   @media screen and (max-width: 1023px) {
     .sweet-modal {
       max-width: 90%;
-      margin-left: 15px;
     }
   }
 </style>
