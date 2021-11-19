@@ -1,16 +1,16 @@
 <template>
   <Container>
     <Row class="columns-between columns-centered-mobile cards">
-      <Card class="card is-vertical" v-for="card in cards" :key="card.icon"
+      <Card v-for="card in cards" :key="card.icon"
             :card="card"/>
     </Row>
   </Container>
 </template>
 
 <script>
-import Container from '../components/layout/Container.vue';
+import Container from '../layout/Container.vue';
 import Row from "@/components/layout/Row";
-import Card from '../components/Card.vue';
+import Card from '../cards/VerticalCard.vue';
 
 export default {
   name: 'Metrics',
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './../scss/layout/media-querries';
+@import '../../scss/layout/media-querries';
 
 
 $cards-section-padding: 2rem 0;
