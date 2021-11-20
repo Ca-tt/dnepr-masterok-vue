@@ -147,6 +147,11 @@ export default {
     margin-bottom: 100px;
   }
 
+  .communication > .title {
+    display: flex;
+    justify-content: center;
+  }
+
   .number a {
     font-size: 25px;
   }

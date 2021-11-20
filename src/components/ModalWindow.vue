@@ -9,22 +9,20 @@
         <span class="modal-close" @click="closeModal">&times;</span>
       </div>
       <div class="modal-body">
-        <form action="Сheck.php" method="post">
           <label class="enter-tel">Введите ваш номер телефона</label>
           <input name = "User_telephone" class="call-input" placeholder="+38(0__) ___-__-__" type="tel" v-mask="['+38(0##) ###-##-##']" />
+          <div class="body-center">
           <a href="#" class="modal-send">ОТПРАВИТЬ</a>
-          <div class="moving-icon">
-<font-awesome-icon icon="fa-solid fa-loader" /> 
+          <span class="ajax-loader is-active"></span>
           </div>
-        </form>
       </div>
       <p class="bottom-line">*перезвоним в течении 5 минут</p>
       <p>
         Нет времени ждать звонка?<br />
         Нажмите чтоб позвонить:
       </p>
-      <h2 class="number">067 135 15 47</h2>
-      <h2 class="number">099 053 88 64</h2>
+      <a><h2 class="number">067 135 15 47</h2></a>
+      <a><h2 class="number">099 053 88 64</h2></a>
     </sweet-modal>
   </div>
 </template>
@@ -41,7 +39,7 @@
   }
 
   .sweet-modal {
-    max-width: 20%;
+    max-width: 26%;
     max-height: 97%;
     min-width: 220px;
     color: #000;
@@ -124,14 +122,20 @@
     font-size: 28px;
   }
 
-  .moving-icon {
-    display: none;
+.body-center{
+  display: flex;
+  align-items: baseline;
+}
+
+@media screen and (min-width: 1023px) {
+  .sweet-modal{
+    max-width: 400px;
   }
+}
 
   @media screen and (max-width: 1023px) {
     .sweet-modal {
       max-width: 90%;
-      margin-left: 15px;
     }
   }
 </style>

@@ -20,7 +20,6 @@
             </div>
           </div>
           <div class="tel-number-send">
-            <!-- <a href="#" class="send-button">ОТПРАВИТЬ</a> -->
             <ModalWindow button-text="ОТПРАВИТЬ"></ModalWindow>
           </div>
         </div>
