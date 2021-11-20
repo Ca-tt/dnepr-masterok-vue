@@ -3,7 +3,7 @@
     <Container>
       <div class="communication">
         <div class="title">
-          <h2 class="title">ВЫЗОВ МАСТЕРА</h2>
+          <h2 class="title" data-v-3e51d18e="">ВЫЗОВ МАСТЕРА</h2>
         </div>
         <div class="com-container">
           <div class="kyivstar">
