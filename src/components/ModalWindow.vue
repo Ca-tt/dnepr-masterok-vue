@@ -9,10 +9,9 @@
         <span class="modal-close" @click="closeModal">&times;</span>
       </div>
       <div class="modal-body">
-<<<<<<< HEAD
         <!-- пока что закомментирую твой action -->
         <!-- <form action="Сheck.php" method="post">-->
-        <form id="form" @submit.prevent="sendEmail">>
+        <form id="form" @submit.prevent="sendEmail">
           <label class="enter-tel">Введите ваш номер телефона</label>
           <!-- не telephone, а number. Двоюшник -->
           <!-- и мы никогда не пишем css в питоновском стиле
@@ -31,14 +30,6 @@
 <!--            <font-awesome-icon icon="loader"/>-->
 <!--          </div>-->
         </form>
-=======
-          <label class="enter-tel">Введите ваш номер телефона</label>
-          <input name = "User_telephone" class="call-input" placeholder="+38(0__) ___-__-__" type="tel" v-mask="['+38(0##) ###-##-##']" />
-          <div class="body-center">
-          <a href="#" class="modal-send">ОТПРАВИТЬ</a>
-          <span class="ajax-loader is-active"></span>
-          </div>
->>>>>>> cf33f8db34914475ce0d9f1256090448cf7a6f09
       </div>
       <p class="bottom-line">*Перезвоним в течение часа</p>
       <p>
@@ -152,11 +143,8 @@
 
 @media screen and (max-width: 1023px) {
   .sweet-modal {
-<<<<<<< HEAD
     max-width: 90%;
     margin-left: 15px;
-=======
-    max-width: 26%;
     max-height: 97%;
     min-width: 220px;
     color: #000;
@@ -244,6 +232,7 @@
   align-items: baseline;
 }
 
+/* две одинаковых медиа. Не нужно их множить, как кроликов =) */
 @media screen and (min-width: 1023px) {
   .sweet-modal{
     max-width: 400px;
@@ -254,7 +243,6 @@
     .sweet-modal {
       max-width: 90%;
     }
->>>>>>> cf33f8db34914475ce0d9f1256090448cf7a6f09
   }
 }
 </style>
@@ -281,19 +269,22 @@ export default {
     closeModal() {
       this.$refs.modal.close();
     },
-    sendEmail(e) {
-      try {
-        emailjs.sendForm('service_u6tq2om',
-            'template_e8qp568',
-            e.target,
-            'user_n00IFqkCIrHm6D3teTlZD', {
-            phoneNumber: this.phoneNumber
-        })
-      } catch (error) {
-        console.log({error})
-      }
-      this.phoneNumber = ''
-    },
+    // СПЕЦИАЛЬНО отключил отправка на имейл, чтобы не тратить
+    // ресурс. Пока бесплатных 200 имейлов, клиенту будет приятно.
+
+    // sendEmail(e) {
+    //   try {
+    //     emailjs.sendForm('service_u6tq2om',
+    //         'template_e8qp568',
+    //         e.target,
+    //         'user_n00IFqkCIrHm6D3teTlZD', {
+    //         phoneNumber: this.phoneNumber
+    //     })
+    //   } catch (error) {
+    //     console.log({error})
+    //   }
+    //   this.phoneNumber = ''
+    // },
   },
 };
 </script>
