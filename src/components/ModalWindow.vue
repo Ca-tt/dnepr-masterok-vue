@@ -9,6 +9,7 @@
         <span class="modal-close" @click="closeModal">&times;</span>
       </div>
       <div class="modal-body">
+<<<<<<< HEAD
         <!-- пока что закомментирую твой action -->
         <!-- <form action="Сheck.php" method="post">-->
         <form id="form" @submit.prevent="sendEmail">>
@@ -30,14 +31,22 @@
 <!--            <font-awesome-icon icon="loader"/>-->
 <!--          </div>-->
         </form>
+=======
+          <label class="enter-tel">Введите ваш номер телефона</label>
+          <input name = "User_telephone" class="call-input" placeholder="+38(0__) ___-__-__" type="tel" v-mask="['+38(0##) ###-##-##']" />
+          <div class="body-center">
+          <a href="#" class="modal-send">ОТПРАВИТЬ</a>
+          <span class="ajax-loader is-active"></span>
+          </div>
+>>>>>>> cf33f8db34914475ce0d9f1256090448cf7a6f09
       </div>
       <p class="bottom-line">*Перезвоним в течение часа</p>
       <p>
         Нет времени ждать звонка?<br/>
         Нажмите чтоб позвонить:
       </p>
-      <h2 class="number">067 135 15 47</h2>
-      <h2 class="number">099 053 88 64</h2>
+      <a><h2 class="number">067 135 15 47</h2></a>
+      <a><h2 class="number">099 053 88 64</h2></a>
     </sweet-modal>
   </div>
 </template>
@@ -143,8 +152,109 @@
 
 @media screen and (max-width: 1023px) {
   .sweet-modal {
+<<<<<<< HEAD
     max-width: 90%;
     margin-left: 15px;
+=======
+    max-width: 26%;
+    max-height: 97%;
+    min-width: 220px;
+    color: #000;
+    font-family: Roboto, sans-serif;
+    overflow-y: auto;
+    position: fixed;
+  }
+
+  .sweet-modal::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .bottom-line {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+  }
+
+  .modal-head {
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal-close {
+    width: 30px;
+    height: 30px;
+    border: 1px solid honeydew;
+    border-radius: 20px;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 15px 1px rgb(2 2 2 / 75%);
+    text-shadow: 0px 0px 0px rgb(0 0 0 / 23%);
+    background-color: rgba(0, 0, 0, 0.52);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+  }
+
+  .modal-close:hover {
+    font-size: 13px;
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .number {
+    color: orange;
+  }
+
+  .modal-send {
+    color: white;
+    font-size: 0.8em;
+    text-decoration: none;
+    background-color: #fab005;
+    padding: 11px 20px;
+    border-radius: 2px;
+  }
+
+  .call-input {
+    padding: 20px;
+    max-width: 350px;
+    font-size: 22px;
+    border: none;
+    display: flex;
+    text-align: center;
+    outline: 0;
+  }
+
+  .topic {
+    color: #000;
+    font-family: Verdana;
+    font-size: 28px;
+  }
+
+.body-center{
+  display: flex;
+  align-items: baseline;
+}
+
+@media screen and (min-width: 1023px) {
+  .sweet-modal{
+    max-width: 400px;
+  }
+}
+
+  @media screen and (max-width: 1023px) {
+    .sweet-modal {
+      max-width: 90%;
+    }
+>>>>>>> cf33f8db34914475ce0d9f1256090448cf7a6f09
   }
 }
 </style>
