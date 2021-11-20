@@ -67,12 +67,9 @@
 
 <style lang="scss" scoped>
 @import './../scss/app/colors.sass';
+@import './../scss/layout/mixins.scss';
 
 /* услуги и цены */
-.service-img {
-  border-radius: 7px;
-  box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);
-}
 
 .to-master {
   text-decoration: none;
@@ -171,6 +168,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 350px;
   height: 200px;
   margin-top: 20px;
+  @include img-rounded(100px);
+  box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);
 }
 
 /* изменил, потому что был бы отступ от хедера */
