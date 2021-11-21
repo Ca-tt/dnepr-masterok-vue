@@ -1,9 +1,8 @@
 <template>
-
     <!-- TODO: wrap every card with a column component -->
 
     <!-- Card template-->
-    <figure class="column card">
+    <figure class="column card is-vertical">
 
       <!-- icon (required) -->
       <header class="card-icon">
@@ -15,14 +14,13 @@
 
       <!-- subheading or text (required) -->
       <figcaption
-          class="card-text">{{ card.text }}</figcaption>
+          class="card-text">{{ card.text }}
+      </figcaption>
 
     </figure>
-
 </template>
 
 <script>
-
 export default {
   name: 'Card',
   props: {
@@ -35,65 +33,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/app/colors';
-@import '../scss/layout/media-querries';
-
-// TODO: refactor and gather old styles and new
-$cards-section-padding: 30px 0;
+@import '../../scss/app/colors';
+@import '../../scss/layout/media-querries';
 
 $card-icon-size: 50px;
 $card-color: $grey;
 
-// card configs (general)
-$default-card-padding: .25em;
-
-// icon configs
-$mobile-icon-size: 25px;
-$desktop-icon-size: 20px;
-
-// text config (subtitle)
-$mobile-font-size: 17px;
-$desktop-font-size: 17px;
-
 .card {
-
-  // карточки в хедере
-  &.is-horizontal {
-
-    .card-icon {
-      padding: $default-card-padding;
-      font-size: $mobile-icon-size;
-    }
-
-    .card-text {
-      padding: $default-card-padding;
-      font-size: $mobile-font-size;
-    }
-
-    @include from-desktop {
-      display: flex;
-      align-items: center;
-
-      .card-icon {
-        font-size: $desktop-icon-size;
-      }
-
-      .card-text {
-        font-size: $desktop-font-size;
-      }
-    }
-  }
 
   // карточки в Metrics
   &.is-vertical {
+    text-align: center;
+    color: $card-color;
 
     @include to-desktop {
       max-width: 50%;
       margin: 0 auto 2rem auto;
     }
-
-    text-align: center;
-      color: $card-color;
 
     // change card width as screen getting bigger
     @media screen and (min-width: $tablet) {
@@ -105,7 +61,7 @@ $desktop-font-size: 17px;
 
     .card-icon {
       font-size: $card-icon-size;
-      margin: 0 0 2rem 0;
+      margin: 0 0 1.5rem 0;
     }
 
     .card-title {
@@ -119,7 +75,6 @@ $desktop-font-size: 17px;
       font-size: 1.25rem;
     }
   }
-
 }
 
 </style>
