@@ -72,15 +72,8 @@
 /* услуги и цены */
 
 .to-master {
-  text-decoration: none;
   background-color: $orange;
-  color: #fff;
-  width: 200px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
+  @include for-all-buttons($orange);
 }
 
 .calculation {
