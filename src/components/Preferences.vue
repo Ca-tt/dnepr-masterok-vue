@@ -58,6 +58,7 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 50px;
+        margin-top: 40px;
     }
 
     .preferences > .title {
