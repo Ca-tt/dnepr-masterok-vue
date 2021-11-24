@@ -2,7 +2,6 @@
   <div>
     <ModalButton :text="buttonText" @click.native="openModal"></ModalButton>
 
-    <!-- check this prop hide-close-button="true"-->
     <sweet-modal ref="modal" :hide-close-button="true">
       <div class="modal-head">
         <p class="topic">ВЫЗОВ МАСТЕРА</p>
@@ -21,17 +20,15 @@
         Нет времени ждать звонка?<br />
         Нажмите чтоб позвонить:
       </p>
-      <a><h2 class="number">067 135 15 47</h2></a>
-      <a><h2 class="number">099 053 88 64</h2></a>
+      <a class="number" href="tel"><h2>067 135 15 47</h2></a>
+      <a class="number" href="tel"><h2>099 053 88 64</h2></a>
     </sweet-modal>
   </div>
 </template>
 <style>
   .sweet-content {
     padding-top: 0 !important;
-    /*костыль ПАМАГИТЕ*/
     padding-bottom: 20px !important;
-    /*костыль ПАМАГИТЕ*/
   }
 
   .sweet-modal-overlay {
@@ -94,6 +91,8 @@
   }
 
   .number {
+    text-decoration: none;
+    cursor: pointer;
     color: orange;
   }
 
