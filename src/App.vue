@@ -9,21 +9,19 @@
     <Note />
     <Call />
     <Footer />
-    <!-- <Check /> -->
   </div>
 </template>
 
 <script>
-import Header from './site-sections/Header.vue'
+import Header from './components/sections/Header.vue'
 import MasterCall from './components/MasterCall.vue'
 import Services from './components/Services.vue'
-import Metrics from './site-sections/Metrics.vue'
+import Metrics from './components/sections/Metrics.vue'
 import Preferences from './components/Preferences.vue'
 import Note from './components/Note.vue'
 import Call from './components/Call.vue'
 import Footer from './components/Footer.vue'
 import Title from './components/Title.vue'
-// import Check from './php/Check.php'
 
 export default {
   name: 'App',
@@ -37,7 +35,6 @@ export default {
     Footer,
     Title,
     Call,
-    // Check,
   },
 }
 </script>

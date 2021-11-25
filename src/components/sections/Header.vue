@@ -7,16 +7,16 @@
         <!-- left column -->
         <Column class="column left-column">
 
-          <Card :card="cards[0]" class="is-horizontal"></Card>
+          <CardIsHorizontal :card="cards[0]"></CardIsHorizontal>
 
         </Column>
 
         <!-- right column -->
         <Column class="column right-column">
 
-          <Card :card="cards[1]" class="is-horizontal"></Card>
-          <Card :card="cards[2]" class="is-horizontal"></Card>
-          <Card :card="cards[3]" class="is-horizontal"></Card>
+          <CardIsHorizontal :card="cards[1]"></CardIsHorizontal>
+          <CardIsHorizontal :card="cards[2]"></CardIsHorizontal>
+          <CardIsHorizontal :card="cards[3]"></CardIsHorizontal>
 
         </Column>
       </Row>
@@ -26,7 +26,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import './../scss/layout/helpers';
+@import '../../scss/layout/helpers';
 
 $header-padding: .5em 0;
 $header-font-color: white;
@@ -74,18 +74,18 @@ a {
 </style>
 
 <script>
-import Container from '../components/layout/Container';
-import Card from '../components/Card';
+import Container from '../layout/Container';
 import Row from "@/components/layout/Row";
 import Column from "@/components/layout/Column";
+import CardIsHorizontal from "@/components/cards/HorizontalCard";
 
 export default {
   name: "Header",
   components: {
+    CardIsHorizontal,
     Column,
     Row,
     Container,
-    Card,
   },
   data() {
     return {
@@ -104,11 +104,13 @@ export default {
           icon: 'mobile',
           title: '',
           text: '067 135 15 47',
+          link: true,
         },
         {
           icon: 'mobile',
           title: '',
           text: '099 053 88 64',
+          link: true,
         },
       ]
     }

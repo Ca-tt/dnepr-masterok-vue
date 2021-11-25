@@ -1,0 +1,16 @@
+@mixin img-rounded($border-radius){
+    border-radius: $border-radius;
+}
+
+@mixin for-all-buttons($outline-color){
+  outline-color: $outline-color;
+  max-width: 250px;
+  padding: 1em 2em;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  outline-width: 2px;
+  outline-style: solid;
+  border-radius: 5px;
+}

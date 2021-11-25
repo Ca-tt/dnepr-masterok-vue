@@ -67,6 +67,7 @@ export default {
 
 <style lang="scss" scoped>
 @import './../scss/layout/media-querries';
+@import './../scss/layout/mixins.scss';
 
 .section {
   background-image: url("../img/background.jpg");
@@ -147,17 +148,7 @@ export default {
 */
 
 .c-f {
-  // max width почти всегда лучше width
-  max-width: 250px;
-  // используйте относительные единицы, когда можно
-  // они гибкие и меняются от размера шрифта
-  padding: 1em 2em;
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  text-align: center;
-  outline: 2px solid white;
-  border-radius: 5px;
+  @include for-all-buttons(white);
 
   /*
     В sass можно делать даже так:
@@ -240,23 +231,6 @@ export default {
     font-size: 40px;
   }
 
-  //.title-slide {
-  //  align-items: center;
-  //}
-  /*
-    маржины указываем только нижние
-    верхние и нижние в куче слипаются между собой
-    и не дают нужного оступа
-    почитай про margin collapse, пожалуйста,
-    чтобы понять, зачем так начали делать
-  */
-
-
-  //.c-f {
-  //  margin-bottom: 55px;
-  //  margin-top: 15px;
-  //}
-
   .menu-click {
     padding: 0 15px;
   }
@@ -302,6 +276,7 @@ export default {
   .menu-union {
     margin-left: 0;
     margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   .menu-click {

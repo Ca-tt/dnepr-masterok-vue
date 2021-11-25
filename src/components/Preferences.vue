@@ -2,7 +2,7 @@
     <section>
         <div class="preferences">
             <div class="title">
-                <h2 class="title">НАШИ ПРЕИМУЩЕСТВА</h2>
+                <h2 class="title" data-v-3e51d18e="">НАШИ ПРЕИМУЩЕСТВА</h2>
                 <p class="category">Компания Днепр-замок отличается опытом и профессиональным подходом. Для своих клиентов мы предоставляем максимально комфортные условия предоставления услуг.</p>
             </div>
             <div class="pref-list">
@@ -58,6 +58,7 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 50px;
+        margin-top: 40px;
     }
 
     .preferences > .title {
