@@ -3,11 +3,11 @@
     <div class="dimmer">
       <Container>
         <div class="menu">
-          <img src="../img/title.png" class="dnepr-class-img"/>
+          <img src="../img/title.png" class="dnepr-class-img" />
           <div class="menu-union">
-            <a href="#" class="menu-click"> УСЛУГИ И ЦЕНЫ </a>
-            <a href="#" class="menu-click"> НАШИ ПРИЕМУЩЕСТВА </a>
-            <a href="#" class="menu-click"> КОНТАКТЫ </a>
+            <a href="#prices-page" class="menu-click"> УСЛУГИ И ЦЕНЫ </a>
+            <a href="#preferences" class="menu-click"> НАШИ ПРИЕМУЩЕСТВА </a>
+            <a href="#dimmed" class="menu-click"> КОНТАКТЫ </a>
           </div>
         </div>
 
@@ -22,7 +22,7 @@
                 Так что не костыль =)
                 C ним лучше, честно.
               -->
-              АВАРИЙНОЕ<br>
+              АВАРИЙНОЕ<br />
               ВСКРЫТИЕ ЗАМКОВ
             </h1>
             <ul class="list">
@@ -39,7 +39,7 @@
           </Column>
 
           <Column class="mobile right-column">
-            <img src="../img/mobile.png" class="title-image"/>
+            <img src="../img/mobile.png" class="title-image" />
           </Column>
         </Row>
       </Container>
@@ -53,7 +53,6 @@ import ModalWindow from "../components/ModalWindow";
 import Row from "@/components/layout/Row";
 import Column from "@/components/layout/Column";
 
-
 export default {
   name: "Title",
   components: {
@@ -66,8 +65,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './../scss/layout/media-querries';
-@import './../scss/layout/mixins.scss';
+@import "./../scss/layout/media-querries";
+@import "./../scss/layout/mixins.scss";
 
 .section {
   background-image: url("../img/background.jpg");
@@ -161,7 +160,6 @@ export default {
   }
 }
 
-
 .list > li {
   margin-top: 25px;
 }
@@ -169,7 +167,6 @@ export default {
 .tab {
   margin-left: 80px;
 }
-
 
 .main-title {
   font-size: 50px;

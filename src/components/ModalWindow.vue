@@ -8,8 +8,6 @@
         <span class="modal-close" @click="closeModal">&times;</span>
       </div>
       <div class="modal-body">
-        <!-- пока что закомментирую твой action -->
-        <!-- <form action="Сheck.php" method="post">-->
         <form id="form" @submit.prevent="sendEmail">
           <label class="enter-num">Введите ваш номер телефона</label>
           <input

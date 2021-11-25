@@ -1,5 +1,5 @@
 <template>
-  <section class="dimmed">
+  <section class="dimmed" id="dimmed">
     <div class="call-dimmer">
       <div class="call-request">
         <div class="request-title">
