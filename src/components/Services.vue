@@ -1,12 +1,14 @@
 <template>
-  <section class="prices-page">
+  <section id="prices-page" class="prices-page">
     <section class="title-prices-page">
       <div class="title-block">
         <h2 class="title">НАШИ УСЛУГИ И ЦЕНЫ</h2>
       </div>
       <div class="categories">
-        <p class="category">Цена услуг по вскрытию замков зависит от конструкции
-          замка и степени сложности поломки.</p>
+        <p class="category">
+          Цена услуг по вскрытию замков зависит от конструкции замка и степени
+          сложности поломки.
+        </p>
         <p class="category">Ложный вызов — 500 грн.</p>
         <p class="category">Простой мастера — 1 час — 1000 грн.</p>
       </div>
@@ -17,70 +19,71 @@
         это повышает читаемость кода
       -->
       <div class="service">
-        <img src="../img/door-open.jpg" alt="" class="service-img">
+        <img src="../img/door-open.jpg" alt="" class="service-img" />
         <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ ДВЕРЕЙ</h3>
-        <p class="explanation-of-service">Стоимость от 400 грн<br>
-          зависит от степени сложности замка</p>
+        <p class="explanation-of-service">
+          Стоимость от 400 грн<br />
+          зависит от степени сложности замка
+        </p>
       </div>
 
       <div class="service">
-        <img src="../img/auto-open.jpg" alt="" class="service-img">
+        <img src="../img/auto-open.jpg" alt="" class="service-img" />
         <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ АВТО</h3>
-        <p class="explanation-of-service">Стоимость от 400 грн<br>
-          зависит от степени сложности замка</p>
+        <p class="explanation-of-service">
+          Стоимость от 400 грн<br />
+          зависит от степени сложности замка
+        </p>
       </div>
 
       <div class="service">
-        <img src="../img/safe-open.jpg" alt="" class="service-img">
+        <img src="../img/safe-open.jpg" alt="" class="service-img" />
         <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ СЕЙФА</h3>
-        <p class="explanation-of-service">Стоимость от 400 грн<br>
-          зависит от степени сложности замка</p>
+        <p class="explanation-of-service">
+          Стоимость от 400 грн<br />
+          зависит от степени сложности замка
+        </p>
       </div>
 
       <div class="service">
-        <img src="../img/change-lock.jpg" alt="" class="service-img">
+        <img src="../img/change-lock.jpg" alt="" class="service-img" />
         <h3 class="service-title">ЗАМЕНА ЗАМКОВ</h3>
-        <p class="explanation-of-service">Стоимость от 400 грн<br>
-          зависит от степени сложности замка</p>
+        <p class="explanation-of-service">
+          Стоимость от 400 грн<br />
+          зависит от степени сложности замка
+        </p>
       </div>
 
       <div class="service">
-        <img src="../img/change-latch.jpg" alt="" class="service-img">
+        <img src="../img/change-latch.jpg" alt="" class="service-img" />
         <h3 class="service-title">ЗАМЕНА НОЧНОЙ ЗАДВИЖКИ</h3>
-        <p class="explanation-of-service">Стоимость от 400 грн<br>
-          зависит от степени сложности замка</p>
-          <ModalWindow buttonText="СРОЧНО ВЫЗВАТЬ МАСТЕРА"></ModalWindow>
+        <p class="explanation-of-service">
+          Стоимость от 400 грн<br />
+          зависит от степени сложности замка
+        </p>
+        <ModalWindow buttonText="СРОЧНО ВЫЗВАТЬ МАСТЕРА"></ModalWindow>
       </div>
 
       <div class="clarify-price">
         <h3 class="clarify">УТОЧНИТЬ СТОИМОСТЬ</h3>
         <p class="calculation">Для точного расчета отправьте фото замка</p>
-        <img src="../img/logo-viber.png" class="sn">
+        <img src="../img/logo-viber.png" class="sn" />
         <p class="click-to-send">нажмите для отправки фото</p>
-        <a class="to-master" href="">
-          ОТПРАВИТЬ ФОТО
-        </a>
+        <a class="to-master" href=""> ОТПРАВИТЬ ФОТО </a>
       </div>
     </section>
   </section>
 </template>
 
 <style lang="scss" scoped>
-@import './../scss/app/colors.sass';
-@import './../scss/layout/mixins.scss';
+@import "./../scss/app/colors.sass";
+@import "./../scss/layout/mixins.scss";
 
 /* услуги и цены */
 
 .to-master {
-  text-decoration: none;
   background-color: $orange;
-  color: #fff;
-  width: 200px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
+  @include for-all-buttons($orange);
 }
 
 .calculation {
@@ -135,7 +138,12 @@
   justify-content: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $grey;
   font-family: "Roboto", sans-serif;
 }
@@ -169,7 +177,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 200px;
   margin-top: 20px;
   @include img-rounded(100px);
-  box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%),
+    0 1px 8px 0 rgb(0 0 0 / 12%);
 }
 
 /* изменил, потому что был бы отступ от хедера */
@@ -297,9 +306,9 @@ section {
 import ModalWindow from "../components/ModalWindow";
 
 export default {
-  name: 'Services',
+  name: "Services",
   components: {
     ModalWindow,
-  }
-}
+  },
+};
 </script>

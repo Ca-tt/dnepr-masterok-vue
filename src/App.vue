@@ -9,7 +9,6 @@
     <Note />
     <Call />
     <Footer />
-    <!-- <Check /> -->
   </div>
 </template>
 
@@ -23,7 +22,6 @@ import Note from './components/Note.vue'
 import Call from './components/Call.vue'
 import Footer from './components/Footer.vue'
 import Title from './components/Title.vue'
-// import Check from './php/Check.php'
 
 export default {
   name: 'App',
@@ -37,7 +35,6 @@ export default {
     Footer,
     Title,
     Call,
-    // Check,
   },
 }
 </script>

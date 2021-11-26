@@ -3,11 +3,11 @@
     <div class="dimmer">
       <Container>
         <div class="menu">
-          <img src="../img/title.png" class="dnepr-class-img"/>
+          <img src="../img/title.png" class="dnepr-class-img" />
           <div class="menu-union">
-            <a href="#" class="menu-click"> УСЛУГИ И ЦЕНЫ </a>
-            <a href="#" class="menu-click"> НАШИ ПРИЕМУЩЕСТВА </a>
-            <a href="#" class="menu-click"> КОНТАКТЫ </a>
+            <a href="#prices-page" class="menu-click"> УСЛУГИ И ЦЕНЫ </a>
+            <a href="#preferences" class="menu-click"> НАШИ ПРИЕМУЩЕСТВА </a>
+            <a href="#dimmed" class="menu-click"> КОНТАКТЫ </a>
           </div>
         </div>
 
@@ -22,7 +22,7 @@
                 Так что не костыль =)
                 C ним лучше, честно.
               -->
-              АВАРИЙНОЕ<br>
+              АВАРИЙНОЕ<br />
               ВСКРЫТИЕ ЗАМКОВ
             </h1>
             <ul class="list">
@@ -39,7 +39,7 @@
           </Column>
 
           <Column class="mobile right-column">
-            <img src="../img/mobile.png" class="title-image"/>
+            <img src="../img/mobile.png" class="title-image" />
           </Column>
         </Row>
       </Container>
@@ -53,7 +53,6 @@ import ModalWindow from "../components/ModalWindow";
 import Row from "@/components/layout/Row";
 import Column from "@/components/layout/Column";
 
-
 export default {
   name: "Title",
   components: {
@@ -66,7 +65,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './../scss/layout/media-querries';
+@import "./../scss/layout/media-querries";
+@import "./../scss/layout/mixins.scss";
 
 .section {
   background-image: url("../img/background.jpg");
@@ -147,17 +147,7 @@ export default {
 */
 
 .c-f {
-  // max width почти всегда лучше width
-  max-width: 250px;
-  // используйте относительные единицы, когда можно
-  // они гибкие и меняются от размера шрифта
-  padding: 1em 2em;
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  text-align: center;
-  outline: 2px solid white;
-  border-radius: 5px;
+  @include for-all-buttons(white);
 
   /*
     В sass можно делать даже так:
@@ -170,7 +160,6 @@ export default {
   }
 }
 
-
 .list > li {
   margin-top: 25px;
 }
@@ -178,7 +167,6 @@ export default {
 .tab {
   margin-left: 80px;
 }
-
 
 .main-title {
   font-size: 50px;
@@ -240,23 +228,6 @@ export default {
     font-size: 40px;
   }
 
-  //.title-slide {
-  //  align-items: center;
-  //}
-  /*
-    маржины указываем только нижние
-    верхние и нижние в куче слипаются между собой
-    и не дают нужного оступа
-    почитай про margin collapse, пожалуйста,
-    чтобы понять, зачем так начали делать
-  */
-
-
-  //.c-f {
-  //  margin-bottom: 55px;
-  //  margin-top: 15px;
-  //}
-
   .menu-click {
     padding: 0 15px;
   }
@@ -302,6 +273,7 @@ export default {
   .menu-union {
     margin-left: 0;
     margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   .menu-click {
