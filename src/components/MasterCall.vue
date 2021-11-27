@@ -56,6 +56,7 @@ export default {
 
 .communication {
   margin-bottom: 50px;
+  padding-top: 50px;
 }
 
 .com-container {
