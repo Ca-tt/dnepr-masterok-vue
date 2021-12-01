@@ -23,6 +23,7 @@ import Call from './components/Call.vue'
 import Footer from './components/Footer.vue'
 import Title from './components/Title.vue'
 
+
 export default {
   name: 'App',
   components: {
