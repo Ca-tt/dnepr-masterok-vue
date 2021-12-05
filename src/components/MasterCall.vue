@@ -69,18 +69,13 @@ export default {
   justify-content: space-around;
   align-items: center;
 
-  // маржины не нужны на десктопе, убрал их
   @include to-desktop {
     margin-bottom: 1rem;
   }
 }
 
 .call-back {
-
-  // тут тоже маржины не нужны на больших экранах
-  // только мешают выровняться по флексу по вертикали
   @include to-desktop {
-    // маржины должны быть в одном правиле
     margin-top: 30px;
     margin-bottom: 0;
   }

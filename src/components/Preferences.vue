@@ -57,7 +57,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
         margin-top: 40px;
     }
 
