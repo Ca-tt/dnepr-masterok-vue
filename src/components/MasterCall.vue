@@ -51,11 +51,12 @@ export default {
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../scss/layout/media-querries';
 
 .communication {
   margin-bottom: 50px;
+  padding-top: 50px;
 }
 
 .com-container {
@@ -140,11 +141,6 @@ export default {
 @media screen and (min-width: 1024px) {
   .communication {
     margin-bottom: 100px;
-  }
-
-  .communication > .title {
-    display: flex;
-    justify-content: center;
   }
 
   .number a {

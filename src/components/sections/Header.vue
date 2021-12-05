@@ -17,7 +17,7 @@
           <CardIsHorizontal :card="cards[1]"></CardIsHorizontal>
           <CardIsHorizontal :card="cards[2]"></CardIsHorizontal>
           <CardIsHorizontal :card="cards[3]"></CardIsHorizontal>
-
+          <MultiLanguage></MultiLanguage>
         </Column>
       </Row>
       <!-- right column end-->
@@ -74,6 +74,7 @@ a {
 </style>
 
 <script>
+import MultiLanguage from '@/components/MultiLanguage.vue'
 import Container from '../layout/Container';
 import Row from "@/components/layout/Row";
 import Column from "@/components/layout/Column";
@@ -86,6 +87,7 @@ export default {
     Column,
     Row,
     Container,
+    MultiLanguage,
   },
   data() {
     return {

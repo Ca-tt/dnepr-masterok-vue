@@ -2,51 +2,39 @@
   <div>
     <ModalButton :text="buttonText" @click.native="openModal"></ModalButton>
 
-    <!-- check this prop hide-close-button="true"-->
     <sweet-modal ref="modal" :hide-close-button="true">
       <div class="modal-head">
         <p class="topic">ВЫЗОВ МАСТЕРА</p>
         <span class="modal-close" @click="closeModal">&times;</span>
       </div>
       <div class="modal-body">
-        <!-- пока что закомментирую твой action -->
-        <!-- <form action="Сheck.php" method="post">-->
         <form id="form" @submit.prevent="sendEmail">
-          <label class="enter-tel">Введите ваш номер телефона</label>
-          <!-- не telephone, а number. Двоюшник -->
-          <!-- и мы никогда не пишем css в питоновском стиле
-            (не user_telephone, а user-phone или user-number)
-          -->
-          <input id="phoneNumber" name="phoneNumber" class="call-input"
-                 placeholder="+38(0__) ___-__-__" type="tel"
-                 v-mask="['+38(0##) ###-##-##']"/>
-          <button type="submit" class="modal-send">ОТПРАВИТЬ
-          </button>
-          <!--
-            не нужно коммитить не работающий код, который еще и выдает ошибки, Саша
-            в консоле ошибок быть не должно
-           -->
-          <!--          <div class="moving-icon">-->
-<!--            <font-awesome-icon icon="loader"/>-->
-<!--          </div>-->
+          <label class="enter-num">Введите ваш номер телефона</label>
+          <input
+            id="phoneNumber"
+            name="phoneNumber"
+            class="call-input"
+            placeholder="+38(0__) ___-__-__"
+            type="tel"
+            v-mask="['+38(0##) ###-##-##']"
+          />
+          <button type="submit" class="modal-send">ОТПРАВИТЬ</button>
         </form>
       </div>
       <p class="bottom-line">*Перезвоним в течение часа</p>
       <p>
-        Нет времени ждать звонка?<br/>
+        Нет времени ждать звонка?<br />
         Нажмите чтоб позвонить:
       </p>
-      <a><h2 class="number">067 135 15 47</h2></a>
-      <a><h2 class="number">099 053 88 64</h2></a>
+      <a class="numbers" href="tel"><h2>067 135 15 47</h2></a>
+      <a class="numbers" href="tel"><h2>099 053 88 64</h2></a>
     </sweet-modal>
   </div>
 </template>
 <style>
 .sweet-content {
   padding-top: 0 !important;
-  /*костыль ПАМАГИТЕ*/
   padding-bottom: 20px !important;
-  /*костыль ПАМАГИТЕ*/
 }
 
 .sweet-modal-overlay {
@@ -108,8 +96,10 @@
   margin-bottom: 30px;
 }
 
-.number {
+.numbers {
   color: orange;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .modal-send {
@@ -119,6 +109,7 @@
   background-color: #fab005;
   padding: 11px 20px;
   border-radius: 2px;
+  border: none;
 }
 
 .call-input {
@@ -199,6 +190,8 @@
   }
 
   .number {
+    text-decoration: none;
+    cursor: pointer;
     color: orange;
   }
 
@@ -227,36 +220,28 @@
     font-size: 28px;
   }
 
-.body-center{
-  display: flex;
-  align-items: baseline;
-}
-
-/* две одинаковых медиа. Не нужно их множить, как кроликов =) */
-@media screen and (min-width: 1023px) {
-  .sweet-modal{
-    max-width: 400px;
+  .body-center {
+    display: flex;
+    align-items: baseline;
   }
 }
-
-  @media screen and (max-width: 1023px) {
-    .sweet-modal {
-      max-width: 90%;
-    }
+@media screen and (min-width: 1023px) {
+  .sweet-modal {
+    max-width: 400px;
   }
 }
 </style>
 <script>
 import ModalButton from "@/components/ModalButton";
-import emailjs from 'emailjs-com';
-emailjs.init("user_n00IFqkCIrHm6D3teTlZD");
+// import emailjs from 'emailjs-com';
+// emailjs.init("user_n00IFqkCIrHm6D3teTlZD");
 
 export default {
   name: "ModalWindow",
   data() {
     return {
-      phoneNumber: '',
-    }
+      phoneNumber: "",
+    };
   },
   components: {
     ModalButton,

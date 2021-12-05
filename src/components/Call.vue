@@ -1,5 +1,5 @@
 <template>
-  <section class="dimmed">
+  <section class="dimmed" id="dimmed">
     <div class="call-dimmer">
       <div class="call-request">
         <div class="request-title">
@@ -7,21 +7,25 @@
           <p>Мы перезвоним в течении 5 минут</p>
         </div>
         <div class="y-tel-number">
-          <div class="tel-number-introduce">
-            <div>
-              <p>Введите ваш номер телефона</p>
+          <form id="form" @submit.prevent="sendEmail">
+            <div class="tel-number-introduce">
+              <div>
+                <p>Введите ваш номер телефона</p>
+              </div>
+              <div class="input-container">
+                <the-mask
+                  :mask="['+38(0##) ###-##-##']"
+                  placeholder="+38(0__) ___-__-__"
+                  class="tel-input"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                />
+              </div>
             </div>
-            <div class="input-container">
-              <the-mask
-                :mask="['+38(0##) ###-##-##']"
-                placeholder="+38(0__) ___-__-__"
-                class="tel-input"
-              />
+            <div class="tel-number-send">
+              <button href="#" class="send-button">Отправить</button>
             </div>
-          </div>
-          <div class="tel-number-send">
-            <ModalWindow button-text="ОТПРАВИТЬ"></ModalWindow>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -213,15 +217,33 @@
 </style>
 
 <script>
-import ModalWindow from "@/components/ModalWindow";
-
+import emailjs from 'emailjs-com';
+// emailjs.init("user_n00IFqkCIrHm6D3teTlZD");
 
 export default {
-  name: 'Call',
-  components: {
-    ModalWindow,
-    // Container
-  }
-}
+  name: "Call",
+  data() {
+    return {
+      phoneNumber: "",
+    };
+  },
+  methods: {
+    // СПЕЦИАЛЬНО отключил отправка на имейл, чтобы не тратить
+    // ресурс. Пока бесплатных 200 имейлов, клиенту будет приятно.
 
+    sendEmail(e) {
+      try {
+        emailjs.sendForm('service_u6tq2om',
+            'template_e8qp568',
+            e.target,
+            'user_n00IFqkCIrHm6D3teTlZD', {
+            phoneNumber: this.phoneNumber
+        })
+      } catch (error) {
+        console.log({error})
+      }
+      this.phoneNumber = ''
+    },
+  },
+};
 </script>
