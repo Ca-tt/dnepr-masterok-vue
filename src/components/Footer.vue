@@ -1,13 +1,9 @@
 <template>
   <footer class="footer-main">
-    <!--
-      тоже костыль (footer-main)
-      лучше придумать один раз паддинги для секции
-      (is-showcase или что-то в этом духе)
-    -->
+    
     <Container>
       <Row class="columns-between two-columns">
-        <!-- добавляй пустую линию между повторяющимися элементами -->
+        
         <div class="column footer-info">
           <font-awesome-icon icon="map-marker-alt" class="footer-icon"/>
           <h6 class="dnepr">Работаем по г. Днепр</h6>
@@ -47,15 +43,13 @@
 }
 
 @media screen and (max-width: 426px) {
-  /*.footer-info {
-  /*  margin: 20px;*/
-  /*}*/
+  
 
 }
 
 @media screen and (max-width: 768px) {
   .dnepr, .mail, .number1, .number2, .developers, .dn-class, .confidentiality {
-    /*font-size: 13px !important;*/
+  
   }
 }
 

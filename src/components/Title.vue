@@ -14,15 +14,7 @@
         <Row class="title-slide columns-between-tablet">
           <Column class="left-column opening">
             <h1 class="main-title">
-              <!--
-                Убрал тег <br>. Считается дурным тоном, ведь
-                с ним тяжелее делать гибкие переходы текста
-
-                Хотя в твоем случае можно было и оставить
-                Так что не костыль =)
-                C ним лучше, честно.
-              -->
-              АВАРИЙНОЕ<br />
+              АВАРИЙНОЕ<br>
               ВСКРЫТИЕ ЗАМКОВ
             </h1>
             <ul class="list">
@@ -34,7 +26,7 @@
             </ul>
             <div class="buttons">
               <ModalWindow buttonText="ВЫЗВАТЬ МАСТЕРА"></ModalWindow>
-              <a href="tel:+38 067 135 15 47" class="c-f"> РАСЧЕТ СТОИМОСТИ </a>
+              <a href="tel:+38 067 135 15 47" class="button cost-calculation"> РАСЧЕТ СТОИМОСТИ </a>
             </div>
           </Column>
 
@@ -84,20 +76,6 @@ export default {
     padding: 2rem 1rem;
   }
 }
-
-//.column {
-//
-//  &.left-column {
-//    @include from-tablet {
-//      flex: 1 0 50% !important; /*костыль. Подумаю, как исправить этот стыд */
-//    }
-//  }
-//}
-
-/*
-  Блоки должны идти в CSS в таком же порядке, как и в ХТМЛ
-  вытянут этот блок с низу, он был под.buttons
-*/
 .opening {
   text-align: left;
 }
@@ -111,7 +89,6 @@ export default {
   height: 124px;
 }
 
-// кнопки по центру только планшета
 .buttons {
   @include mobile-only {
     text-align: center;
@@ -123,41 +100,8 @@ export default {
   }
 }
 
-/*
-  Название классов не оч. Объясню, почему
-
-  Мне, как разработчику, который не писал этот код, не ясно,
-  что такое .c-f: кнопка, секция, блок-контейнер?
-
-  Старайся давайть названия для блоков по следующей методе:
-  - что за элемент (секция, кнопка)
-  - что делает на сайте (колонка, ряд, контейнер)
-  - в каком состоянии находится (оранжевая, синяя, большая, маленькая)
-
-*/
-
-/*
-  Сократил код кнопки за счет того, что
-  не использовал flex.
-
-  Чтобы выровнять текст по центру, использовал паддинги
-  В ховере был тот же код, что и для элемента без наведения.
-
-  Убрал этот код.
-*/
-
-.c-f {
-  @include for-all-buttons(white);
-
-  /*
-    В sass можно делать даже так:
-    - вкладывать один элемент в другой
-    - и использовать название родительского класса (&)
-   */
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.65);
-  }
+.button.cost-calculation {
+  @include for-all-buttons(rgba(255, 255, 255, 0.65), $background-color: transparent);
 }
 
 .list > li {
@@ -181,12 +125,6 @@ export default {
   color: white;
   font-size: 20px;
 }
-
-/* решели с Лешей, что space-between будет выглядить лучше*/
-//.title-slide {
-//display: flex;
-//justify-content: space-between;
-//}
 
 .menu-click {
   text-decoration: none;
@@ -263,13 +201,6 @@ export default {
     flex-direction: column;
   }
 
-  //.title-slide {
-  //  display: flex;
-  //  flex-direction: column;
-  //  align-items: center;
-  //  justify-content: center;
-  //}
-
   .menu-union {
     margin-left: 0;
     margin-top: 10px;
@@ -280,17 +211,11 @@ export default {
     font-size: 17px;
   }
 
-  // теперь это не нужно
-  //.buttons {
-  //  justify-content: center;
-  //  align-items: center;
-  //}
-
   .a-m {
     margin: 0;
   }
 
-  .c-f {
+  .button.cost-calculation {
     margin-bottom: 20px;
   }
 }
@@ -300,20 +225,10 @@ export default {
     margin-right: 0;
   }
 
-  // в этом тоже больше нет необходимости
-  //.buttons {
-  //  justify-content: center;
-  //  align-items: center;
-  //}
-
   .main-title,
   .list {
     text-align: center;
   }
-
-  //.title-slide {
-  //  flex-direction: column;
-  //}
 
   .dnepr-class-img {
     margin-top: 20px;
@@ -351,7 +266,7 @@ export default {
     width: 170px;
   }
 
-  .c-f {
+  .button.cost-calculation {
     margin-bottom: 30px;
   }
 

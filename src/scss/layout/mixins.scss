@@ -1,8 +1,16 @@
+@import './../app/colors.sass';
+
 @mixin img-rounded($border-radius){
     border-radius: $border-radius;
 }
 
-@mixin for-all-buttons($outline-color){
+@mixin for-all-buttons(
+    $background-color-hover: white, 
+    $outline-color: white, 
+    $border-color: white,
+    $background-color: $orange){
+  background-color: $background-color;
+  border-color: $border-color;
   outline-color: $outline-color;
   max-width: 250px;
   padding: 1em 2em;
@@ -13,4 +21,8 @@
   outline-width: 2px;
   outline-style: solid;
   border-radius: 5px;
+
+  &:hover{
+    background-color: $background-color-hover;
+  }
 }

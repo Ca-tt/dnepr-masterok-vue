@@ -14,10 +14,7 @@
       </div>
     </section>
     <section class="main">
-      <!--
-        между однотипными элементами всегда ставим одну пустую линию
-        это повышает читаемость кода
-      -->
+      
       <div class="service">
         <img src="../img/door-open.jpg" alt="" class="service-img" />
         <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ ДВЕРЕЙ</h3>
@@ -82,8 +79,7 @@
 /* услуги и цены */
 
 .to-master {
-  background-color: $orange;
-  @include for-all-buttons($orange);
+  @include for-all-buttons($orange, $orange);
 }
 
 .calculation {
@@ -181,7 +177,6 @@ h6 {
     0 1px 8px 0 rgb(0 0 0 / 12%);
 }
 
-/* изменил, потому что был бы отступ от хедера */
 section {
   font-family: sans-serif;
   margin: 0;
@@ -195,7 +190,6 @@ section {
 
 .title {
   font-weight: 350;
-  /* font-family: sans-serif; */
   font-size: 35px;
   margin-bottom: 10px;
   color: $grey;
