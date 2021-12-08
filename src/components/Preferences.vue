@@ -13,7 +13,7 @@
         <div class="pref-list-fst">
           <div class="pref-block">
             <div class="pref-icon">
-              <font-awesome-icon icon="sort-numeric-down" class="icon" />
+              <font-awesome-icon icon="sort-numeric-down" class="icon"/>
             </div>
             <div class="pref-text">
               <h3>Порядочность и конфиденциальность</h3>
@@ -25,7 +25,7 @@
           </div>
           <div class="pref-block">
             <div class="pref-icon">
-              <font-awesome-icon icon="money-bill-alt" class="icon" />
+              <font-awesome-icon icon="money-bill-alt" class="icon"/>
             </div>
             <div class="pref-text">
               <h3>Наличный или безналичный расчет</h3>
@@ -39,7 +39,7 @@
         <div class="pref-list-snd">
           <div class="pref-block">
             <div class="pref-icon">
-              <font-awesome-icon icon="id-card" class="icon" />
+              <font-awesome-icon icon="id-card" class="icon"/>
             </div>
             <div class="pref-text">
               <h3>Профессионализм</h3>
@@ -51,7 +51,7 @@
           </div>
           <div class="pref-block">
             <div class="pref-icon">
-              <font-awesome-icon icon="lock-open" class="icon" />
+              <font-awesome-icon icon="lock-open" class="icon"/>
             </div>
             <div class="pref-text">
               <h3>Вскрытие без повреждений</h3>
@@ -68,112 +68,110 @@
 </template>
 
 
-<style>
-<<<<<<< HEAD
-    .preferences {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 100px;
-        margin-top: 40px;
-    }
+<style lang="scss" scoped>
+.preferences {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+  margin-top: 40px;
+}
 
-    .preferences > .title {
-        /* width: 55%; */
-        text-align: center;
-        margin-bottom: 25px;
-    }
+.preferences > .title {
+  /* width: 55%; */
+  text-align: center;
+  margin-bottom: 25px;
+}
 
-    .preferences > .title > .category {
-        line-height: 1.7;
-    }
+.preferences > .title > .category {
+  line-height: 1.7;
+}
 
-    .pref-list {
-        display: flex;
-        flex-direction: column;
-    }
+.pref-list {
+  display: flex;
+  flex-direction: column;
+}
 
-    .pref-list-fst, .pref-list-snd {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.pref-list-fst, .pref-list-snd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .pref-block {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-    }
+.pref-block {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
 
-    .pref-icon .icon {
-        width: 60px;
-        height: 60px;
-        border: 2px solid #54617A;
-        padding: 10px;
-        border-radius: 50%;
-        margin: 15px;
-    }
+.pref-icon .icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #54617A;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 15px;
+}
 
-    .pref-text h3 {
-        color: #f5ac00;
-    }
+.pref-text h3 {
+  color: #f5ac00;
+}
 
-    .pref-text p {
-        font-size: 0.9em;
-    }
+.pref-text p {
+  font-size: 0.9em;
+}
 
-    @media screen and (min-width: 768px) {
-        .preferences > .title {
-            width: 70%;
-            margin-bottom: 35px;
-        }
+@media screen and (min-width: 768px) {
+  .preferences > .title {
+    width: 70%;
+    margin-bottom: 35px;
+  }
 
-        .pref-list-fst, .pref-list-snd {
-            flex-direction: row;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
+  .pref-list-fst, .pref-list-snd {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
 
-        .pref-block {
-            flex-direction: row;
-            align-items: center;
-            width: 45%;
-        }
+  .pref-block {
+    flex-direction: row;
+    align-items: center;
+    width: 45%;
+  }
 
-        .pref-text {
-            text-align: left;
-        }
-    }
+  .pref-text {
+    text-align: left;
+  }
+}
 
-    @media screen and (min-width: 1024px) {
-        .pref-list-fst, .pref-list-snd {
-            margin-bottom: 25px;
-        }
+@media screen and (min-width: 1024px) {
+  .pref-list-fst, .pref-list-snd {
+    margin-bottom: 25px;
+  }
 
-        .preferences {
-            margin-bottom: 100px;
-        }
+  .preferences {
+    margin-bottom: 100px;
+  }
 
-        .preferences > .title {
-            width: 720px;
-        }
+  .preferences > .title {
+    width: 720px;
+  }
 
-        .pref-text p {
-            font-size: 1em;
-        }
-    }
+  .pref-text p {
+    font-size: 1em;
+  }
+}
 
-    @media screen and (min-width: 1440px) {
-        .pref-text h3 {
-            font-size: 1.5em;
-        }
+@media screen and (min-width: 1440px) {
+  .pref-text h3 {
+    font-size: 1.5em;
+  }
 
-        .pref-text p {
-            font-size: 1.2em;
-        }
-    }
-</style>
-=======
+  .pref-text p {
+    font-size: 1.2em;
+  }
+}
+
 .preferences {
   display: flex;
   flex-direction: column;
@@ -181,7 +179,6 @@
   margin-bottom: 50px;
   margin-top: 40px;
 }
->>>>>>> fb1a4eac9f48a35fcc0513c065d4b3750c0d4259
 
 .preferences > .title {
   /* width: 55%; */
@@ -280,10 +277,12 @@
     font-size: 1.2em;
   }
 }
+
 </style>
 
 <script>
 export default {
   name: "Preferences",
-};
+}
+
 </script>
