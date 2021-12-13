@@ -8,7 +8,7 @@
         <div class="com-container">
           <div class="kyivstar">
             <div class="logo">
-              <img src="../img/kyivstar.png" alt="">
+              <img src="../img/kyivstar.png" alt="" />
             </div>
             <div class="number">
               <a href="#">067 135 15 47</a>
@@ -16,7 +16,7 @@
           </div>
           <div class="vodafone">
             <div class="logo">
-              <img src="../img/vodafone.png" alt="">
+              <img src="../img/vodafone.png" alt="" />
             </div>
             <div class="number">
               <a href="#">099 053 88 64</a>
@@ -38,21 +38,20 @@
 
 
 <script>
-import Container from '../components/layout/Container';
+import Container from "../components/layout/Container";
 import ModalWindow from "@/components/ModalWindow";
 
 export default {
-  name: 'MasterCall',
+  name: "MasterCall",
   components: {
     ModalWindow,
-    Container
-  }
-}
-
+    Container,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/layout/media-querries';
+@import "../scss/layout/media-querries";
 
 .communication {
   margin-bottom: 50px;
@@ -64,7 +63,9 @@ export default {
   flex-direction: column;
 }
 
-.kyivstar, .vodafone, .call-back {
+.kyivstar,
+.vodafone,
+.call-back {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -86,13 +87,14 @@ export default {
   }
 }
 
-.logo, .backcall {
+.logo,
+.backcall {
   margin-bottom: 15px;
 }
 
 .number a {
   text-decoration: none;
-  color: #54617A;
+  color: #54617a;
   font-size: 20px;
 }
 
@@ -100,17 +102,17 @@ export default {
   color: white;
   text-decoration: none;
   padding: 12px 20px;
-  background-color: #FAB619;
+  background-color: #fab619;
   border-radius: 5px;
   font-size: 12px;
 }
 
 .backcall a:hover {
-  background-color: #FAC019;
+  background-color: #fac019;
 }
 
 .call-soon p {
-  color: #54617A;
+  color: #54617a;
 }
 
 .logo img {
@@ -125,7 +127,9 @@ export default {
     margin-top: 50px;
   }
 
-  .kyivstar, .vodafone, .call-back {
+  .kyivstar,
+  .vodafone,
+  .call-back {
     width: 30%;
   }
 
@@ -175,7 +179,6 @@ export default {
 
   .logo img {
     width: 180px;
-
   }
 }
 </style>

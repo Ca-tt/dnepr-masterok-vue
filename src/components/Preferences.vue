@@ -69,7 +69,6 @@
 
 
 <style>
-<<<<<<< HEAD
     .preferences {
         display: flex;
         flex-direction: column;
@@ -172,16 +171,7 @@
             font-size: 1.2em;
         }
     }
-</style>
-=======
-.preferences {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 50px;
-  margin-top: 40px;
-}
->>>>>>> fb1a4eac9f48a35fcc0513c065d4b3750c0d4259
+
 
 .preferences > .title {
   /* width: 55%; */

@@ -5,29 +5,28 @@
       <Row class="columns-between two-columns">
         
         <div class="column footer-info">
-          <font-awesome-icon icon="map-marker-alt" class="footer-icon"/>
-          <h6 class="dnepr">Работаем по г. Днепр</h6>
+          <font-awesome-icon icon="map-marker-alt" class="footer-icon fa-2x"/>
+          <h6 class="dnepr">Працюємо по м. Дніпро</h6>
         </div>
 
         <div class="column footer-info">
-          <font-awesome-icon icon="envelope" class="footer-icon"/>
+          <font-awesome-icon icon="envelope" class="footer-icon fa-2x"/>
           <h6 class="mail">info@dnepr-сlass.com.ua</h6>
-          <a href="#" class="third-section"><h6 class="confidentiality">Политика
-            конфиденциальности</h6></a>
+          <a href="#" class="third-section"><h6 class="confidentiality">Політика конфіденційності</h6></a>
         </div>
 
         <div class="column footer-info">
-          <font-awesome-icon icon="mobile" class="footer-icon"/>
+          <font-awesome-icon icon="mobile" class="footer-icon fa-2x"/>
           <h6 class="number1">067 135 15 47</h6>
           <h6 class="number2">099 053 88 64</h6>
         </div>
 
         <div class="column footer-info">
+          <font-awesome-icon icon="laptop" class="footer-icon fa-2x"/>
+          <h6 class="dn-class">Сайт розроблений</h6>
           <a href="#" class="fourth-section">
-            <h6 class="developers">Сайт разработан командой EXPND
-            </h6>
+            <h6 class="developers">EXPND Team</h6>
           </a>
-          <h6 class="dn-class">© 2021 Дамир, Леша, Даня, Саша</h6>
         </div>
       </Row>
 
@@ -38,40 +37,28 @@
 <style lang="scss">
 @import '../scss/layout/media-querries';
 
-.footer-main {
-  padding: 2rem 0;
-}
-
-@media screen and (max-width: 426px) {
-  
-
-}
-
-@media screen and (max-width: 768px) {
-  .dnepr, .mail, .number1, .number2, .developers, .dn-class, .confidentiality {
-  
-  }
-}
-
 .developers {
-  margin-bottom: .5rem;
+  margin-top: .5rem;
+  color: #000;
 }
 
 .dn-class {
-  color: #fab005;
+  color: white;
   margin-top: 0;
 }
 
 .number1 {
-  color: #fab005;
+  color: white;
 }
 
 .number2 {
-  color: #fab005;
+  color: white;
+  margin-top: .5rem;
 }
 
-.confidentiality, .developers {
-  color: white;
+.confidentiality {
+  color: black;
+  margin-top: .5rem;
 }
 
 .third-section, .fourth-section {
@@ -79,7 +66,7 @@
 }
 
 .mail {
-  color: #fab005;
+  color: white;
 }
 
 .confidentiality {
@@ -98,7 +85,7 @@
 }
 
 .dnepr {
-  color: #fab005;
+  color: white;
 }
 
 .dnepr, .mail, .number1, .number2, .developers, .dn-class, .confidentiality {
@@ -106,14 +93,13 @@
 }
 
 .footer-icon {
-  margin: 0 0 1em 0;
-  color: #fab005;
+  margin: 20px;
+  color: #000;
 }
 
 .footer-main {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: black;
+  background-color: #8DA0BC;
+  padding: 2rem 0;
 }
 
 </style>
