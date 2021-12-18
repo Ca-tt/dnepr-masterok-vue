@@ -13,7 +13,7 @@
         <div class="pref-list-fst">
           <div class="pref-block">
             <div class="pref-icon">
-              <font-awesome-icon icon="sort-numeric-down" class="icon" />
+              <font-awesome-icon icon="sort-numeric-down" class="icon"/>
             </div>
             <div class="pref-text">
               <h3>Порядочность и конфиденциальность</h3>
@@ -25,7 +25,7 @@
           </div>
           <div class="pref-block">
             <div class="pref-icon">
-              <font-awesome-icon icon="money-bill-alt" class="icon" />
+              <font-awesome-icon icon="money-bill-alt" class="icon"/>
             </div>
             <div class="pref-text">
               <h3>Наличный или безналичный расчет</h3>
@@ -39,7 +39,7 @@
         <div class="pref-list-snd">
           <div class="pref-block">
             <div class="pref-icon">
-              <font-awesome-icon icon="id-card" class="icon" />
+              <font-awesome-icon icon="id-card" class="icon"/>
             </div>
             <div class="pref-text">
               <h3>Профессионализм</h3>
@@ -51,7 +51,7 @@
           </div>
           <div class="pref-block">
             <div class="pref-icon">
-              <font-awesome-icon icon="lock-open" class="icon" />
+              <font-awesome-icon icon="lock-open" class="icon"/>
             </div>
             <div class="pref-text">
               <h3>Вскрытие без повреждений</h3>
@@ -270,10 +270,12 @@
     font-size: 1.2em;
   }
 }
+
 </style>
 
 <script>
 export default {
   name: "Preferences",
-};
+}
+
 </script>
