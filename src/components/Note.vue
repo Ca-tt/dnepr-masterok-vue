@@ -1,54 +1,68 @@
 <template>
-   <section class="note">
-       <section class="union">
+  <section class="note">
+        <div class="line1"></div>
+            <section class="union">
             <div class="note-title">
-                <h5 class="title-note">ПРИМЕЧАНИЕ</h5>
+                <h5 class="title-note">ПРИМІТКА</h5>
             </div>
             <div class="only-documents">
-                <p class="notes">Все работы по аварийному вскрытию замков осуществляются ТОЛЬКО при наличии документов на вскрываемый объект!</p>
+                <p class="notes">
+                Всі роботи з аварійного відкриття замків здійснюються ТІЛЬКИ за<br />
+                наявності документів на об'єкт, що вскривається!
+                </p>
             </div>
-       </section>
-   </section>
+            </section>
+        <div class="line2"></div>
+  </section>
 </template>
 
 <style>
-    @media screen and (max-width: 1024px){
-        .notes{
-            font-size: 15px !important;
-        }
-        .title-note{
-            font-size: 20px !important;
-        }
-    }
-    .notes{
-        font-size: 18px;
-        margin: 5px;
-    }
-    .title-note{
-        font-size: 23px;
-        font-weight: 400;
-        margin-bottom: 15px;
-    }
-    .union{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .note{
-        background-color: rgb(245, 250, 253);
-        height: 200px;
-        padding: 2.5%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+@media screen and (max-width: 1024px) {
+  .notes {
+    font-size: 15px !important;
+  }
+  .title-note {
+    font-size: 20px !important;
+  }
+}
+
+.line1, .line2{
+    width: 2px;
+    height: 250px;
+    background-color: #F86F21;
+}
+
+.notes {
+  font-size: 18px;
+  margin: 5px;
+  color: #485d7d;
+  text-align: center;
+  font-weight: 300;
+}
+.title-note {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  color: #f86f21;
+}
+.union {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.note {
+  background-color: #dde4ed;
+  height: 250px;
+  padding: 2.5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 </style>
 
 <script>
-
 export default {
-  name: 'Note',
-
-}
+  name: "Note",
+};
 </script>
