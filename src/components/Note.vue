@@ -59,6 +59,12 @@
   justify-content: space-around;
   align-items: center;
 }
+
+@media screen and (max-width: 580px){
+  .line1, .line2{
+    display: none;
+  }
+}
 </style>
 
 <script>
