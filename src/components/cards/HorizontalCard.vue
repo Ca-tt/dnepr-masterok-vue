@@ -1,21 +1,16 @@
 <template>
   <!-- TODO: wrap every card with a column component -->
-
   <!-- Card template-->
   <a class="card-link" :href="card.link">
-
     <figure class="column card is-horizontal">
-
       <!-- icon (required) -->
-      <header class="card-icon">
-        <font-awesome-icon :icon="card.icon"/>
-      </header>
-
+<!--      <header class="card-icon">-->
+<!--        <font-awesome-icon :icon="card.icon"/>-->
+<!--      </header>-->
       <!-- subheading or text (required) -->
       <figcaption class="card-text">
         {{ card.text }}
       </figcaption>
-
     </figure>
   </a>
 </template>
@@ -32,59 +27,47 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '../../scss/app/colors';
-@import '../../scss/layout/media-querries';
+<style lang="sass" scoped>
+@import './../../scss/app/defaults'
+@import '../../scss/app/colors'
+@import '../../scss/layout/media-querries'
 
-// TODO: refactor and gather old styles and new
-$cards-section-padding: 30px 0;
+$cards-section-padding: 30px 0
 
-$card-icon-size: 50px;
-$card-color: white;
-
-// card configs (general)
-$default-card-padding: .25em;
-
-// icon configs
-$mobile-icon-size: 25px;
-$desktop-icon-size: 20px;
+$card-color: white
+$card-icon-size: 50px
+$card-padding: .25em
+$card-icon-size-mobile: 25px
+$card-icon-size-desktop: 20px
 
 // text config (subtitle)
-$mobile-font-size: 15px;
-$desktop-font-size: 15px;
+$card-font-size-mobile: $default-page-font-size
+$card-font-size-desktop: 17px
 
+$card-link-hover: $deep-orange
+.card-link
+  transition: .6s
+  color: $card-color
+  &:hover
+    color: $card-link-hover
 
-.card-link {
-  color: $card-color;
-  text-decoration: none;
-}
+.card.is-horizontal
+  .card-icon
+    padding: $card-padding
+    font-size: $card-icon-size-mobile
 
-.card {
-  // карточки в хедере
-  &.is-horizontal {
+  .card-text
+    padding: $card-padding
+    font-size: $card-font-size-mobile
 
-    .card-icon {
-      padding: $default-card-padding;
-      font-size: $mobile-icon-size;
-    }
+.card.is-horizontal
+    @include from-desktop
+      display: flex
+      align-items: center
 
-    .card-text {
-      padding: $default-card-padding;
-      font-size: $mobile-font-size;
-    }
+      .card-icon 
+        font-size: $card-icon-size-desktop
 
-    @include from-desktop {
-      display: flex;
-      align-items: center;
-
-      .card-icon {
-        font-size: $desktop-icon-size;
-      }
-
-      .card-text {
-        font-size: $desktop-font-size;
-      }
-    }
-  }
-}
+      .card-text 
+        font-size: $card-font-size-desktop
 </style>
