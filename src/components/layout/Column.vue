@@ -1,46 +1,18 @@
 <template lang="pug">
-
   .column
     slot
-
 </template>
+
+<style lang="sass">
+@import '../../scss/layout/media-querries.scss'
+
+.column
+  @include mobile-only
+    margin: 0 auto
+</style>
 
 <script>
 export default {
   name: "Column"
 }
 </script>
-
-<style lang="sass">
-@import '../../scss/layout/media-querries.scss'
-
-.column
-
-  @include mobile-only
-    margin: 0 auto
-
-// when inside a row with columns between
-:is(.row.columns-between,
-    .row.columns-between-tablet,
-    .row.columns-between-desktop)
-
-    .left-column
-      flex: 1 0 30%
-
-    .right-column
-      flex: 1 1 70%
-      text-align: center
-
-      @include from-tablet
-        display: flex
-        justify-content: flex-end
-
-// начались костыли
-  // in Title.vue
-.section.is-site-opening
-  .left-column
-    flex: 1 0 50%
-  .right-column
-    flex: 1 0 30%
-
-</style>

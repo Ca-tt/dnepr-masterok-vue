@@ -6,18 +6,14 @@
 
         <!-- left column -->
         <Column class="column left-column">
-
           <CardIsHorizontal :card="cards[0]"></CardIsHorizontal>
-
         </Column>
 
         <!-- right column -->
         <Column class="column right-column">
-
           <CardIsHorizontal :card="cards[1]"></CardIsHorizontal>
           <CardIsHorizontal :card="cards[2]"></CardIsHorizontal>
           <CardIsHorizontal :card="cards[3]"></CardIsHorizontal>
-          <MultiLanguage></MultiLanguage>
         </Column>
       </Row>
       <!-- right column end-->
@@ -25,60 +21,38 @@
   </header>
 </template>
 
-<style lang="scss" scoped>
-@import '../../scss/layout/helpers';
+<style lang="sass" scoped>
+@import '../../scss/layout/helpers'
 
-$header-padding: .5em 0;
-$header-font-color: white;
+$header-padding: .5em 0
+$header-font-color: white
+$header-background: #485D7D
 
-.site-header {
-  padding: $header-padding;
-  background-color: #222;
-  color: $header-font-color;
-}
+.site-header 
+  padding: $header-padding
+  background-color: $header-background
+  color: $header-font-color
 
-.card {
-  max-width: 100%;
-}
+.card 
+  max-width: 100%
 
-//.left-column {
-//  flex: 1 0 25%;
-//}
-//
-//.right-column {
-//  justify-content: flex-end;
-//  align-items: center;
-//}
-
-.header-icon {
-  padding: 0;
-  font-size: 18px;
-  color: #999;
-  margin-right: 10px;
-}
-
-.clock {
-  max-width: 18px;
-}
+.clock 
+  max-width: 18px
 
 .site-header,
-a {
-  color: white;
-}
+a 
+  color: white
 
-@media (max-width: 767px) {
-  header {
-    display: none;
-  }
-}
+@media (max-width: 767px) 
+  header 
+    display: none
 </style>
 
 <script>
-import MultiLanguage from '@/components/MultiLanguage.vue'
 import Container from '../layout/Container';
-import Row from "@/components/layout/Row";
-import Column from "@/components/layout/Column";
-import CardIsHorizontal from "@/components/cards/HorizontalCard";
+import Row from "./../../components/layout/Row";
+import Column from "./../../components/layout/Column";
+import CardIsHorizontal from "./../cards/HorizontalCard";
 
 export default {
   name: "Header",
@@ -87,31 +61,30 @@ export default {
     Column,
     Row,
     Container,
-    MultiLanguage,
   },
   data() {
     return {
       cards: [
         {
-          icon: 'lock',
+          // icon: 'lock',
           title: '',
-          text: 'Открываем замки любой сложности',
+          text: 'Відкриваємо замки будь-якої складності',
         },
         {
-          icon: 'clock',
+          // icon: 'clock',
           title: '',
-          text: 'Работаем круглосуточно',
+          text: 'Працюємо цілодобово',
         },
         {
-          icon: 'mobile',
+          // icon: 'mobile',
           title: '',
-          text: '067 135 15 47',
+          text: '066 172-03-52',
           link: true,
         },
         {
-          icon: 'mobile',
+          // icon: 'mobile',
           title: '',
-          text: '099 053 88 64',
+          text: '097 753-34-60',
           link: true,
         },
       ]

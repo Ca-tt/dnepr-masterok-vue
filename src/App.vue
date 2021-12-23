@@ -40,44 +40,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
-/*
-  below listed
-  Default Page Styles for
-  - body
-  - styles for mobile responsiveness
-
-*/
-
-// TODO: подключить локальные шрифты.
-// А пока и так сойдет =)
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
-@import './scss/app/colors';
-@import './scss/layout/media-querries';
-
-$default-page-text-alignment: center;
-$default-page-color: $light-grey;
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  color: $default-page-color;
-
-  @include to-desktop {
-    text-align: $default-page-text-alignment;
-  }
-}
-
-body,
-figure {
-  margin: 0;
-}
-
-:is(h1, h2, h3, h4, h5, h6) {
-  margin: 0;
-}
+<style lang="sass">
+@import 'scss/app/defaults'
 
 </style>
