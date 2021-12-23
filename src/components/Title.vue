@@ -3,35 +3,37 @@
     <div class="dimmer">
       <Container>
         <div class="menu">
-          <img src="../img/title.png" class="dnepr-class-img" />
+          <img src="../img/logo.png" class="dnepr-class-img" />
           <div class="menu-union">
-            <a href="#prices-page" class="menu-click"> УСЛУГИ И ЦЕНЫ </a>
-            <a href="#preferences" class="menu-click"> НАШИ ПРИЕМУЩЕСТВА </a>
-            <a href="#dimmed" class="menu-click"> КОНТАКТЫ </a>
+            <a href="#prices-page" class="menu-click"> Послуги та ціни </a>
+            <a href="#preferences" class="menu-click"> Наші переваги </a>
+            <a href="#dimmed" class="menu-click"> Контакти </a>
           </div>
         </div>
 
         <Row class="title-slide columns-between-tablet">
           <Column class="left-column opening">
             <h1 class="main-title">
-              АВАРИЙНОЕ<br>
-              ВСКРЫТИЕ ЗАМКОВ
+              АВАРІЙНЕ<br />
+              ВІДКРИТТЯ ЗАМКІВ
             </h1>
             <ul class="list">
-              <li>- ОТКРЫВАЕМ ВСЕ ВИДЫ ЗАМКОВ</li>
-              <li>- ПРИЕДЕМ В ТЕЧЕНИИ 20 МИНУТ</li>
-              <li>- БЕЗ ПОВРЕЖДЕНИЯ ЗАМКА</li>
-              <li>- КОНФИДЕНЦИАЛЬНО</li>
-              <li class="tab">от 300 грн</li>
+              <li>- ВІДКРИВАЄМО ВСІ ВИДИ ЗАМКІВ</li>
+              <li>- ПРИЇДЕМО ПРОТЯГОМ 20 ХВИЛИН</li>
+              <li>- БЕЗ ПОШКОДЖЕННЯ ЗАМКА</li>
+              <li>- КОНФІДЕНЦІЙНО</li>
+              <li class="tab">ВІД 300 грн</li>
             </ul>
             <div class="buttons">
-              <ModalWindow buttonText="ВЫЗВАТЬ МАСТЕРА"></ModalWindow>
-              <a href="tel:+38 067 135 15 47" class="button cost-calculation"> РАСЧЕТ СТОИМОСТИ </a>
+              <ModalWindow buttonText="ВИКЛИКАТИ МАЙСТРА"></ModalWindow>
+              <a href="tel:+38 067 135 15 47" class="button cost-calculation">
+                РОЗРАХУНОК ВАРТОСТІ
+              </a>
             </div>
           </Column>
 
           <Column class="mobile right-column">
-            <img src="../img/mobile.png" class="title-image" />
+            <img src="../img/contact-phone.png" class="title-image" />
           </Column>
         </Row>
       </Container>
@@ -61,15 +63,15 @@ export default {
 @import "./../scss/layout/mixins.scss";
 
 .section {
-  background-image: url("../img/background.jpg");
-  background-position: center center;
+  background-image: url("../img/bg-first-section.png");
   background-attachment: fixed;
   background-size: cover;
-  min-height: 100vh;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
 }
 
 .dimmer {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(245, 239, 239, 0);
   min-height: 100vh;
 
   .container {
@@ -101,7 +103,10 @@ export default {
 }
 
 .button.cost-calculation {
-  @include for-all-buttons(rgba(255, 255, 255, 0.65), $background-color: transparent);
+  @include for-all-buttons(
+    rgba(255, 255, 255, 0.65),
+    $background-color: transparent
+  );
 }
 
 .list > li {
@@ -114,7 +119,7 @@ export default {
 
 .main-title {
   font-size: 50px;
-  color: white;
+  color: black;
   font-weight: 600;
   margin-bottom: 0;
 }
@@ -122,15 +127,17 @@ export default {
 .list {
   list-style-type: none;
   padding: 0;
-  color: white;
-  font-size: 20px;
+  color: black;
+  font-size: 22px;
 }
 
 .menu-click {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 17px;
-  font-weight: 600;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
 }
 
 .menu-click:hover {

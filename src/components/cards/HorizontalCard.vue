@@ -50,8 +50,8 @@ $mobile-icon-size: 25px;
 $desktop-icon-size: 20px;
 
 // text config (subtitle)
-$mobile-font-size: 17px;
-$desktop-font-size: 17px;
+$mobile-font-size: 15px;
+$desktop-font-size: 15px;
 
 
 .card-link {

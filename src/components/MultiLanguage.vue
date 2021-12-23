@@ -6,37 +6,42 @@
 	//! js : делаем по принципу ключ значении (key = "Ключ")  -->
 
   <div>
-    <!--  card  -->
-    <a class="card-link">
-      <figure class="column card is-horizontal">
-        <!-- icon (required) -->
-        <header class="card-icon">
-          <img src="../img/flags/ua-flag.png" alt="Ukraine-flag" />
-        </header>
+    <section class="multi-body">
+      <!--  card  -->
+      <a class="card-link">
+        <figure class="column card is-horizontal">
+          <!-- icon (required) -->
+          <header class="card-icon">
+            <a href="#" class="ua-flag-button" id="ua"
+              ><img src="../img/flags/ua-flag.png" alt="Ukraine-flag"
+            /></a>
+          </header>
 
-        <!-- subheading or text (required) -->
-        <figcaption class="card-text">Ua</figcaption>
-      </figure>
-    </a>
+          <!-- subheading or text (required) -->
+          <figcaption class="card-text">Ua</figcaption>
+        </figure>
+      </a>
 
-    <!--  card  -->
-    <a class="card-link">
-      <figure class="column card is-horizontal">
-        <!-- icon (required) -->
-        <header class="card-icon">
-          <img src="../img/flags/ru-flag.png" alt="Russia-flag" />
-        </header>
+      <!--  card  -->
+      <a class="card-link">
+        <figure class="column card is-horizontal">
+          <!-- icon (required) -->
+          <header class="card-icon">
+            <a href="#" class="ru-flag-button lang" id="ru"
+              ><img src="../img/flags/ru-flag.png" alt="Russia-flag"
+            /></a>
+          </header>
 
-        <!-- subheading or text (required) -->
-        <figcaption class="card-text">Ru</figcaption>
-      </figure>
-    </a>
+          <!-- subheading or text (required) -->
+          <figcaption class="card-text">Ru</figcaption>
+        </figure>
+      </a>
+    </section>
   </div>
 </template>
 
 
 <script>
-
 </script>
 
 <style lang="scss" scoped>
@@ -63,6 +68,10 @@ $desktop-font-size: 17px;
 .card-link {
   color: $card-color;
   text-decoration: none;
+}
+
+.multi-body{
+  display: flex;
 }
 
 .card {

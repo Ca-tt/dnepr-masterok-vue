@@ -17,7 +17,7 @@
           <CardIsHorizontal :card="cards[1]"></CardIsHorizontal>
           <CardIsHorizontal :card="cards[2]"></CardIsHorizontal>
           <CardIsHorizontal :card="cards[3]"></CardIsHorizontal>
-          <MultiLanguage></MultiLanguage>
+          <!-- <MultiLanguage></MultiLanguage> -->
         </Column>
       </Row>
       <!-- right column end-->
@@ -33,7 +33,7 @@ $header-font-color: white;
 
 .site-header {
   padding: $header-padding;
-  background-color: #222;
+  background-color: rgba(48, 120, 255, 0.657);
   color: $header-font-color;
 }
 
@@ -50,16 +50,14 @@ $header-font-color: white;
 //  align-items: center;
 //}
 
-.header-icon {
-  padding: 0;
-  font-size: 18px;
-  color: #999;
-  margin-right: 10px;
-}
+// .header-icon {
+//   padding: 0;
+//   font-size: 18px;
+//   color: #999;
+//   margin-right: 10px;
+// }
 
-.clock {
-  max-width: 18px;
-}
+
 
 .site-header,
 a {
@@ -74,7 +72,7 @@ a {
 </style>
 
 <script>
-import MultiLanguage from '@/components/MultiLanguage.vue'
+// import MultiLanguage from '@/components/MultiLanguage.vue'
 import Container from '../layout/Container';
 import Row from "@/components/layout/Row";
 import Column from "@/components/layout/Column";
@@ -87,29 +85,25 @@ export default {
     Column,
     Row,
     Container,
-    MultiLanguage,
+    // MultiLanguage,
   },
   data() {
     return {
       cards: [
         {
-          icon: 'lock',
           title: '',
-          text: 'Открываем замки любой сложности',
+          text: 'Відкриваємо замки будь-якої складності',
         },
         {
-          icon: 'clock',
           title: '',
-          text: 'Работаем круглосуточно',
+          text: 'Працюємо цілодобово',
         },
         {
-          icon: 'mobile',
           title: '',
           text: '067 135 15 47',
           link: true,
         },
         {
-          icon: 'mobile',
           title: '',
           text: '099 053 88 64',
           link: true,
