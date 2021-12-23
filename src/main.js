@@ -11,6 +11,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 
 // import necessary icons from font-awesome
 import {
+    faArrowUp,
     faLaptop,
     faLock,
     faLockOpen,
@@ -27,6 +28,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 // add them to the library
 library.add(
+    faArrowUp,
     faLaptop,
     faLock,
     faLockOpen,
