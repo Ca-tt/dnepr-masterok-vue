@@ -35,7 +35,7 @@
 .notes {
   font-size: 18px;
   margin: 5px;
-  color: #485d7d;
+  color: #485D7D;
   text-align: center;
   font-weight: 300;
 }

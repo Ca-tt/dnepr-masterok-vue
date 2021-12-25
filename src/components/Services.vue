@@ -2,71 +2,70 @@
   <section id="prices-page" class="prices-page">
     <section class="title-prices-page">
       <div class="title-block">
-        <h2 class="title">НАШИ УСЛУГИ И ЦЕНЫ</h2>
+        <h2 class="title-pr-page">НАШІ ПОСЛУГИ І ЦІНИ</h2>
       </div>
       <div class="categories">
         <p class="category">
-          Цена услуг по вскрытию замков зависит от конструкции замка и степени
-          сложности поломки.
+          Ціна послуг відкриття замків залежить від конструкції замку та ступеня
+          складності поломки
         </p>
-        <p class="category">Ложный вызов — 500 грн.</p>
-        <p class="category">Простой мастера — 1 час — 1000 грн.</p>
+        <p class="category">Хибний виклик — 500 грн.</p>
+        <p class="category">Простій майстра — 1 година — 1000 грн.</p>
       </div>
     </section>
     <section class="main">
-      
       <div class="service">
         <img src="../img/door-open.jpg" alt="" class="service-img" />
-        <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ ДВЕРЕЙ</h3>
+        <h3 class="service-title">ТЕРМІНОВЕ ВІДКРИТТЯ ДВЕРЕЙ</h3>
         <p class="explanation-of-service">
-          Стоимость от 400 грн<br />
-          зависит от степени сложности замка
+          Вартість від 400 грн<br />
+          залежить від ступеня складності замку
         </p>
       </div>
 
       <div class="service">
-        <img src="../img/auto-open.jpg" alt="" class="service-img" />
-        <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ АВТО</h3>
+        <img src="../img/open-door-2.png" alt="" class="service-img" />
+        <h3 class="service-title">ТЕРМІНОВЕ ВІДКРИТТЯ АВТО</h3>
         <p class="explanation-of-service">
-          Стоимость от 400 грн<br />
-          зависит от степени сложности замка
+          Вартість від 400 грн<br />
+          залежить від ступеня складності замку
         </p>
       </div>
 
       <div class="service">
-        <img src="../img/safe-open.jpg" alt="" class="service-img" />
-        <h3 class="service-title">СРОЧНОЕ ВСКРЫТИЕ СЕЙФА</h3>
+        <img src="../img/open-safe-2.png" alt="" class="service-img" />
+        <h3 class="service-title">ТЕРМІНОВЕ ВІДКРИТТЯ СЕЙФУ</h3>
         <p class="explanation-of-service">
-          Стоимость от 400 грн<br />
-          зависит от степени сложности замка
+          Вартість від 400 грн<br />
+          залежить від ступеня складності замку
         </p>
       </div>
 
       <div class="service">
         <img src="../img/change-lock.jpg" alt="" class="service-img" />
-        <h3 class="service-title">ЗАМЕНА ЗАМКОВ</h3>
+        <h3 class="service-title">ЗАМІНА ЗАМКІВ</h3>
         <p class="explanation-of-service">
-          Стоимость от 400 грн<br />
-          зависит от степени сложности замка
+          Вартість від 400 грн<br />
+          залежить від ступеня складності замку
         </p>
       </div>
 
       <div class="service">
-        <img src="../img/change-latch.jpg" alt="" class="service-img" />
-        <h3 class="service-title">ЗАМЕНА НОЧНОЙ ЗАДВИЖКИ</h3>
+        <img src="../img/change-latch-2.png" alt="" class="service-img" />
+        <h3 class="service-title">ЗАМІНА НІЧНОЇ ЗАСУВКИ</h3>
         <p class="explanation-of-service">
-          Стоимость от 400 грн<br />
-          зависит от степени сложности замка
+          Вартість від 400 грн<br />
+          залежить від ступеня складності замку
         </p>
-        <ModalWindow buttonText="СРОЧНО ВЫЗВАТЬ МАСТЕРА"></ModalWindow>
+        <ModalWindow buttonText="ТЕРМІНОВО ВИКЛИКАТИ МАЙСТРА"></ModalWindow>
       </div>
 
       <div class="clarify-price">
-        <h3 class="clarify">УТОЧНИТЬ СТОИМОСТЬ</h3>
-        <p class="calculation">Для точного расчета отправьте фото замка</p>
-        <img src="../img/logo-viber.png" class="sn" />
-        <p class="click-to-send">нажмите для отправки фото</p>
-        <a class="to-master" href=""> ОТПРАВИТЬ ФОТО </a>
+        <img src="../img/logotype-viber.png" class="sn" />
+        <h3 class="clarify">УТОЧНИТИ ВАРТІСТЬ</h3>
+        <p class="calculation">Для точного розрахунку надішліть фото замка</p>
+        <p class="click-to-send">натисніть, щоб відправити фото</p>
+        <a class="to-master" href="">НАДІСЛАТИ ФОТО</a>
       </div>
     </section>
   </section>
@@ -82,16 +81,20 @@
   @include for-all-buttons($orange, $orange);
 }
 
+.click-to-send {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
 .calculation {
   margin: 0;
   text-align: center;
-  margin-bottom: 5px;
 }
 
 .clarify {
-  margin-top: 30px !important;
+  margin-top: 20px !important;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 21px;
   font-weight: 300;
 }
@@ -106,9 +109,9 @@
 }
 
 .sn {
-  margin-top: 10px !important;
   max-width: 100%;
-  height: auto;
+  height: 150px;
+  margin: 0;
 }
 
 .title-of-call {
@@ -172,7 +175,7 @@ h6 {
   width: 350px;
   height: 200px;
   margin-top: 20px;
-  @include img-rounded(100px);
+  @include img-rounded(20px);
   box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%),
     0 1px 8px 0 rgb(0 0 0 / 12%);
 }
@@ -188,9 +191,9 @@ section {
   flex-wrap: wrap;
 }
 
-.title {
-  font-weight: 350;
-  font-size: 35px;
+.title-pr-page {
+  font-weight: 100;
+  font-size: 45px;
   margin-bottom: 10px;
   color: $grey;
   text-align: center;
@@ -210,7 +213,7 @@ section {
 }
 
 .prices-page {
-  background-color: $light-grey-blue;
+  background-color: #dde4ed;
   padding: 50px 0;
 }
 
@@ -234,7 +237,8 @@ section {
 
   .sn {
     max-width: 100%;
-    height: auto;
+    height: 200px;
+    margin-top: 20px;
   }
 
   .service-img {
@@ -249,7 +253,7 @@ section {
 }
 
 @media screen and (max-width: 1024px) {
-  .title {
+  .title-pr-page {
     font-size: 45px;
   }
 
@@ -274,6 +278,10 @@ section {
     width: 272px;
     height: 150px;
   }
+  
+  .sn{
+    height: 150px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -292,6 +300,10 @@ section {
 
   .clarify-price {
     width: 310px;
+  }
+
+  .sn{
+    margin-top: 30px;
   }
 }
 </style>
