@@ -97,7 +97,7 @@
 }
 
 .numbers {
-  color: orange;
+  color: #F86F21;
   text-decoration: none;
   cursor: pointer;
 }
@@ -106,7 +106,8 @@
   color: white;
   font-size: 0.8em;
   text-decoration: none;
-  background-color: #fab005;
+  background-color: #F86F21;
+;
   padding: 11px 20px;
   border-radius: 2px;
   border: none;

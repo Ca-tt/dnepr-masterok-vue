@@ -70,7 +70,7 @@ $card-color: $grey;
     }
 
     .card-text {
-      color: #f5ac00;
+      color: $orange;
       font-weight: bold;
       font-size: 1.25rem;
     }

@@ -26,7 +26,7 @@
             </ul>
             <div class="buttons">
               <ModalWindow buttonText="ВИКЛИКАТИ МАЙСТРА"></ModalWindow>
-              <a href="tel:+38 067 135 15 47" class="button cost-calculation">
+              <a href="tel:+38 067 135 15 47" class=" button cost-calculation">
                 РОЗРАХУНОК ВАРТОСТІ
               </a>
             </div>
@@ -102,11 +102,16 @@ export default {
   }
 }
 
-.button.cost-calculation {
-  @include for-all-buttons(
-    rgba(255, 255, 255, 0.65),
-    $background-color: transparent
-  );
+.cost-calculation {
+  // @include for-all-buttons(
+  //   rgba(255, 255, 255, 0.65),
+  //   $background-color: $orange
+  // );
+  color: white;
+  text-decoration: none;
+  background-color: $orange;
+  padding: 1em 2em;
+  border-radius: 30px;
 }
 
 .list > li {

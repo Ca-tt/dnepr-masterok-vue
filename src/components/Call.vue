@@ -3,14 +3,14 @@
     <div class="call-dimmer">
       <div class="call-request">
         <div class="request-title">
-          <h2 class="title">ЗАКАЗАТЬ ЗВОНОК</h2>
-          <p>Мы перезвоним в течении 5 минут</p>
+          <h2 class="title">Замовити дзвінок</h2>
+          <p>Ми передзвонимо протягос 5 хвилин</p>
         </div>
         <div class="y-tel-number">
           <form id="form" @submit.prevent="sendEmail">
             <div class="tel-number-introduce">
               <div>
-                <p>Введите ваш номер телефона</p>
+                <p>Введіть ваш номер</p>
               </div>
               <div class="input-container">
                 <the-mask
@@ -23,7 +23,7 @@
               </div>
             </div>
             <div class="tel-number-send">
-              <button href="#" class="send-button">Отправить</button>
+              <button href="#" class="send-button">Відправити</button>
             </div>
           </form>
         </div>
@@ -35,6 +35,7 @@
 
 <style lang="scss" scoped>
 @import '../scss/layout/media-querries';
+@import '../scss/app/colors';
 
 .call-dimmer {
   background-color: rgba(0, 0, 0, 0.6);
@@ -109,7 +110,7 @@
   color: white;
   font-size: 0.8em;
   text-decoration: none;
-  background-color: #fab005;
+  background-color: $orange;
   padding: 8px 45px;
   border-radius: 5px;
   box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 5px 8px 0 rgb(0 0 0 / 14%),
@@ -117,7 +118,7 @@
 }
 
 .send-button:hover {
-  background-color: #faa005;
+  background-color: $orange;
 }
 
 .call-request {
