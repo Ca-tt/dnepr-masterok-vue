@@ -2,7 +2,7 @@
   <section id="prices-page" class="prices-page">
     <section class="title-prices-page">
       <div class="title-block">
-        <h2 class="title-pr-page">НАШІ ПОСЛУГИ І ЦІНИ</h2>
+        <h2 class="title">НАШІ ПОСЛУГИ І ЦІНИ</h2>
       </div>
       <div class="categories">
         <p class="category">
@@ -191,7 +191,7 @@ section {
   flex-wrap: wrap;
 }
 
-.title-pr-page {
+.title {
   font-weight: 100;
   font-size: 45px;
   margin-bottom: 10px;
@@ -253,7 +253,7 @@ section {
 }
 
 @media screen and (max-width: 1024px) {
-  .title-pr-page {
+  .title {
     font-size: 45px;
   }
 
