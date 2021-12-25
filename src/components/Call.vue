@@ -4,14 +4,11 @@
       <div class="call-request">
         <div class="request-title">
           <h2 class="title">Замовити дзвінок</h2>
-          <p>Ми передзвонимо протягос 5 хвилин</p>
         </div>
         <div class="y-tel-number">
+          <p class="call-p-title">Ми передзвонимо протягом 5 хвилин</p>
           <form id="form" @submit.prevent="sendEmail">
             <div class="tel-number-introduce">
-              <div>
-                <p>Введіть ваш номер</p>
-              </div>
               <div class="input-container">
                 <the-mask
                   :mask="['+38(0##) ###-##-##']"
@@ -21,9 +18,12 @@
                   name="phoneNumber"
                 />
               </div>
+              <div class="tel-number-send">
+                <button href="#" class="send-button">Відправити</button>
+              </div>
             </div>
-            <div class="tel-number-send">
-              <button href="#" class="send-button">Відправити</button>
+            <div>
+                <p>Введіть ваш номер</p>
             </div>
           </form>
         </div>
@@ -38,7 +38,7 @@
 @import '../scss/app/colors';
 
 .call-dimmer {
-  background-color: rgba(0, 0, 0, 0.6);
+  // background-color: rgb(46, 45, 45), 0.6;
   width: 100%;
   padding: 2rem 0;
 
@@ -51,7 +51,7 @@
 }
 
 .dimmed {
-  background-image: url("../img/contactusheader.jpg");
+  background-image: url("../img/1b0cb02c6b5060abe54338e9f5749cae.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
@@ -64,7 +64,7 @@
 
 .request-title h2,
 .request-title p {
-  color: white;
+  color: black;
 }
 
 .request-title {
@@ -77,25 +77,29 @@
   font-size: 1.8em;
 }
 
-.tel-number-introduce p {
-  font-size: 0.85em;
+.call-p-title {
+  color: black;
+  font-size: 25px;
 }
+
+.y-tel-number div p {
+  font-size: 1em;
+  color: $orange;
+}
+
 
 .y-tel-number {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: #b9cae4;
   /* height: 151px; */
   width: 90%;
   padding: 20px 0px 38px 0px;
-  border-radius: 8px;
+  border-radius: 50px;
   color: #7f7f7f;
   margin: 0;
-}
-
-.tel-number-send {
-  margin-top: 20px;
+  border: 1px solid black;
 }
 
 .tel-input {
@@ -104,6 +108,7 @@
   margin-right: 0;
   outline: 0;
   max-width: 185px;
+  background-color: #b9cae4;
 }
 
 .send-button {
@@ -112,9 +117,11 @@
   text-decoration: none;
   background-color: $orange;
   padding: 8px 45px;
-  border-radius: 5px;
-  box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 5px 8px 0 rgb(0 0 0 / 14%),
-    0 1px 14px 0 rgb(0 0 0 / 12%);
+  border-radius: 20px;
+}
+
+.send-button {
+  margin-top: 20px;
 }
 
 .send-button:hover {
@@ -154,12 +161,14 @@
   .y-tel-number {
     padding: 20px 40px 38px 40px;
     width: 65%;
+    align-items: center;
+    justify-content: center;
   }
 
   .tel-number-introduce {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .tel-number-introduce p {
@@ -175,6 +184,7 @@
   .tel-input {
     font-size: 23px;
     max-width: 230px;
+    margin-right: 30px;
   }
 
   .send-button {
