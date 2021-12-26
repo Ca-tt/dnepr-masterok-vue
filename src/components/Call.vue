@@ -118,6 +118,7 @@
   padding: 8px 45px;
   border-radius: 20px;
   margin-top: 20px;
+  border: none;
 }
 
 .send-button:hover {
