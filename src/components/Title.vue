@@ -84,6 +84,7 @@ export default {
 
 .title-image {
   width: 250px;
+  margin-top: 3rem;
 }
 
 .dnepr-class-img {
@@ -112,6 +113,10 @@ export default {
   background-color: $orange;
   padding: 1em 2em;
   border-radius: 30px;
+}
+
+.cost-calculation:hover {
+  background-color: rgb(255, 203, 59);
 }
 
 .list > li {
@@ -161,6 +166,12 @@ export default {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .title-image {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 1024px) {

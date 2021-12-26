@@ -87,7 +87,6 @@
   color: $orange;
 }
 
-
 .y-tel-number {
   display: flex;
   flex-direction: column;
@@ -118,14 +117,11 @@
   background-color: $orange;
   padding: 8px 45px;
   border-radius: 20px;
-}
-
-.send-button {
   margin-top: 20px;
 }
 
 .send-button:hover {
-  background-color: $orange;
+  background-color: rgb(255, 203, 59);
 }
 
 .call-request {

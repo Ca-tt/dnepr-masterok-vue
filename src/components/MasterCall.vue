@@ -124,7 +124,7 @@ export default {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   .kyivstar,

@@ -81,6 +81,10 @@
   @include for-all-buttons($orange, $orange);
 }
 
+.to-master:hover {
+  background-color: rgb(255, 203, 59);
+}
+
 .click-to-send {
   margin-bottom: 5px;
   margin-top: 5px;
