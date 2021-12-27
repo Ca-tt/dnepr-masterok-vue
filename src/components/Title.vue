@@ -65,8 +65,8 @@ export default {
 .section {
   background-image: url("../img/bg-first-section.png");
   background-attachment: fixed;
-  background-size: cover;
-  background-position-y: bottom;
+  background-size:cover;
+  background-position-y:-20%;
   background-repeat: no-repeat;
 }
 
@@ -287,6 +287,10 @@ export default {
 @media screen and (max-width: 321px) {
   .title-image {
     width: 170px;
+  }
+
+  .dimmer{
+    background-color: rgba(245, 239, 239, 0);
   }
 
   .button.cost-calculation {

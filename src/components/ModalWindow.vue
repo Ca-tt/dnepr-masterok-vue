@@ -4,12 +4,12 @@
 
     <sweet-modal ref="modal" :hide-close-button="true">
       <div class="modal-head">
-        <p class="topic">ВЫЗОВ МАСТЕРА</p>
+        <p class="topic">ВИКЛИК МАЙСТРА</p>
         <span class="modal-close" @click="closeModal">&times;</span>
       </div>
       <div class="modal-body">
         <form id="form" @submit.prevent="sendEmail">
-          <label class="enter-num">Введите ваш номер телефона</label>
+          <label class="enter-num">Введіть номер телефону</label>
           <input
             id="phoneNumber"
             name="phoneNumber"
@@ -18,13 +18,13 @@
             type="tel"
             v-mask="['+38(0##) ###-##-##']"
           />
-          <button type="submit" class="modal-send">ОТПРАВИТЬ</button>
+          <button type="submit" class="modal-send">ВІДПРАВИТИ</button>
         </form>
       </div>
-      <p class="bottom-line">*Перезвоним в течение часа</p>
+      <p class="bottom-line">*передзвонимо протягом 5 хвилин</p>
       <p>
-        Нет времени ждать звонка?<br />
-        Нажмите чтоб позвонить:
+        Немає часу чекати на дзвінок?<br />
+        Натисніть щоб зателефонувати:
       </p>
       <a class="numbers" href="tel"><h2>067 135 15 47</h2></a>
       <a class="numbers" href="tel"><h2>099 053 88 64</h2></a>
@@ -98,7 +98,6 @@
 
 .numbers {
   color: #F86F21;
-  text-decoration: none;
   cursor: pointer;
 }
 
@@ -106,10 +105,9 @@
   color: white;
   font-size: 0.8em;
   text-decoration: none;
-  background-color: #F86F21;
-;
-  padding: 11px 20px;
-  border-radius: 2px;
+  background-color: rgb(245, 143, 84);
+  padding: 11px 40px;
+  border-radius: 4px;
   border: none;
 }
 
