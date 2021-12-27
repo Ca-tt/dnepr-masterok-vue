@@ -8,13 +8,16 @@
     $background-color-hover: white, 
     $outline-color: white, 
     $border-color: white,
-    $background-color: $orange){
+    $background-color: $deep-orange){
   background-color: $background-color;
   border-color: $border-color;
   outline-color: $outline-color;
   max-width: 250px;
+  max-height: 47px;
   padding: 1em 2em;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: white;
   text-align: center;

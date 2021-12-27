@@ -22,10 +22,10 @@ export default {
     font-size: 1em;
     cursor: pointer;
     color: white;
-    background-color: $orange;
+    background-color: $deep-orange;
     border: none;
     padding: 1em 2em;
-    border-radius: 30px;
+    border-radius: 10px;
 
     // вот это уже костыль.
     // В идеале кнопка должна быть переиспользуемым элементом
@@ -40,7 +40,7 @@ export default {
     &:hover {
       text-decoration: none;
       color: white;
-      background-color: rgb(255, 203, 59);
+      background-color: rgb(245, 143, 84);
     }
   }
 }

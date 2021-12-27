@@ -78,11 +78,11 @@
 /* услуги и цены */
 
 .to-master {
-  @include for-all-buttons($orange, $orange);
+  @include for-all-buttons($deep-orange, $deep-orange);
 }
 
 .click-to-send {
-  margin-bottom: 5px;
+  margin-bottom: 35px;
   margin-top: 5px;
 }
 
@@ -168,7 +168,7 @@ h6 {
   margin-bottom: 10px;
   font-size: 23px;
   color: $grey;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .service-img {
@@ -259,6 +259,7 @@ section {
 
   .click-to-send {
     font-size: 14px;
+    margin-bottom: 10px;
   }
 
   .calculation {
