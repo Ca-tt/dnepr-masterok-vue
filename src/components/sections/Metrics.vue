@@ -25,12 +25,12 @@ export default {
         {
           icon: 'truck',
           title: '20 мин',
-          text: 'ПРИБЫТИЕ МАСТЕРА',
+          text: 'ПРИБУТТЯ МАЙСТРА',
         },
         {
           icon: 'lock-open',
           title: 'до 30 мин',
-          text: 'ОТКРЫТИЕ ЗАМКА',
+          text: 'ВІДКРИТТЯ ЗАМКУ',
         },
         {
           icon: 'check-circle',
@@ -40,7 +40,7 @@ export default {
         {
           icon: 'user-circle',
           title: 'на 100%',
-          text: 'ОФИЦИАЛЬНО',
+          text: 'ОФІЦІЙНО',
         },
       ]
     }

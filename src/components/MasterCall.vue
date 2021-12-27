@@ -3,17 +3,9 @@
     <Container>
       <div class="communication">
         <div class="title">
-          <h2 class="title" data-v-3e51d18e="">ВЫЗОВ МАСТЕРА</h2>
+          <h2 class="title" data-v-3e51d18e="">Визвати майстра</h2>
         </div>
         <div class="com-container">
-          <div class="kyivstar">
-            <div class="logo">
-              <img src="../img/kyivstar.png" alt="" />
-            </div>
-            <div class="number">
-              <a href="#">067 135 15 47</a>
-            </div>
-          </div>
           <div class="vodafone">
             <div class="logo">
               <img src="../img/vodafone.png" alt="" />
@@ -24,10 +16,18 @@
           </div>
           <div class="call-back">
             <div class="backcall">
-              <ModalWindow button-text="Обратный звонок"></ModalWindow>
+              <ModalWindow button-text="Зворотній дзвінок"></ModalWindow>
             </div>
             <div class="call-soon">
-              <p>Перезвоним в течении 3-5 минут</p>
+              <p>Передзвонимо протягом 3-5 хвилин</p>
+            </div>
+          </div>
+          <div class="kyivstar">
+            <div class="logo">
+              <img src="../img/kyivstar.png" alt="" />
+            </div>
+            <div class="number">
+              <a href="#">067 135 15 47</a>
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@ export default {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   .kyivstar,
