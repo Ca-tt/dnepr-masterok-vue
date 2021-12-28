@@ -174,11 +174,6 @@
     0 1px 8px 0 rgb(0 0 0 / 12%);
 }
 
-section {
-  font-family: sans-serif;
-  margin: 0;
-}
-
 .title-block {
   display: flex;
   justify-content: center;
