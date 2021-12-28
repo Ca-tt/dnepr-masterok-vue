@@ -1,13 +1,11 @@
 /*
-  below listed
   Default Page Styles for
   - body
   - styles for mobile responsiveness
   */
 
-// TODO: подключить локальные шрифты.
-// А пока и так сойдет =)
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,1000,3000,4000,5000,7000,9001,4001,5001,7001,900&display=swap')
+//@import ~@fontsource/roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap')
 @import './colors'
 @import './../layout/media-querries'
 
@@ -19,21 +17,16 @@ $default-page-font-size: 16px
 * 
   box-sizing: border-box
 
-
 body 
-  font: 
-    family: "Roboto", sans-serif
-    size: $default-page-font-size
-
+  font-family: "Roboto", sans-serif
+  font-size: $default-page-font-size
   color: $default-page-color
-
-  @include to-desktop 
+  @include to-desktop
     text-align: $default-page-text-alignment
 
 body,
-figure 
+figure
   margin: 0
 
-
-:is(h1, h2, h3, h4, h5, h6) 
+:is(h1, h2, h3, h4, h5, h6)
   margin: 0

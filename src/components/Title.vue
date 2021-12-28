@@ -143,7 +143,6 @@ export default {
 
 .menu-click {
   text-decoration: none;
-  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
