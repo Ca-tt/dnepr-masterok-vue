@@ -38,13 +38,9 @@
 @import '../scss/app/colors';
 
 .call-dimmer {
-  // background-color: rgb(46, 45, 45), 0.6;
   width: 100%;
   padding: 2rem 0;
 
-
-  // фиксированная высота, начиная с больших экранов
-  // а то на телефоне смотрится как огромный блок
   @include from-tablet {
     height: 530px;
   }
@@ -92,7 +88,6 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: #b9cae4;
-  /* height: 151px; */
   width: 90%;
   padding: 20px 0px 38px 0px;
   border-radius: 50px;
@@ -119,10 +114,11 @@
   border-radius: 20px;
   margin-top: 20px;
   border: none;
-}
+  cursor: pointer;
 
-.send-button:hover {
-  background-color: rgb(255, 203, 59);
+  &:hover {
+    background-color: $button-hover-color;
+  }
 }
 
 .call-request {

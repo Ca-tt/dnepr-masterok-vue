@@ -36,7 +36,7 @@ export default {
     &:hover {
       text-decoration: none;
       color: white;
-      background-color: rgb(245, 143, 84);
+      background-color: $button-hover-color;
     }
   }
 }

@@ -66,6 +66,7 @@ export default {
   background-image: url("../img/bg-first-section.png");
   background-attachment: fixed;
   background-size:cover;
+  background-position-y:cover;
   background-repeat: no-repeat;
 }
 
@@ -97,10 +98,6 @@ export default {
 }
 
 .cost-calculation {
-  // @include for-all-buttons(
-  //   rgba(255, 255, 255, 0.65),
-  //   $background-color: $orange
-  // );
   color: white;
   text-decoration: none;
   background-color: $orange;
@@ -109,7 +106,7 @@ export default {
 }
 
 .cost-calculation:hover {
-  background-color: rgb(255, 203, 59);
+  background-color: $button-hover-color;
 }
 
 .list > li {

@@ -78,10 +78,10 @@
 /* услуги и цены */
 .to-master {
   @include for-all-buttons($deep-orange, $deep-orange);
-}
 
-.to-master:hover {
-  background-color: rgb(255, 203, 59);
+  .to-master:hover {
+    background-color: $button-hover-color;
+  }
 }
 
 .click-to-send {
@@ -172,11 +172,6 @@
   @include img-rounded(20px);
   box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%),
     0 1px 8px 0 rgb(0 0 0 / 12%);
-}
-
-section {
-  font-family: sans-serif;
-  margin: 0;
 }
 
 .title-block {
