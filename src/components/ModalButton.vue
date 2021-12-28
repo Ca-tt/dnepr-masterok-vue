@@ -25,12 +25,8 @@ export default {
     background-color: $deep-orange;
     border: none;
     padding: 1em 2em;
-    border-radius: 10px;
+    border-radius: 30px;
 
-    // вот это уже костыль.
-    // В идеале кнопка должна быть переиспользуемым элементом
-    // а тут всё налепил в одну кучу
-    // in Title.vue file
     .opening & {
       @include from-desktop {
         margin: 0 1rem 0 0;
@@ -40,7 +36,7 @@ export default {
     &:hover {
       text-decoration: none;
       color: white;
-      background-color: rgb(245, 143, 84);
+      background-color: $button-hover-color;
     }
   }
 }

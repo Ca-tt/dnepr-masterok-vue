@@ -70,8 +70,6 @@ $right-column-display: flex
 // section-specific hotfixes [TODO]
 // Header.vue
 .site-header
-  .row
-    //align-items: flex-start
   .left-column
     flex: 1 0 45%
   .right-column
@@ -79,11 +77,16 @@ $right-column-display: flex
     flex: 1 1 55%
 
 // Title.vue
-.section.is-site-opening
+.title-slide
   .left-column
     flex: 1 0 50%
-  .right-column
-    flex: 1 0 30%
+
+  @include from-desktop
+    justify-content: space-around
+
+    .left-column
+      flex: none
+
 
 
 </style>

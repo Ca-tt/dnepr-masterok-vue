@@ -26,7 +26,7 @@
             </ul>
             <div class="buttons">
               <ModalWindow buttonText="ВИКЛИКАТИ МАЙСТРА"></ModalWindow>
-              <a href="tel:+38 067 135 15 47" class=" button cost-calculation">
+              <a href="tel:0661720352" class=" button cost-calculation">
                 РОЗРАХУНОК ВАРТОСТІ
               </a>
             </div>
@@ -72,7 +72,6 @@ export default {
 
 .dimmer {
   background-color: rgba(245, 239, 239, 0);
-  min-height: 100vh;
 
   .container {
     padding: 2rem 1rem;
@@ -87,11 +86,6 @@ export default {
   margin-top: 3rem;
 }
 
-.dnepr-class-img {
-  width: 272px;
-  height: 124px;
-}
-
 .buttons {
   @include mobile-only {
     text-align: center;
@@ -104,10 +98,6 @@ export default {
 }
 
 .cost-calculation {
-  // @include for-all-buttons(
-  //   rgba(255, 255, 255, 0.65),
-  //   $background-color: $orange
-  // );
   color: white;
   text-decoration: none;
   background-color: $orange;
@@ -116,7 +106,7 @@ export default {
 }
 
 .cost-calculation:hover {
-  background-color: rgb(255, 203, 59);
+  background-color: $button-hover-color;
 }
 
 .list > li {
@@ -143,7 +133,6 @@ export default {
 
 .menu-click {
   text-decoration: none;
-  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -166,6 +155,7 @@ export default {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin: 0 0 50px 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -197,11 +187,6 @@ export default {
 @media screen and (max-width: 769px) {
   .menu-click {
     font-size: 15px;
-  }
-
-  .dnepr-class-img {
-    width: 232px;
-    height: 104px;
   }
 
   .list {
@@ -260,7 +245,6 @@ export default {
   }
 
   .section {
-    background-image: url("../img/door-background.jpg");
     min-height: 100vh;
     background-position: center center;
     background-attachment: fixed;

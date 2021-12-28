@@ -79,13 +79,13 @@ export default {
           // icon: 'mobile',
           title: '',
           text: '066 172-03-52',
-          link: true,
+          link: 'tel:0661720352',
         },
         {
           // icon: 'mobile',
           title: '',
           text: '097 753-34-60',
-          link: true,
+          link: 'tel:0977533460',
         },
       ]
     }

@@ -24,12 +24,12 @@ export default {
       cards: [
         {
           icon: 'truck',
-          title: '20 мин',
+          title: '20 хвилин',
           text: 'ПРИБУТТЯ МАЙСТРА',
         },
         {
           icon: 'lock-open',
-          title: 'до 30 мин',
+          title: 'до 30 хвилин',
           text: 'ВІДКРИТТЯ ЗАМКУ',
         },
         {

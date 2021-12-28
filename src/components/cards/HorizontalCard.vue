@@ -1,5 +1,4 @@
 <template>
-  <!-- TODO: wrap every card with a column component -->
   <!-- Card template-->
   <a class="card-link" :href="card.link">
     <figure class="column card is-horizontal">
