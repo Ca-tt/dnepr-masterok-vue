@@ -66,7 +66,7 @@ export default {
   background-image: url("../img/bg-first-section.png");
   background-attachment: fixed;
   background-size:cover;
-  background-position-y:-20%;
+  background-position-y:cover;
   background-repeat: no-repeat;
 }
 
