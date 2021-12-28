@@ -78,10 +78,10 @@
 /* услуги и цены */
 .to-master {
   @include for-all-buttons($deep-orange, $deep-orange);
-}
 
-.to-master:hover {
-  background-color: rgb(255, 203, 59);
+  .to-master:hover {
+    background-color: $button-hover-color;
+  }
 }
 
 .click-to-send {
