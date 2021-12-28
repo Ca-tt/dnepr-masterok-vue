@@ -119,6 +119,10 @@
   &:hover {
     background-color: $button-hover-color;
   }
+
+  &:active {
+    background-color: rgb(255, 173, 126);
+  }
 }
 
 .call-request {
