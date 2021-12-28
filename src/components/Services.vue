@@ -76,7 +76,6 @@
 @import "./../scss/layout/mixins.scss";
 
 /* услуги и цены */
-
 .to-master {
   @include for-all-buttons($deep-orange, $deep-orange);
 }
@@ -141,21 +140,12 @@
   justify-content: center;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $grey;
-  font-family: "Roboto", sans-serif;
-}
+
 
 .explanation-of-service {
-  margin: 0;
+  margin: 0 0 5px 0;
   text-align: center;
   color: $light-grey;
-  margin-bottom: 5px;
 }
 
 .service {
@@ -198,9 +188,8 @@ section {
 .title {
   font-weight: 100;
   font-size: 45px;
-  margin-bottom: 10px;
-  color: $grey;
   text-align: center;
+  margin: 0 0 .75em 0;
 }
 
 .categories {

@@ -26,7 +26,7 @@
             </ul>
             <div class="buttons">
               <ModalWindow buttonText="ВИКЛИКАТИ МАЙСТРА"></ModalWindow>
-              <a href="tel:+38 067 135 15 47" class=" button cost-calculation">
+              <a href="tel:0661720352" class=" button cost-calculation">
                 РОЗРАХУНОК ВАРТОСТІ
               </a>
             </div>
@@ -66,13 +66,11 @@ export default {
   background-image: url("../img/bg-first-section.png");
   background-attachment: fixed;
   background-size:cover;
-  background-position-y:-20%;
   background-repeat: no-repeat;
 }
 
 .dimmer {
   background-color: rgba(245, 239, 239, 0);
-  min-height: 100vh;
 
   .container {
     padding: 2rem 1rem;
@@ -85,11 +83,6 @@ export default {
 .title-image {
   width: 250px;
   margin-top: 3rem;
-}
-
-.dnepr-class-img {
-  width: 272px;
-  height: 124px;
 }
 
 .buttons {
@@ -165,6 +158,7 @@ export default {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin: 0 0 50px 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -196,11 +190,6 @@ export default {
 @media screen and (max-width: 769px) {
   .menu-click {
     font-size: 15px;
-  }
-
-  .dnepr-class-img {
-    width: 232px;
-    height: 104px;
   }
 
   .list {
@@ -259,7 +248,6 @@ export default {
   }
 
   .section {
-    background-image: url("../img/door-background.jpg");
     min-height: 100vh;
     background-position: center center;
     background-attachment: fixed;

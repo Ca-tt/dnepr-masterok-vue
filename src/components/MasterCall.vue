@@ -3,7 +3,7 @@
     <Container>
       <div class="communication">
         <div class="title">
-          <h2 class="title" data-v-3e51d18e="">Визвати майстра</h2>
+          <h2 class="title" data-v-3e51d18e="">Викликати майстра</h2>
         </div>
         <div class="com-container">
           <div class="vodafone">
@@ -11,7 +11,7 @@
               <img src="../img/vodafone.png" alt="" />
             </div>
             <div class="number">
-              <a href="#">099 053 88 64</a>
+              <a href="tel:0661720352">+38 066 172-03-52</a>
             </div>
           </div>
           <div class="call-back">
@@ -27,7 +27,7 @@
               <img src="../img/kyivstar.png" alt="" />
             </div>
             <div class="number">
-              <a href="#">067 135 15 47</a>
+              <a href="tel:0977533460">+38 097 753-34-60</a>
             </div>
           </div>
         </div>
@@ -130,7 +130,8 @@ export default {
   .kyivstar,
   .vodafone,
   .call-back {
-    width: 30%;
+    max-width: 30%;
+    text-align: center;
   }
 
   .backcall a {
