@@ -10,7 +10,7 @@
       <div class="modal-body">
         <form id="form" @submit.prevent="sendEmail">
           <label class="enter-num">Введіть номер телефону</label>
-          <input
+          <input required minlength="18"
             id="phoneNumber"
             name="phoneNumber"
             class="call-input"
@@ -31,10 +31,15 @@
     </sweet-modal>
   </div>
 </template>
-<style>
+
+<style lang="scss">
+@import './../scss/app/defaults';
+@import './../scss/app/colors';
+
 .sweet-content {
   padding-top: 0 !important;
   padding-bottom: 20px !important;
+  font-family: $default-page-font;
 }
 
 .sweet-modal-overlay {
@@ -103,18 +108,19 @@
 
 .modal-send {
   color: white;
-  font-size: 0.8em;
+  font-size: 1em;
   text-decoration: none;
-  background-color: rgb(245, 143, 84);
-  padding: 11px 40px;
+  background-color: $button-hover-color;
+  padding: 15px 50px;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 
 .call-input {
   padding: 20px;
   max-width: 350px;
-  font-size: 22px;
+  font-size: 1.75em;
   border: none;
   display: flex;
   text-align: center;
@@ -123,12 +129,7 @@
 
 .topic {
   color: #000;
-  font-family: Verdana;
   font-size: 28px;
-}
-
-.moving-icon {
-  display: none;
 }
 
 @media screen and (max-width: 1023px) {
@@ -188,21 +189,6 @@
     margin-bottom: 30px;
   }
 
-  .number {
-    text-decoration: none;
-    cursor: pointer;
-    color: orange;
-  }
-
-  .modal-send {
-    color: white;
-    font-size: 0.8em;
-    text-decoration: none;
-    background-color: #fab005;
-    padding: 11px 20px;
-    border-radius: 2px;
-  }
-
   .call-input {
     padding: 20px;
     max-width: 350px;
@@ -231,9 +217,9 @@
 }
 </style>
 <script>
-import ModalButton from "@/components/ModalButton";
-// import emailjs from 'emailjs-com';
-// emailjs.init("user_n00IFqkCIrHm6D3teTlZD");
+import ModalButton from "./ModalButton";
+import emailjs from 'emailjs-com';
+emailjs.init("user_n00IFqkCIrHm6D3teTlZD");
 
 export default {
   name: "ModalWindow",
@@ -253,22 +239,51 @@ export default {
     closeModal() {
       this.$refs.modal.close();
     },
-    // СПЕЦИАЛЬНО отключил отправка на имейл, чтобы не тратить
-    // ресурс. Пока бесплатных 200 имейлов, клиенту будет приятно.
+    sendEmail(e) {
+      // TODO: get elements by Vue reference, not by pure JS
+      const numberInput = document.getElementById('phoneNumber');
 
-    // sendEmail(e) {
-    //   try {
-    //     emailjs.sendForm('service_u6tq2om',
-    //         'template_e8qp568',
-    //         e.target,
-    //         'user_n00IFqkCIrHm6D3teTlZD', {
-    //         phoneNumber: this.phoneNumber
-    //     })
-    //   } catch (error) {
-    //     console.log({error})
-    //   }
-    //   this.phoneNumber = ''
-    // },
+      this.phoneNumber = numberInput.value;
+
+      let number = this.phoneNumber;
+      const requiredNumberLenght = 18;
+      // TODO: create warning object
+      const warningLabel = document.querySelector('.enter-num');
+      const warningMessage =
+          'Будь ласка, скорегуйте свiй номер та спробуйте вiдправити його знову';
+      const successMessage =
+          'Дякуємо за звернення. Ми зателефонуємо вам протягом години';
+
+      // console.log(
+      //     number, ' — number —',
+      //     number.length, 'number.length',
+      //     warningLabel, 'warningLabel',
+      // );
+
+      if (number.length < requiredNumberLenght) {
+        warningLabel.style.color = '#F86F21';
+        warningLabel.innerHTML = warningMessage;
+      }
+      else {
+        warningLabel.style.color = '#54617a';
+        warningLabel.innerHTML = successMessage;
+
+        try {
+          emailjs.sendForm('service_u6tq2om',
+              'template_e8qp568',
+              e.target,
+              'user_n00IFqkCIrHm6D3teTlZD', {
+              phoneNumber: this.phoneNumber
+          })
+        } catch (error) {
+          console.log({error})
+        }
+
+        numberInput.value = '';
+        number = '';
+      }
+
+    },
   },
 };
 </script>
