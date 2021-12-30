@@ -37,6 +37,75 @@
   </div>
 </template>
 
+<script>
+import ModalButton from "./ModalButton";
+import emailjs from 'emailjs-com';
+emailjs.init("user_n00IFqkCIrHm6D3teTlZD");
+
+export default {
+  name: "ModalWindow",
+  data() {
+    return {
+      phoneNumber: '',
+      notification: {
+        'warning-message':
+            'Будь ласка, скорегуйте свiй номер та спробуйте вiдправити його знову',
+        'success-message': 'Дякуємо за звернення. Ми зателефонуємо вам протягом години',
+      }
+    };
+  },
+  components: {
+    ModalButton,
+  },
+  props: ["buttonText"],
+  methods: {
+    openModal() {
+      this.$refs.modal.open();
+    },
+    closeModal() {
+      this.$refs.modal.close();
+    },
+    sendEmail(e) {
+      // get input with phoneNumber and label with notification message
+      const numberInput = this.$refs.phoneNumber;
+      const warningLabel = this.$refs.notification;
+      // get required number length from input with phoneNumber
+      const requiredNumberLength =
+          this.$refs.phoneNumber.getAttribute('minlength');
+      // get current input value (number)
+      let phoneNumber = this.$refs.phoneNumber.value;
+
+      // try to send email (else catch and error and do something)
+      // if phoneNumber length is not empty and is equal to input.minlength
+      if(phoneNumber && phoneNumber.length == requiredNumberLength) {
+        // change <label> text and color
+        warningLabel.classList.add('success-color');
+        warningLabel.innerHTML = this.notification["success-message"];
+
+        // then send email
+        // ! dont forget to change emailjs.init in imports
+        emailjs.sendForm('service_u6tq2om',
+            'template_e8qp568',
+            e.target,
+            'user_n00IFqkCIrHm6D3teTlZD', {
+              phoneNumber: this.phoneNumber
+            })
+
+        // clear input and phoNumber data
+        numberInput.value = '';
+        phoneNumber = '';
+      }
+      else {
+        warningLabel.classList.add('warning-color');
+        warningLabel.innerHTML = this.notification["warning-message"];
+      }
+    }
+  },
+  mounted() {
+  }
+};
+</script>
+
 <style lang="scss">
 @import './../scss/app/defaults';
 @import './../scss/app/colors';
@@ -239,71 +308,3 @@
   }
 }
 </style>
-
-<script>
-import ModalButton from "./ModalButton";
-import emailjs from 'emailjs-com';
-emailjs.init("user_n00IFqkCIrHm6D3teTlZD");
-
-export default {
-  name: "ModalWindow",
-  data() {
-    return {
-      phoneNumber: '',
-      notification: {
-        'warning-message':
-            'Будь ласка, скорегуйте свiй номер та спробуйте вiдправити його знову',
-        'success-message': 'Дякуємо за звернення. Ми зателефонуємо вам протягом години',
-      }
-    };
-  },
-  components: {
-    ModalButton,
-  },
-  props: ["buttonText"],
-  methods: {
-    openModal() {
-      this.$refs.modal.open();
-    },
-    closeModal() {
-      this.$refs.modal.close();
-    },
-    sendEmail(e) {
-      // get input with phoneNumber and label with notification message
-      const numberInput = this.$refs.phoneNumber;
-      const warningLabel = this.$refs.notification;
-      // get required number length from input with phoneNumber
-      const requiredNumberLength =
-          this.$refs.phoneNumber.getAttribute('minlength');
-      // get current input value (number)
-      let phoneNumber = this.$refs.phoneNumber.value;
-
-      // try to send email (else catch and error and do something)
-      // if phoneNumber length is not empty and is equal to input.minlength
-      if(phoneNumber && phoneNumber.length == requiredNumberLength) {
-        // change <label> text and color
-        warningLabel.classList.add('success-color');
-        warningLabel.innerHTML = this.notification["success-message"];
-
-        // then send email
-        emailjs.sendForm('service_u6tq2om',
-            'template_e8qp568',
-            e.target,
-            'user_n00IFqkCIrHm6D3teTlZD', {
-            phoneNumber: this.phoneNumber
-        })
-
-        // clear input and phoNumber data
-        numberInput.value = '';
-        phoneNumber = '';
-      }
-      else {
-        warningLabel.classList.add('warning-color');
-        warningLabel.innerHTML = this.notification["warning-message"];
-      }
-    }
-  },
-  mounted() {
-  }
-};
-</script>

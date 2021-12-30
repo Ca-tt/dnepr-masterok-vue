@@ -14,7 +14,9 @@
         <div class="column footer-info">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="footer-icon" version="1.1" viewBox="0 0 24 24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" /></svg>
           <h6 class="mail">info@dnepr-сlass.com.ua</h6>
-          <a href="#" class="third-section"><h6 class="confidentiality">Політика конфіденційності</h6></a>
+          <a @click.prevent="openModal" href="#privacy"
+             class="third-section"><h6
+              class="confidentiality">Політика конфіденційності</h6></a>
         </div>
 
         <div class="column footer-info">
@@ -33,8 +35,40 @@
       </Row>
 
     </Container>
+
+    <!-- Sweet Modal -->
+    <sweet-modal ref="modal" overlay-theme="dark">
+      <PrivacyPolicy></PrivacyPolicy>
+    </sweet-modal>
+
   </footer>
 </template>
+
+<script>
+import Container from "./../components/layout/Container";
+import Row from "./..//components/layout/Row";
+import PrivacyPolicy from "./modals/PrivacyPolicy";
+
+export default {
+  name: 'Footer',
+  components: {
+    PrivacyPolicy,
+    Row,
+    Container,
+  },
+  methods: {
+    openModal() {
+      this.$refs.modal.open();
+    },
+    closeModal() {
+      this.$refs.modal.close();
+    },
+  },
+  mounted() {
+    this.openModal();
+  }
+}
+</script>
 
 <style lang="scss">
 @import '../scss/layout/media-querries';
@@ -105,15 +139,38 @@
   padding: 2rem 0;
 }
 
-</style>
+/* Sweet Modal styles */
+footer {
+  .sweet-modal-overlay {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 
-<script>
+  .sweet-modal {
+    max-width: 90%;
+    background: rgba(255, 2555, 255, 0.9);
 
-import Container from "@/components/layout/Container";
-import Row from "@/components/layout/Row";
+    .sweet-content {
+      padding: 0;
 
-export default {
-  name: 'Footer',
-  components: {Row, Container},
+      .modal-text {
+        padding: 1em;
+        font-size: 1.1em;
+      }
+
+      p {
+        text-align: left;
+      }
+
+      h2, h3 {
+        text-align: center;
+        font-size: 1.75em;
+      }
+    }
+  }
+
 }
-</script>
+
+</style>
