@@ -282,7 +282,6 @@ export default {
         numberInput.value = '';
         number = '';
       }
-
     },
   },
 };
