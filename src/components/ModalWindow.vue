@@ -102,8 +102,12 @@
 }
 
 .numbers {
-  color: #F86F21;
+  text-decoration-color: #f86f21;
   cursor: pointer;
+}
+
+.numbers > h2 {
+  color: #f86f21;
 }
 
 .modal-send {
@@ -115,6 +119,12 @@
   border-radius: 4px;
   border: none;
   cursor: pointer;
+}
+
+.modal-send:hover {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(245, 143, 84);
 }
 
 .call-input {
