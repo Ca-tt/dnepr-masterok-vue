@@ -74,7 +74,6 @@
 <style lang="scss" scoped>
 @import '../scss/app/colors';
 
-
 .preferences {
   display: flex;
   flex-direction: column;
@@ -141,7 +140,8 @@
   .pref-block {
     flex-direction: row;
     align-items: center;
-    width: 45%;
+    max-width: 50%;
+    padding: 0.5em;
   }
 
   .pref-text {
@@ -177,9 +177,7 @@
   }
 }
 
-
 .preferences > .title {
-  /* width: 55%; */
   text-align: center;
   margin-bottom: 25px;
 }
@@ -239,7 +237,8 @@
   .pref-block {
     flex-direction: row;
     align-items: center;
-    width: 45%;
+    max-width: 50%;
+    padding: 0 .5em;
   }
 
   .pref-text {

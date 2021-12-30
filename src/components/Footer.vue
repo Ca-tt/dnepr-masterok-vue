@@ -65,7 +65,6 @@ export default {
     },
   },
   mounted() {
-    this.openModal();
   }
 }
 </script>
