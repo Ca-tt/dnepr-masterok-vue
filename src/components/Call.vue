@@ -5,17 +5,21 @@
         <div class="request-title">
           <h2 class="title">Замовити дзвінок</h2>
         </div>
+
         <div class="y-tel-number">
           <p class="call-p-title">Ми передзвонимо протягом 5 хвилин</p>
           <form id="form" @submit.prevent="sendEmail">
             <div class="tel-number-introduce">
               <div class="input-container">
-                <the-mask
-                  :mask="['+38(0##) ###-##-##']"
-                  placeholder="+38(0__) ___-__-__"
-                  class="tel-input"
-                  id="phoneNumber"
-                  name="phoneNumber"
+                <input required
+                       ref="phoneNumberOnPage"
+                       minlength="18"
+                       id="phoneNumber"
+                       name="phoneNumber"
+                       class="tel-input"
+                       placeholder="+38(0__) ___-__-__"
+                       type="tel"
+                       v-mask="['+38(0##) ###-##-##']"
                 />
               </div>
               <div class="tel-number-send">
@@ -23,9 +27,11 @@
               </div>
             </div>
             <div>
-                <p>Введіть ваш номер</p>
+                <p class="notification" ref="notificationOnPage">Введіть ваш
+                  номер</p>
             </div>
           </form>
+
         </div>
       </div>
     </div>
@@ -76,6 +82,17 @@
 .call-p-title {
   color: black;
   font-size: 25px;
+}
+
+.notification {
+  display: block;
+
+  &.warning-color {
+    color: #F86F21;
+  }
+  &.success-color {
+    color: #54617a;
+  }
 }
 
 .y-tel-number div p {
@@ -232,26 +249,49 @@ export default {
   name: "Call",
   data() {
     return {
-      phoneNumber: "",
+      phoneNumber: '',
+      notification: {
+        'warning-message':
+            'Будь ласка, скорегуйте свiй номер та спробуйте вiдправити його знову',
+        'success-message': 'Дякуємо за звернення. Ми зателефонуємо вам протягом години',
+      }
     };
   },
   methods: {
-    // СПЕЦИАЛЬНО отключил отправка на имейл, чтобы не тратить
-    // ресурс. Пока бесплатных 200 имейлов, клиенту будет приятно.
-
     sendEmail(e) {
-      try {
+      // get input with phoneNumber and label with notification message
+      const numberInput = this.$refs.phoneNumberOnPage;
+      const warningLabel = this.$refs.notificationOnPage;
+      // get required number length from input with phoneNumber
+      const requiredNumberLength =
+          this.$refs.phoneNumberOnPage.getAttribute('minlength');
+      // get current input value (number)
+      let phoneNumber = this.$refs.phoneNumberOnPage.value;
+
+      // try to send email (else catch and error and do something)
+      // if phoneNumber length is not empty and is equal to input.minlength
+      if(phoneNumber && phoneNumber.length == requiredNumberLength) {
+        // change <label> text and color
+        warningLabel.classList.add('success-color');
+        warningLabel.innerHTML = this.notification["success-message"];
+
+        // then send email
         emailjs.sendForm('service_u6tq2om',
             'template_e8qp568',
             e.target,
             'user_n00IFqkCIrHm6D3teTlZD', {
-            phoneNumber: this.phoneNumber
-        })
-      } catch (error) {
-        console.log({error})
+              phoneNumber: this.phoneNumber
+            })
+
+        // clear input and phoNumber data
+        numberInput.value = '';
+        phoneNumber = '';
       }
-      this.phoneNumber = ''
-    },
+      else {
+        warningLabel.classList.add('warning-color');
+        warningLabel.innerHTML = this.notification["warning-message"];
+      }
+    }
   },
 };
 </script>

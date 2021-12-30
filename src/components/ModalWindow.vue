@@ -9,15 +9,20 @@
       </div>
       <div class="modal-body">
         <form id="form" @submit.prevent="sendEmail">
-          <label class="enter-num">Введіть номер телефону</label>
-          <input required minlength="18"
-            id="phoneNumber"
-            name="phoneNumber"
-            class="call-input"
-            placeholder="+38(0__) ___-__-__"
-            type="tel"
-            v-mask="['+38(0##) ###-##-##']"
-          />
+          <label ref="notification" class="notification">Введіть номер
+            телефону</label>
+          <p class="input-wrapper">
+            <input required
+                   ref="phoneNumber"
+                   minlength="18"
+                   id="phoneNumber"
+                   name="phoneNumber"
+                   class="call-input"
+                   placeholder="+38(0__) ___-__-__"
+                   type="tel"
+                   v-mask="['+38(0##) ###-##-##']"
+            />
+          </p>
           <button type="submit" class="modal-send">ВІДПРАВИТИ</button>
         </form>
       </div>
@@ -71,6 +76,22 @@
   justify-content: center;
 }
 
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.notification {
+  display: block;
+
+  &.warning-color {
+    color: #F86F21;
+  }
+  &.success-color {
+    color: #54617a;
+  }
+}
+
 .modal-close {
   width: 30px;
   height: 30px;
@@ -88,26 +109,18 @@
   top: 0;
   right: 0;
   color: white;
-}
 
-.modal-close:hover {
-  font-size: 13px;
+  &:hover {
+    font-size: 13px;
+  }
 }
 
 .modal-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 30px;
 }
 
 .numbers {
   text-decoration-color: #f86f21;
-  cursor: pointer;
-}
-
-.numbers > h2 {
-  color: #f86f21;
 }
 
 .modal-send {
@@ -226,6 +239,7 @@
   }
 }
 </style>
+
 <script>
 import ModalButton from "./ModalButton";
 import emailjs from 'emailjs-com';
@@ -235,7 +249,12 @@ export default {
   name: "ModalWindow",
   data() {
     return {
-      phoneNumber: "",
+      phoneNumber: '',
+      notification: {
+        'warning-message':
+            'Будь ласка, скорегуйте свiй номер та спробуйте вiдправити його знову',
+        'success-message': 'Дякуємо за звернення. Ми зателефонуємо вам протягом години',
+      }
     };
   },
   components: {
@@ -250,49 +269,41 @@ export default {
       this.$refs.modal.close();
     },
     sendEmail(e) {
-      // TODO: get elements by Vue reference, not by pure JS
-      const numberInput = document.getElementById('phoneNumber');
+      // get input with phoneNumber and label with notification message
+      const numberInput = this.$refs.phoneNumber;
+      const warningLabel = this.$refs.notification;
+      // get required number length from input with phoneNumber
+      const requiredNumberLength =
+          this.$refs.phoneNumber.getAttribute('minlength');
+      // get current input value (number)
+      let phoneNumber = this.$refs.phoneNumber.value;
 
-      this.phoneNumber = numberInput.value;
+      // try to send email (else catch and error and do something)
+      // if phoneNumber length is not empty and is equal to input.minlength
+      if(phoneNumber && phoneNumber.length == requiredNumberLength) {
+        // change <label> text and color
+        warningLabel.classList.add('success-color');
+        warningLabel.innerHTML = this.notification["success-message"];
 
-      let number = this.phoneNumber;
-      const requiredNumberLenght = 18;
-      // TODO: create warning object
-      const warningLabel = document.querySelector('.enter-num');
-      const warningMessage =
-          'Будь ласка, скорегуйте свiй номер та спробуйте вiдправити його знову';
-      const successMessage =
-          'Дякуємо за звернення. Ми зателефонуємо вам протягом години';
+        // then send email
+        emailjs.sendForm('service_u6tq2om',
+            'template_e8qp568',
+            e.target,
+            'user_n00IFqkCIrHm6D3teTlZD', {
+            phoneNumber: this.phoneNumber
+        })
 
-      // console.log(
-      //     number, ' — number —',
-      //     number.length, 'number.length',
-      //     warningLabel, 'warningLabel',
-      // );
-
-      if (number.length < requiredNumberLenght) {
-        warningLabel.style.color = '#F86F21';
-        warningLabel.innerHTML = warningMessage;
+        // clear input and phoNumber data
+        numberInput.value = '';
+        phoneNumber = '';
       }
       else {
-        warningLabel.style.color = '#54617a';
-        warningLabel.innerHTML = successMessage;
-
-        try {
-          emailjs.sendForm('service_u6tq2om',
-              'template_e8qp568',
-              e.target,
-              'user_n00IFqkCIrHm6D3teTlZD', {
-              phoneNumber: this.phoneNumber
-          })
-        } catch (error) {
-          console.log({error})
-        }
-
-        numberInput.value = '';
-        number = '';
+        warningLabel.classList.add('warning-color');
+        warningLabel.innerHTML = this.notification["warning-message"];
       }
-    },
+    }
   },
+  mounted() {
+  }
 };
 </script>
