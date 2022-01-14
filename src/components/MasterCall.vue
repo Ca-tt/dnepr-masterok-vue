@@ -3,7 +3,7 @@
     <Container>
       <div class="communication">
         <div class="title">
-          <h2 class="title" data-v-3e51d18e="">Викликати майстра</h2>
+          <h2 class="title">Викликати майстра</h2>
         </div>
         <div class="com-container">
           <div class="vodafone">
@@ -56,6 +56,7 @@ export default {
 .communication {
   margin-bottom: 50px;
   padding-top: 50px;
+  text-align:center;
 }
 
 .com-container {

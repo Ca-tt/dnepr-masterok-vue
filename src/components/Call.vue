@@ -243,7 +243,8 @@
 
 <script>
 import emailjs from 'emailjs-com';
-// emailjs.init("user_n00IFqkCIrHm6D3teTlZD");
+import { emailjsAccountData } from "../js/emailJSAccountData";
+emailjs.init(emailjsAccountData.userID);
 
 export default {
   name: "Call",
@@ -276,10 +277,10 @@ export default {
         warningLabel.innerHTML = this.notification["success-message"];
 
         // then send email
-        emailjs.sendForm('service_u6tq2om',
-            'template_e8qp568',
+        emailjs.sendForm(emailjsAccountData.serviceID,
+            emailjsAccountData.templateID,
             e.target,
-            'user_n00IFqkCIrHm6D3teTlZD', {
+            emailjsAccountData.userID, {
               phoneNumber: this.phoneNumber
             })
 

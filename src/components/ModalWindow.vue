@@ -40,7 +40,8 @@
 <script>
 import ModalButton from "./ModalButton";
 import emailjs from 'emailjs-com';
-emailjs.init("user_n00IFqkCIrHm6D3teTlZD");
+import { emailjsAccountData } from "../js/emailJSAccountData";
+emailjs.init(emailjsAccountData.userID);
 
 export default {
   name: "ModalWindow",
@@ -84,10 +85,10 @@ export default {
 
         // then send email
         // ! dont forget to change emailjs.init in imports
-        emailjs.sendForm('service_u6tq2om',
-            'template_e8qp568',
+        emailjs.sendForm(emailjsAccountData.serviceID,
+            emailjsAccountData.templateID,
             e.target,
-            'user_n00IFqkCIrHm6D3teTlZD', {
+            emailjsAccountData.userID, {
               phoneNumber: this.phoneNumber
             })
 
