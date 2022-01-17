@@ -1,9 +1,13 @@
 import Vue from 'vue';
-import VueModal from '@kouts/vue-modal'
-import '@kouts/vue-modal/dist/vue-modal.css'
-import VueTheMask from 'vue-the-mask'
-import SweetModal from 'sweet-modal-vue/src/plugin.js'
+import VueModal from '@kouts/vue-modal';
+import '@kouts/vue-modal/dist/vue-modal.css';
+import VueTheMask from 'vue-the-mask';
+import SweetModal from 'sweet-modal-vue/src/plugin.js';
 import App from './App.vue';
+
+import { phoneNumbers, phoneNumbersLinks } from './js/appData.js';
+Vue.prototype.$phoneNumbers = phoneNumbers;
+Vue.prototype.$phoneNumbersLinks = phoneNumbersLinks;
 
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'

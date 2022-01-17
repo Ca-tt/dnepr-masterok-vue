@@ -31,8 +31,9 @@
         Немає часу чекати на дзвінок?<br />
         Натисніть щоб зателефонувати:
       </p>
-      <a class="numbers" href="tel"><h2>067 135 15 47</h2></a>
-      <a class="numbers" href="tel"><h2>099 053 88 64</h2></a>
+      <a class="numbers" :href="this.$phoneNumbersLinks.kievstar"><h2>{{ this.$phoneNumbers.kievstar }}</h2></a>
+      <a class="numbers" :href="this.$phoneNumbersLinks.vodafone"><h2>{{
+          this.$phoneNumbers.vodafone }}</h2></a>
     </sweet-modal>
   </div>
 </template>

@@ -5,16 +5,21 @@
         <div class="title">
           <h2 class="title">Викликати майстра</h2>
         </div>
+
         <div class="com-container">
-          <div class="vodafone">
-            <div class="logo">
-              <img src="../img/vodafone.png" alt="" />
-            </div>
-            <div class="number">
-              <a href="tel:0661720352">+38 066 172-03-52</a>
-            </div>
+
+          <div class="vodafone phone-number">
+            <a :href="this.$phoneNumbersLinks.vodafone">
+              <div class="logo">
+                <img src="../img/vodafone.png" alt="" />
+              </div>
+              <div class="number">
+                   {{ this.$phoneNumbers.vodafone }}
+              </div>
+            </a>
           </div>
-          <div class="call-back">
+
+          <div class="call-back phone-number">
             <div class="backcall">
               <ModalWindow button-text="Зворотній дзвінок"></ModalWindow>
             </div>
@@ -22,16 +27,21 @@
               <p>Передзвонимо протягом 3-5 хвилин</p>
             </div>
           </div>
-          <div class="kyivstar">
-            <div class="logo">
-              <img src="../img/kyivstar.png" alt="" />
-            </div>
-            <div class="number">
-              <a href="tel:0977533460">+38 097 753-34-60</a>
-            </div>
+
+          <div class="kyivstar phone-number">
+            <a :href="this.$phoneNumbersLinks.kievstar">
+              <div class="logo">
+                <img src="../img/kyivstar.png" alt="" />
+              </div>
+              <div class="number">
+                {{ this.$phoneNumbers.kievstar }}
+              </div>
+            </a>
           </div>
+
         </div>
       </div>
+
     </Container>
   </section>
 </template>
@@ -53,6 +63,11 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/layout/media-querries";
 
+.title {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
 .communication {
   margin-bottom: 50px;
   padding-top: 50px;
@@ -62,6 +77,15 @@ export default {
 .com-container {
   display: flex;
   flex-direction: column;
+}
+
+.phone-number {
+
+  a {
+    color: #54617a;
+    text-decoration: none;
+    font-size: 20px;
+  }
 }
 
 .kyivstar,
@@ -91,12 +115,6 @@ export default {
 .logo,
 .backcall {
   margin-bottom: 15px;
-}
-
-.number a {
-  text-decoration: none;
-  color: #54617a;
-  font-size: 20px;
 }
 
 .backcall a {

@@ -66,26 +66,22 @@ export default {
     return {
       cards: [
         {
-          // icon: 'lock',
           title: '',
           text: 'Відкриваємо замки будь-якої складності',
         },
         {
-          // icon: 'clock',
           title: '',
           text: 'Працюємо цілодобово',
         },
         {
-          // icon: 'mobile',
           title: '',
-          text: '066 172-03-52',
-          link: 'tel:0661720352',
+          text: this.$phoneNumbers.vodafone,
+          link: this.$phoneNumbersLinks.vodafone,
         },
         {
-          // icon: 'mobile',
           title: '',
-          text: '097 753-34-60',
-          link: 'tel:0977533460',
+          text: this.$phoneNumbers.kievstar,
+          link: this.$phoneNumbersLinks.kievstar,
         },
       ]
     }

@@ -1,12 +1,6 @@
 <template>
-  <!-- Card template-->
   <a class="card-link" :href="card.link">
     <figure class="column card is-horizontal">
-      <!-- icon (required) -->
-<!--      <header class="card-icon">-->
-<!--        <font-awesome-icon :icon="card.icon"/>-->
-<!--      </header>-->
-      <!-- subheading or text (required) -->
       <figcaption class="card-text">
         {{ card.text }}
       </figcaption>
