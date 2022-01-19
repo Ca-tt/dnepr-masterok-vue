@@ -2,7 +2,7 @@
   <footer class="footer-main">
     
     <Container>
-      <Row class="columns-between two-columns">
+      <Row class="columns-between columns-v-top">
         
         <div class="column footer-info">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="footer-icon" version="1.1" viewBox="0 0 24 24">
@@ -13,7 +13,8 @@
 
         <div class="column footer-info">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="footer-icon" version="1.1" viewBox="0 0 24 24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" /></svg>
-          <h6 class="mail">info@dnepr-сlass.com.ua</h6>
+          <h6 class="mail"><a href="mailto:call@dnepr-сlass.com.ua">call@dnepr
+            -сlass.com.ua</a></h6>
           <a @click.prevent="openModal" href="#privacy"
              class="third-section"><h6
               class="confidentiality">Політика конфіденційності</h6></a>
@@ -27,13 +28,19 @@
               this.$phoneNumbers.vodafone }}</a>
         </div>
 
-        <div class="column footer-info">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="footer-icon" viewBox="0 0 24 24"><path d="M4,6H20V16H4M20,18A2,2 0 0,0 22,16V6C22,4.89 21.1,4 20,4H4C2.89,4 2,4.89 2,6V16A2,2 0 0,0 4,18H0V20H24V18H20Z" /></svg>
-          <h6 class="dn-class">Сайт розроблений</h6>
-          <a href="#" class="fourth-section">
-            <h6 class="developers">EXPND Team</h6>
-          </a>
-        </div>
+          <!-- icon -->
+<!--          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="footer-icon" viewBox="0 0 24 24"><path d="M4,6H20V16H4M20,18A2,2 0 0,0 22,16V6C22,4.89 21.1,4 20,4H4C2.89,4 2,4.89 2,6V16A2,2 0 0,0 4,18H0V20H24V18H20Z" /></svg>-->
+        <figure class="column footer-info copyrights">
+
+          <div class="img-wrapper rounded">
+            <img class="text-icon footer-icon"
+                     src="./../img/expand/EXPND-logo-black.png"
+               alt="логотип команды Expand">
+          </div>
+
+          <h6 class="dn-class">Сайт розробила</h6>
+            <p><a href="https://www.instagram.com/expnd__/" class="fourth-section">команда EXPAND</a></p>
+        </figure>
       </Row>
 
     </Container>
@@ -60,8 +67,6 @@ export default {
   },
   data() {
     return {
-      // vodafone: phoneNumbers.vodafone,
-      // kievstar: phoneNumbers.kievstar,
     }
   },
   methods: {
@@ -80,6 +85,10 @@ export default {
 <style lang="scss">
 @import '../scss/layout/media-querries';
 
+.row.columns-v-top {
+  align-items: flex-start;
+}
+
 .developers {
   margin-top: .5rem;
   color: #000;
@@ -87,7 +96,7 @@ export default {
 
 .dn-class {
   color: white;
-  margin-top: 0;
+  margin: 0 0 .5rem 0;
 }
 
 .number1, .number2 {
@@ -105,7 +114,7 @@ export default {
     text-decoration-color: black;
 }
 
-.mail {
+.mail a {
   color: white;
 }
 
@@ -116,7 +125,7 @@ export default {
 .footer-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   @include to-desktop {
@@ -132,10 +141,24 @@ export default {
   font-size: 15px;
 }
 
+.copyrights {
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: white;
+  }
+}
+
 .footer-icon {
-  margin: 20px;
   color: #000;
-  width: 60px;
+  margin: 1rem 0;
+  max-width: 60px;
+}
+
+.img-wrapper {
+  text-align: center;
 }
 
 .footer-main {
