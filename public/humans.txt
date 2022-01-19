@@ -1,12 +1,11 @@
-# Привет!
-# Если ты читаешь это, желаю тебе классного настроения!
+# Hi there!
+# In case you occasionally read this, I wish you the best day ever!
 
-# Над сайтом работала команда EXPAND
-# Дизайн сайта: Марк Линкевич, Илья Чумак
-# Код писали: Лёша Ким, Саша Яцюта, Даня Дёшин
-# Направлял на путь истинный: Дамир Лукьяненко
+# This site is developed by EXPAND team
+# Design: Mark Linkevich, Iliia Chumack
+# Code: Alex Kim, Sasha Iachiuta, Dania Dioshin
+# MVP: Damir Lukianenko
 
-# В завещания скажу одно
+# My motto
 # Get rich and die tryin
-
-# Но деньги - не главное. Команда - важжнее.
+# But team is way more important
