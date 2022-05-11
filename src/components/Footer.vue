@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer-main">
+  <footer id="site-footer" class="footer-main">
     
     <Container>
       <Row class="columns-between columns-v-top">
@@ -39,7 +39,7 @@
           </div>
 
           <h6 class="dn-class">Сайт розробила</h6>
-            <p><a href="https://www.instagram.com/expnd__/" class="fourth-section">команда EXPAND</a></p>
+            <p><a href="#" class="fourth-section">команда EXPAND</a></p>
         </figure>
       </Row>
 

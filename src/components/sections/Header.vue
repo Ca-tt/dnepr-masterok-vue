@@ -1,5 +1,5 @@
 <template>
-  <header class="site-header">
+  <header id="site-header"  class="site-header">
 
     <Container>
       <Row class="columns-between">
